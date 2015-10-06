@@ -1,0 +1,25 @@
+{
+  "name": "fxos-device-service",
+  "version": "0.0.0-alpha.0",
+  "author": "FxOS <dev-fxos@lists.mozilla.org> (#fxos)",
+  "description": "A web service that exposes interactions with a connected Firefox OS device",
+  "license": "MPL-2.0",
+  "main": "./build/service.js",
+  "repository": "mozilla-b2g/fxos-device-service",
+
+  "dependencies": {
+    "babel": "^5.8.23",
+    "express": "^4.13.3"
+  },
+
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "mocha": "^2.3.3",
+    "tcp-port-used": "^0.1.2"
+  },
+
+  "scripts": {
+    "prepublish": "make -j8",
+    "test": "./node_modules/.bin/mocha"
+  }
+}
