@@ -1,4 +1,10 @@
+let adb = require('./adb');
+
 module.exports = function log(req, res) {
-  // TODO
-  res.status(501).send('501 Not Implemented');
+  let {proc, output} = adb.logcat();
+  output.pipe(res);
+  req.socket.on('close', () => {
+    output.unpipe(res);
+    proc.kill();
+  });
 };

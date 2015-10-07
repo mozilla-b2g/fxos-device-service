@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+var fs = require('fs');
+
+function main() {
+  var argv = process.argv;
+  var commandName = argv[2];
+  var args = argv.splice(3, argv.length - 3);
+  commands[commandName].apply(null, args);
+}
+
+var commands = {};
+
+/**
+ * Write some random stuff to stdout.
+ */
+commands.logcat = function logcat() {
+  var random = fs.createReadStream('/dev/urandom');
+  random.pipe(process.stdout);
+};
+
+if (require.main === module) {
+  main();
+}
