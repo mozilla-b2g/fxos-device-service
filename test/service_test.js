@@ -1,6 +1,8 @@
 let exec = require('mz/child_process').exec;
 let get = require('./get');
 let http = require('http');
+let net = require('net');
+let request = require('./request');
 let service = require('../src/service');
 let tcpPortUsed = require('tcp-port-used');
 
@@ -19,13 +21,13 @@ suite('service', () => {
   });
 
   test('/', async function() {
-    let res = await get('http://localhost:3000/');
+    let res = await get(3000, '/');
     res.statusCode.should.equal(200);
     res.body.should.equal('200 OK');
   });
 
   test('404', async function() {
-    let res = await get('http://localhost:3000/eh');
+    let res = await get(3000, '/eh');
     res.statusCode.should.equal(404);
     res.body.should.equal('404 Not Found');
   });
@@ -62,6 +64,27 @@ suite('service', () => {
     test('should kill adb process when client disconnects', async function() {
       let [ps] = await exec('ps -au');
       ps.should.not.include('adb logcat');
+    });
+  });
+
+  suite('/connect', () => {
+    let port;
+
+    setup(async function() {
+      let res = await request('POST', 3000, '/connect/4000');
+      port = parseInt(res.body, 10);
+      await tcpPortUsed.waitUntilUsed(port);
+    });
+
+    teardown(async function() {
+      let res = await request('DELETE', 3000, `/disconnect/${port}`);
+      res.statusCode.should.equal(200);
+      res.body.should.equal('200 OK');
+      await tcpPortUsed.waitUntilFree(port);
+    });
+
+    test('should return proxied tcp port', () => {
+      port.should.be.gte(10000);
     });
   });
 });

@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 var fs = require('fs');
+var net = require('net');
+var spawn = require('child_process').spawn;
 
 function main() {
   var argv = process.argv;
@@ -9,6 +11,36 @@ function main() {
 }
 
 var commands = {};
+
+/**
+ * We'll get something that either looks like
+ *
+ *   adb forward tcp:xxxx tcp:xxxx
+ *   adb forward --remove tcp:xxxx
+ *
+ * In the first case, we can fake it by bringing up a tcp server
+ * on the parameter port.
+ *
+ * In the second case, we can fake it by killing any processes listening
+ * for traffic on the parameter port.
+ */
+commands.forward = function forward(arg0, arg1) {
+  var child;
+  if (arg0 === '--remove') {
+    child = spawn('fuser', ['-n', 'tcp', '-k', arg1.split(':')[1]], {
+      detached: true,
+      stdio: ['ignore', 'ignore', 'ignore']
+    });
+  } else {
+    child = spawn('./echo_server', [arg0.split(':')[1]], {
+      cwd: __dirname,
+      detached: true,
+      stdio: ['ignore', 'ignore', 'ignore']
+    });
+  }
+
+  child.unref();
+};
 
 /**
  * Write some random stuff to stdout.

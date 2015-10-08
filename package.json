@@ -12,6 +12,9 @@
 
   "dependencies": {
     "babel": "^5.8.23",
+    "bluebird": "^2.10.2",
+    "denodeify": "^1.2.1",
+    "empty-port": "^0.0.1",
     "express": "^4.13.3",
     "mz": "^2.0.0"
   },
