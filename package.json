@@ -1,12 +1,14 @@
 {
   "name": "fxos-device-service",
-  "version": "0.0.0-alpha.0",
+  "version": "0.0.0-alpha.2",
   "author": "FxOS <dev-fxos@lists.mozilla.org> (#fxos)",
   "description": "A web service that exposes interactions with a connected Firefox OS device",
   "license": "MPL-2.0",
   "bin": "./bin/fxos-device-service",
   "main": "./build/service.js",
   "repository": "mozilla-b2g/fxos-device-service",
+
+  "files": ["build"],
 
   "dependencies": {
     "babel": "^5.8.23",
