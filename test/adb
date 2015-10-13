@@ -1,7 +1,10 @@
 #!/usr/bin/env node
+var denodeify = require('denodeify');
+var cp = denodeify(require('cp'));
 var fs = require('fs');
 var net = require('net');
 var spawn = require('child_process').spawn;
+var tmpdir = denodeify(require('tmp').dir);
 
 function main() {
   var argv = process.argv;
@@ -11,6 +14,11 @@ function main() {
 }
 
 var commands = {};
+
+commands.devices = function devices() {
+  console.log('List of devices attached');
+  console.log('04fb7d5bc6d37039\tdevice');
+};
 
 /**
  * We'll get something that either looks like
@@ -48,6 +56,10 @@ commands.forward = function forward(arg0, arg1) {
 commands.logcat = function logcat() {
   var random = fs.createReadStream('/dev/urandom');
   random.pipe(process.stdout);
+};
+
+commands.pull = function pull(arg0, arg1) {
+  return cp(__dirname + '/application.zip', arg1 + '/application.zip');
 };
 
 if (require.main === module) {

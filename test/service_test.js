@@ -87,4 +87,25 @@ suite('service', () => {
       port.should.be.gte(10000);
     });
   });
+
+  suite('/info', async function() {
+    let data;
+
+    setup(async function() {
+      let res = await get(3000, '/info');
+      data = JSON.parse(res.body);
+    });
+
+    test('device id', () => {
+      let {id, description} = data.device;
+      id.should.equal('04fb7d5bc6d37039');
+      description.should.equal('device');
+    });
+
+    test('gaia commit', () => {
+      let {sha, timestamp} = data.commit;
+      sha.should.equal('f75bd584aca0a751a5bed115800250faa8412927');
+      timestamp.should.equal('1445236798');
+    });
+  });
 });
