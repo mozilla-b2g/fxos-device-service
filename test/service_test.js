@@ -108,4 +108,14 @@ suite('service', () => {
       timestamp.should.equal('1445236798');
     });
   });
+
+  test('/restart soft', async function() {
+    let res = await request('POST', 3000, '/restart?hard=false');
+    res.body.should.equal('200 OK');
+  });
+
+  test('/restart hard', async function() {
+    let res = await request('POST', 3000, '/restart?hard=true');
+    res.body.should.equal('200 OK');
+  });
 });

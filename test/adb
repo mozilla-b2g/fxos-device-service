@@ -15,6 +15,9 @@ function main() {
 
 var commands = {};
 
+/**
+ * Print fake device info to console.
+ */
 commands.devices = function devices() {
   console.log('List of devices attached');
   console.log('04fb7d5bc6d37039\tdevice');
@@ -58,8 +61,24 @@ commands.logcat = function logcat() {
   random.pipe(process.stdout);
 };
 
+
+/**
+ * Copy a fixture settings zipball to argument destination.
+ */
 commands.pull = function pull(arg0, arg1) {
   return cp(__dirname + '/application.zip', arg1 + '/application.zip');
+};
+
+/**
+ * Noop.
+ */
+commands.reboot = function reboot() {
+};
+
+/**
+ * Noop for now since this is only being used for restarting b2g.
+ */
+commands.shell = function shell() {
 };
 
 if (require.main === module) {
