@@ -10,10 +10,10 @@ exports.start = function start(port = 8080) {
   app.get('/info', require('./info'));
   app.get('/log', require('./log'));
   app.get('*', (req, res) => res.status(404).send('404 Not Found'));
-  app.post('/connect/:port', require('./connect'));
+  app.post('/connection/:port', require('./connect'));
   app.post('/profile', require('./profile'));
   app.post('/restart', require('./restart'));
-  app.delete('/disconnect/:port', require('./disconnect'));
+  app.delete('/connection/:port', require('./disconnect'));
   server = http.createServer(app);
   server.listen(port);
 };

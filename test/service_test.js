@@ -67,17 +67,17 @@ suite('service', () => {
     });
   });
 
-  suite('/connect', () => {
+  suite('/connection', () => {
     let port;
 
     setup(async function() {
-      let res = await request('POST', 3000, '/connect/4000');
+      let res = await request('POST', 3000, '/connection/4000');
       port = parseInt(res.body, 10);
       await tcpPortUsed.waitUntilUsed(port);
     });
 
     teardown(async function() {
-      let res = await request('DELETE', 3000, `/disconnect/${port}`);
+      let res = await request('DELETE', 3000, `/connection/${port}`);
       res.statusCode.should.equal(200);
       res.body.should.equal('200 OK');
       await tcpPortUsed.waitUntilFree(port);
