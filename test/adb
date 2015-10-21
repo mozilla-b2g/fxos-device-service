@@ -70,15 +70,16 @@ commands.pull = function pull(arg0, arg1) {
 };
 
 /**
- * Noop.
- */
-commands.reboot = function reboot() {
-};
-
-/**
  * Noop for now since this is only being used for restarting b2g.
  */
 commands.shell = function shell() {
+};
+
+/**
+ * Do something async.
+ */
+commands['wait-for-device'] = function waitForDevice() {
+  setTimeout(function() {}, 500);
 };
 
 if (require.main === module) {
