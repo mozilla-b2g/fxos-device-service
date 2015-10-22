@@ -1,6 +1,29 @@
 #!/usr/bin/env node
+var ArgumentParser = require('argparse').ArgumentParser;
+
+var parser;
+
+function main(argv) {
+  var parser = new ArgumentParser({
+    description: 'http service for interacting with adb attached fxos devices',
+    version: require('../package').version,
+    addHelp: true
+  });
+
+  parser.addArgument(['port'], {
+    type: 'int',
+    defaultValue: 8080,
+    required: false,
+    help: 'port to bring up service on'
+  });
+
+  var args = parser.parseKnownArgs(argv)[0];
+
+  require('babel/polyfill');
+  var service = require('../build/service');
+  service.start(args.port);
+}
 
 if (require.main === module) {
-  require('babel/polyfill');
-  require('../build/service').start();
+  main(process.argv.splice(2));
 }
