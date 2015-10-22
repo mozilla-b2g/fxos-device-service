@@ -66,13 +66,42 @@ commands.logcat = function logcat() {
  * Copy a fixture settings zipball to argument destination.
  */
 commands.pull = function pull(arg0, arg1) {
-  return cp(__dirname + '/application.zip', arg1 + '/application.zip');
+  return cp(__dirname + '/fixtures/application.zip', arg1 + '/application.zip');
 };
 
-/**
- * Noop for now since this is only being used for restarting b2g.
- */
-commands.shell = function shell() {
+commands.shell = function shell(arg0) {
+  if (!arg0) {
+    return;
+  }
+
+  var argv = arg0.split(/\s+/);
+  var command = argv[0];
+  switch (command) {
+    case 'cat':
+      var file = arguments[1]
+        .replace('/data/b2g/mozilla/', '')
+        .replace('\\', '');
+      var cat = spawn('cat', [file], {cwd: __dirname + '/fixtures'});
+      cat.stdout.pipe(process.stdout);
+      cat.stderr.pipe(process.stderr);
+      break;
+    case 'ls':
+      var args = argv.slice(1);
+      var path = args
+        .join(' ')
+        .replace('/data/b2g/mozilla/', '')
+        .replace('\\', '');
+      var ls = spawn('ls', [path], {cwd: __dirname + '/fixtures'});
+      ls.stdout.pipe(process.stdout);
+      ls.stderr.pipe(process.stderr);
+      break;
+    case 'reboot':
+    case 'start':
+    case 'stop':
+    default:
+      // noop
+      return;
+  }
 };
 
 /**

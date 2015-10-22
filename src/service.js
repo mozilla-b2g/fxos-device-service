@@ -6,7 +6,8 @@ let server;
 exports.start = function start(port = 8080) {
   let app = express();
   app.get('/', (req, res) => res.send('200 OK'));
-  app.get('/crash', require('./crash'));
+  app.get('/crashes', require('./list_crash_reports'));
+  app.get('/crashes/:id', require('./get_crash_report'));
   app.get('/info', require('./info'));
   app.get('/log', require('./log'));
   app.get('*', (req, res) => res.status(404).send('404 Not Found'));
