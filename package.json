@@ -1,6 +1,6 @@
 {
   "name": "fxos-device-service",
-  "version": "0.0.0-alpha.3",
+  "version": "0.0.1",
   "author": "FxOS <dev-fxos@lists.mozilla.org> (#fxos)",
   "description": "A web service that exposes interactions with a connected Firefox OS device",
   "license": "MPL-2.0",
