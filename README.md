@@ -4,6 +4,10 @@
 
 A web service that exposes interactions with a connected Firefox OS device
 
+### Installation
+
+`npm install`
+
 ### API
 
 #### GET /
@@ -23,6 +27,8 @@ Pipe logs from logcat to the connected client.
 
 Restarts b2g process running on device. If the url parameter *hard* is
 `true` or `1`, then the device will be restarted instead.
+
+*If you do a hard restart you will lose your connection to adb and have to reconnect.*
 
 #### POST /connection/:port
 
