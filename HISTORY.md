@@ -1,3 +1,7 @@
+### 0.1.0
+
++ Add `GET /crashes` and `GET /crashes/:id` to service api.
+
 ### 0.0.1
 
 + Initial implementation for v0.0 API.

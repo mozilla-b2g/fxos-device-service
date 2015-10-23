@@ -19,6 +19,14 @@ commit.
 
 Pipe logs from logcat to the connected client.
 
+#### GET /crashes
+
+List ids of crash reports on device.
+
+#### GET /crashes/:id
+
+Download the crash dump with the parameter crash *id*.
+
 #### POST /restart?hard=(true|false|0|1)
 
 Restarts b2g process running on device. If the url parameter *hard* is
