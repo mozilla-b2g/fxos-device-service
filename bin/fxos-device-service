@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 var ArgumentParser = require('argparse').ArgumentParser;
 
-var parser;
-
 function main(argv) {
   var parser = new ArgumentParser({
     description: 'http service for interacting with adb attached fxos devices',
@@ -21,7 +19,7 @@ function main(argv) {
 
   require('babel/polyfill');
   var service = require('../build/service');
-  service.start(args.port);
+  service.start(args);
 }
 
 if (require.main === module) {

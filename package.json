@@ -32,7 +32,8 @@
 
   "scripts": {
     "prepublish": "make -j8",
-    "test": "./node_modules/.bin/mocha",
-    "watch": "./node_modules/.bin/watchman src 'npm run prepublish'"
+    "start": "./bin/fxos-device-service",
+    "test": "mocha",
+    "watch": "watchman src 'npm run prepublish'"
   }
 }

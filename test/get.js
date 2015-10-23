@@ -1,5 +1,5 @@
 let request = require('./request');
 
-module.exports = function get(port, path) {
-  return request('GET', port, path);
+module.exports = function get(port, path, options = {}) {
+  return request('GET', port, path, options);
 };

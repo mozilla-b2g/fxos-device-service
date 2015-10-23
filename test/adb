@@ -1,116 +1,40 @@
 #!/usr/bin/env node
-var denodeify = require('denodeify');
-var cp = denodeify(require('cp'));
-var fs = require('fs');
-var net = require('net');
-var spawn = require('child_process').spawn;
-var tmpdir = denodeify(require('tmp').dir);
+var ArgumentParser = require('argparse').ArgumentParser;
+var path = require('path');
 
-function main() {
-  var argv = process.argv;
-  var commandName = argv[2];
-  var args = argv.splice(3, argv.length - 3);
-  commands[commandName].apply(null, args);
+function main(argv) {
+  var parser = new ArgumentParser({
+    description: 'fake adb executable for testing',
+    addHelp: true
+  });
+
+  parser.addArgument(['-s', '--serial'], {
+    type: 'string',
+    aliases: ['serial'],
+    required: false,
+    help: 'device serial, synonymous to ANDROID_SERIAL'
+  });
+
+  parser.addArgument(['-H', '--host'], {
+    type: 'string',
+    aliases: ['host'],
+    required: false,
+    help: 'device attached to remote host'
+  });
+
+  parser.addArgument(['-P', '--port'], {
+    type: 'int',
+    aliases: ['port'],
+    required: false,
+    help: 'device attached to remote port'
+  });
+
+  var args = parser.parseKnownArgs(argv);
+  var modulePath = path.resolve(__dirname, 'commands', args[1].shift());
+
+  require(modulePath).apply(args[0], args[1]);
 }
 
-var commands = {};
-
-/**
- * Print fake device info to console.
- */
-commands.devices = function devices() {
-  console.log('List of devices attached');
-  console.log('04fb7d5bc6d37039\tdevice');
-};
-
-/**
- * We'll get something that either looks like
- *
- *   adb forward tcp:xxxx tcp:xxxx
- *   adb forward --remove tcp:xxxx
- *
- * In the first case, we can fake it by bringing up a tcp server
- * on the parameter port.
- *
- * In the second case, we can fake it by killing any processes listening
- * for traffic on the parameter port.
- */
-commands.forward = function forward(arg0, arg1) {
-  var child;
-  if (arg0 === '--remove') {
-    child = spawn('fuser', ['-n', 'tcp', '-k', arg1.split(':')[1]], {
-      detached: true,
-      stdio: ['ignore', 'ignore', 'ignore']
-    });
-  } else {
-    child = spawn('./echo_server', [arg0.split(':')[1]], {
-      cwd: __dirname,
-      detached: true,
-      stdio: ['ignore', 'ignore', 'ignore']
-    });
-  }
-
-  child.unref();
-};
-
-/**
- * Write some random stuff to stdout.
- */
-commands.logcat = function logcat() {
-  var random = fs.createReadStream('/dev/urandom');
-  random.pipe(process.stdout);
-};
-
-
-/**
- * Copy a fixture settings zipball to argument destination.
- */
-commands.pull = function pull(arg0, arg1) {
-  return cp(__dirname + '/fixtures/application.zip', arg1 + '/application.zip');
-};
-
-commands.shell = function shell(arg0) {
-  if (!arg0) {
-    return;
-  }
-
-  var argv = arg0.split(/\s+/);
-  var command = argv[0];
-  switch (command) {
-    case 'cat':
-      var file = arguments[1]
-        .replace('/data/b2g/mozilla/', '')
-        .replace('\\', '');
-      var cat = spawn('cat', [file], {cwd: __dirname + '/fixtures'});
-      cat.stdout.pipe(process.stdout);
-      cat.stderr.pipe(process.stderr);
-      break;
-    case 'ls':
-      var args = argv.slice(1);
-      var path = args
-        .join(' ')
-        .replace('/data/b2g/mozilla/', '')
-        .replace('\\', '');
-      var ls = spawn('ls', [path], {cwd: __dirname + '/fixtures'});
-      ls.stdout.pipe(process.stdout);
-      ls.stderr.pipe(process.stderr);
-      break;
-    case 'reboot':
-    case 'start':
-    case 'stop':
-    default:
-      // noop
-      return;
-  }
-};
-
-/**
- * Do something async.
- */
-commands['wait-for-device'] = function waitForDevice() {
-  setTimeout(function() {}, 500);
-};
-
 if (require.main === module) {
-  main();
+  main(process.argv.slice(2));
 }

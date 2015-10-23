@@ -1,8 +1,6 @@
-let adb = require('../adb');
-
-module.exports = async function reboot(hard = true) {
+module.exports = async function reboot(adb, hard = true) {
   if (hard) {
-    await adb.shell('reboot');
+    await adb.reboot();
     await adb.waitForDevice();
     return;
   }

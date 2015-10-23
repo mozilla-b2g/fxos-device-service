@@ -1,7 +1,29 @@
-let basename = require('path').basename;
-let fs = require('fs');
+let modularize = require('../modularize');
 
-fs.readdirSync(__dirname)
-  .filter(filename => !__filename.endsWith(filename))
-  .map(filename => basename(filename, '.js'))  // remove file extension
-  .forEach(moduleName => exports[moduleName] = require(`./${moduleName}`));
+/**
+ * Create a request-specific Adb instance by modularizing the current directory
+ * @constructor
+ * @param {Object} options accepts properties of:
+ *   path: Specify the path to an alternate ADB binary
+ *   serial: Android device serial number to target
+ *   remoteHost: Connect to a device on a remote host
+ *   remotePort: Connect to a device on a remote port
+ */
+let Adb = modularize(function Adb(options) {
+  this.options = options;
+}, __dirname);
+
+module.exports = options => {
+  /**
+   * Bind an Adb instance as Express middleware to the request
+   */
+  return (req, res, next) => {
+    req.adb = new Adb(Object.assign({
+      serial: req.serial,
+      remoteHost: req.remoteHost,
+      remotePort: req.remotePort
+    }, options));
+
+    next();
+  };
+};

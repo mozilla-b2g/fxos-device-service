@@ -1,8 +1,5 @@
-let debug = console.log.bind(console, '[adb/devices]');
-let exec = require('mz/child_process').exec;
-
 module.exports = async function devices() {
-  let output = await exec('adb devices');
+  let output = await this.exec('devices');
   let entries = output[0]
     .split('\n')
     .filter(str => !/^\s*$/.test(str));

@@ -1,17 +1,20 @@
 let exec = require('mz/child_process').exec;
 let get = require('./get');
+let getLog = require('./get_log');
 let http = require('http');
-let net = require('net');
+let path = require('path');
 let request = require('./request');
 let service = require('../src/service');
 let tcpPortUsed = require('tcp-port-used');
 
 suite('service', () => {
   setup(async function() {
-    // Make sure that our fake adb gets used instead of
-    // the real thing.
-    process.env.PATH = `${__dirname}:${process.env.PATH}`;
-    service.start(3000);
+    service.start({
+      port: 3000,
+      // Make sure that our fake adb gets used instead of the real thing.
+      adbPath: path.resolve(__dirname, 'adb')
+    });
+
     await tcpPortUsed.waitUntilUsed(3000);
   });
 
@@ -35,26 +38,8 @@ suite('service', () => {
   suite('/log', () => {
     let log = '';
 
-    setup(done => {
-      let req = http.get('http://localhost:3000/log', res => {
-        function onend() {
-          done(new Error('Log request ended unexpectedly'));
-        }
-
-        res.setEncoding('utf8');
-        res.on('data', chunk => log += chunk);
-        res.on('end', onend);
-
-        // Close the request to /log after some time elapses.
-        setTimeout(async function() {
-          // At this point we should have a logcat process.
-          let [ps] = await exec('ps -au');
-          ps.should.include('adb logcat');
-          res.removeListener('end', onend);
-          req.abort();
-          done();
-        }, 500);
-      });
+    setup(async function() {
+      log = await getLog();
     });
 
     test('should pipe data to browser', () => {
@@ -62,8 +47,23 @@ suite('service', () => {
     });
 
     test('should kill adb process when client disconnects', async function() {
-      let [ps] = await exec('ps -au');
-      ps.should.not.include('adb logcat');
+      let [ps] = await exec('ps au');
+      ps.should.not.match(/adb.*logcat/);
+    });
+  });
+
+  suite('multiple devices', () => {
+    let logA = '';
+    let logB = '';
+
+    setup(async function() {
+      logA = await getLog({ headers: { 'X-Android-Serial': 'f30eccef' } });
+      logB = await getLog({ headers: { 'X-Android-Serial': '04fb7d5bc6d37039' } });
+    });
+
+    test('get different log per device', () => {
+      logA.should.match(/ANDROID_SERIAL.*f30eccef/);
+      logB.should.match(/ANDROID_SERIAL.*04fb7d5bc6d37039/);
     });
   });
 
@@ -88,22 +88,62 @@ suite('service', () => {
     });
   });
 
-  suite('/info', async function() {
+  suite('/devices', async function() {
     let data;
 
     setup(async function() {
-      let res = await get(3000, '/info');
+      let res = await get(3000, '/devices');
       data = JSON.parse(res.body);
     });
 
-    test('device id', () => {
-      let {id, description} = data.device;
-      id.should.equal('04fb7d5bc6d37039');
-      description.should.equal('device');
+    test('should be multiple devices', () => {
+      data.length.should.equal(2);
     });
 
-    test('gaia commit', () => {
-      let {sha, timestamp} = data.commit;
+    test('should have identifiable devices', () => {
+      data[0].id.should.equal('f30eccef');
+      data[0].description.should.equal('device');
+      data[1].id.should.equal('04fb7d5bc6d37039');
+      data[1].description.should.equal('device');
+    });
+  });
+
+  suite('/device', async function() {
+    test('gaia commit', async function() {
+      let res = await get(3000, '/device');
+      let {sha, timestamp} = JSON.parse(res.body).gaia;
+      sha.should.equal('f75bd584aca0a751a5bed115800250faa8412927');
+      timestamp.should.equal('1445236798');
+    });
+
+    test('target specific device', async function() {
+      let res = await get(3000, '/device', {
+        headers: { 'X-Android-Serial': '04fb7d5bc6d37039' }
+      });
+      let {sha, timestamp} = JSON.parse(res.body).gaia;
+      sha.should.equal('f75bd584aca0a751a5bed115800250faa8412927');
+      timestamp.should.equal('1445236798');
+    });
+
+    test('target different device', async function() {
+      let res = await get(3000, '/device', {
+        headers: { 'X-Android-Serial': 'f30eccef' }
+      });
+      let {sha, timestamp} = JSON.parse(res.body).gaia;
+      sha.should.equal('f75bd584aca0a751a5bed115800250faa8412927');
+      timestamp.should.equal('1445236798');
+    });
+
+    test('target specific device via URL path', async function() {
+      let res = await get(3000, '/device/04fb7d5bc6d37039');
+      let {sha, timestamp} = JSON.parse(res.body).gaia;
+      sha.should.equal('f75bd584aca0a751a5bed115800250faa8412927');
+      timestamp.should.equal('1445236798');
+    });
+
+    test('target different device via URL path', async function() {
+      let res = await get(3000, '/device/f30eccef');
+      let {sha, timestamp} = JSON.parse(res.body).gaia;
       sha.should.equal('f75bd584aca0a751a5bed115800250faa8412927');
       timestamp.should.equal('1445236798');
     });

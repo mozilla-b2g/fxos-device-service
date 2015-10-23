@@ -1,8 +1,8 @@
-let adb = require('./adb');
 let uniq = require('lodash/array/uniq');
 let flatten = require('lodash/array/flatten');
 
 module.exports = async function listCrashReports(req, res) {
+  let adb = req.adb;
   let [pending, submitted] = await Promise.all([
     adb.shell('ls /data/b2g/mozilla/Crash\\ Reports/pending'),
     adb.shell('ls /data/b2g/mozilla/Crash\\ Reports/submitted')

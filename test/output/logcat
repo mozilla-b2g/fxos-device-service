@@ -1,0 +1,1343 @@
+--------- beginning of /dev/log/main
+I/irsc_util(  208): executing /system/bin/irsc_util failed: No such file or directory
+E/logwrapper(  218): executing /system/bin/irsc_util failed: No such file or directory
+I/qrngd   (  211): qrngd has started:
+I/qrngd   (  211): Reading device:'/dev/hw_random' updating entropy for device:'/dev/random'
+I/rfs_access(  193): Initialized RFS server
+D/WLAN_PSA(  209): PTT_SOCKET_APP Start
+V/WLAN_PSA(  209): UID 0
+E/WLAN_PSA(  209): Set as Blocked Operation
+D/WLAN_PSA(  209): PTT_SOCKET_APP Init done, wait clients
+I/irsc_util(  208): irsc_util terminated by exit(255)
+I/Netd    (  197): Netd 1.0 starting
+D/adsprpc (  216): vendor/qcom/proprietary/adsprpc/src/adsprpcd.c:21::info: calling: 0 == adsp_default_listener_register()
+W/InterfaceController(  197): Warning (dlopen failed: library "/system/lib/libnetcmdiface.so" not found) while opening the net interface command library
+E/adsprpc (  216): vendor/qcom/proprietary/adsprpc/src/listener_android.c:107:listener using ion heap: -1
+D/adsprpc (  216): vendor/qcom/proprietary/adsprpc/src/adsprpcd.c:21::info: passed: 0 == adsp_default_listener_register()
+I/DEBUG   (  198): debuggerd: Oct 14 2015 08:02:54
+I/installd(  202): installd firing up
+I/qcom-bluetooth(  214): /system/etc/init.qcom.bt.sh: init.qcom.bt.sh config = onboot
+E/adsprpc (  216): vendor/qcom/proprietary/adsprpc/src/apps_std_imp.c:33:apps_std fopen failed: /oemconfig.so No such file or directory
+E/adsprpc (  216): vendor/qcom/proprietary/adsprpc/src/apps_std_imp.c:33:apps_std fopen failed: /system/lib/rfsa/adsp//oemconfig.so No such file or directory
+E/adsprpc (  216): vendor/qcom/proprietary/adsprpc/src/apps_std_imp.c:33:apps_std fopen failed: /system/vendor/lib/rfsa/adsp//oemconfig.so No such file or directory
+E/adsprpc (  216): vendor/qcom/proprietary/adsprpc/src/../inc/mod_table_imp.h:346::error: 2: 0 == (nErr = invoke_func_ptr(sc, pra))
+E/adsprpc (  216): vendor/qcom/proprietary/adsprpc/src/apps_std_imp.c:33:apps_std fopen failed: /remote_heap_config.so No such file or directory
+E/adsprpc (  216): vendor/qcom/proprietary/adsprpc/src/apps_std_imp.c:33:apps_std fopen failed: /system/lib/rfsa/adsp//remote_heap_config.so No such file or directory
+E/adsprpc (  216): vendor/qcom/proprietary/adsprpc/src/apps_std_imp.c:33:apps_std fopen failed: /system/vendor/lib/rfsa/adsp//remote_heap_config.so No such file or directory
+E/adsprpc (  216): vendor/qcom/proprietary/adsprpc/src/../inc/mod_table_imp.h:346::error: 2: 0 == (nErr = invoke_func_ptr(sc, pra))
+E/adsprpc (  216): vendor/qcom/proprietary/adsprpc/src/apps_std_imp.c:33:apps_std fopen failed: /voiceproc_tx.so No such file or directory
+E/adsprpc (  216): vendor/qcom/proprietary/adsprpc/src/apps_std_imp.c:33:apps_std fopen failed: /system/lib/rfsa/adsp//voiceproc_tx.so No such file or directory
+E/adsprpc (  216): vendor/qcom/proprietary/adsprpc/src/apps_std_imp.c:33:apps_std fopen failed: /system/vendor/lib/rfsa/adsp//voiceproc_tx.so No such file or directory
+E/adsprpc (  216): vendor/qcom/proprietary/adsprpc/src/../inc/mod_table_imp.h:346::error: 2: 0 == (nErr = invoke_func_ptr(sc, pra))
+E/adsprpc (  216): vendor/qcom/proprietary/adsprpc/src/apps_std_imp.c:33:apps_std fopen failed: /voiceproc_rx.so No such file or directory
+E/adsprpc (  216): vendor/qcom/proprietary/adsprpc/src/apps_std_imp.c:33:apps_std fopen failed: /system/lib/rfsa/adsp//voiceproc_rx.so No such file or directory
+E/adsprpc (  216): vendor/qcom/proprietary/adsprpc/src/apps_std_imp.c:33:apps_std fopen failed: /system/vendor/lib/rfsa/adsp//voiceproc_rx.so No such file or directory
+E/adsprpc (  216): vendor/qcom/proprietary/adsprpc/src/../inc/mod_table_imp.h:346::error: 2: 0 == (nErr = invoke_func_ptr(sc, pra))
+I/qcom-bluetooth(  231): /system/etc/init.qcom.bt.sh: Bluetooth Address programmed successfully
+E/DirectVolume(  191): Vold managed volumes must have auto mount point; ignoring /storage/sdcard
+E/DirectVolume(  191): Vold managed volumes must have auto mount point; ignoring /storage/sdcard1
+--------- beginning of /dev/log/system
+I/Vold    (  191): Vold 2.1 (the revenge) firing up
+D/Vold    (  191): Volume sdcard state changing -1 (Initializing) -> 0 (No-Media)
+D/Vold    (  191): Volume sdcard1 state changing -1 (Initializing) -> 0 (No-Media)
+E/QCOMSysDaemon(  206): Can't open /dev/block/platform/msm_sdcc.1/by-name/bootselect: (No such file or directory)
+I/QCOMSysDaemon(  206): Starting qcom system daemon
+I/ThermalEngine(  210): Thermal daemon started
+I/ThermalEngine(  210): devices_manager_init: Init
+I/ThermalEngine(  210): Number of gpus :1
+I/Thermal-IOCTL(  210): KTM IOCTL interface "/dev/msm_thermal_query" opened
+I/ThermalEngine(  210): vdd_rstr_init: Init KTM VDD RSTR enabled: 0
+I/ThermalEngine(  210): sensors_manager_init: Init
+I/ThermalEngine(  210): BCL sensors setup done.
+I/ThermalEngine(  210): Using target config file '/system/etc/thermal-engine-8610.conf'
+I/ThermalEngine(  210): Loading config file for virtual sensor
+E/ThermalEngine(  210): Unable to open config file '/system/etc/thermal-engine-8610.conf'
+E/ThermalEngine(  210): virtual_sensors_init: Error getting virtual sensors set
+E/ThermalEngine(  210): Unable to open config file '/system/etc/thermal-engine-8610.conf'
+I/ThermalEngine(  210): [VDD_RSTR_MONITOR-TSENS5]
+I/ThermalEngine(  210): #algo_type monitor
+I/ThermalEngine(  210): sampling 1000
+I/ThermalEngine(  210): sensor tsens_tz_sensor5
+I/ThermalEngine(  210): thresholds 5000
+I/ThermalEngine(  210): thresholds_clr 10000
+I/ThermalEngine(  210): actions vdd_restriction
+I/ThermalEngine(  210): action_info 1
+I/ThermalEngine(  210): descending
+I/ThermalEngine(  210): [VDD_RSTR_MONITOR-TSENS0]
+I/ThermalEngine(  210): #algo_type monitor
+I/ThermalEngine(  210): sampling 1000
+I/ThermalEngine(  210): sensor tsens_tz_sensor0
+I/ThermalEngine(  210): thresholds 5000
+I/ThermalEngine(  210): thresholds_clr 10000
+I/ThermalEngine(  210): actions vdd_restriction
+I/ThermalEngine(  210): action_info 1
+I/ThermalEngine(  210): descending
+I/ThermalEngine(  210): [SS-CPU0-1-2-3]
+I/ThermalEngine(  210): #algo_type ss
+I/ThermalEngine(  210): sampling 250
+I/ThermalEngine(  210): sensor cpu0-1-2-3
+I/ThermalEngine(  210): device cpu
+I/ThermalEngine(  210): set_point 80000
+I/ThermalEngine(  210): set_point_clr 65000
+I/ThermalEngine(  210): time_constant 0
+I/ThermalEngine(  210): Sensor:tsens_tz_sensor5:38000 mC
+I/ThermalEngine(  210): Sensor:tsens_tz_sensor5:38000 mC
+I/ThermalEngine(  210): Sensor:tsens_tz_sensor5:38000 mC
+I/ThermalEngine(  210): Sensor:tsens_tz_sensor0:38000 mC
+I/ThermalEngine(  210): Sensor:tsens_tz_sensor0:38000 mC
+I/ThermalEngine(  210): vdd_restrict_qmi_request: MODEM req level(0) is recorded and waiting for completing QMI registration
+I/ThermalEngine(  210): vdd_restrict_qmi_request: ADSP req level(0) is recorded and waiting for completing QMI registration
+I/ThermalEngine(  210): hotplug_ktm_disable_cb: write out 0
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:32, major:179, minor:32
+D/Vold    (  191): Volume sdcard state changing 0 (No-Media) -> 1 (Idle-Unmounted)
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:0, major:179, minor:0
+D/Vold    (  191): Volume sdcard state changing 1 (Idle-Unmounted) -> 2 (Pending)
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:1, major:179, minor:1
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:2, major:179, minor:2
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:3, major:179, minor:3
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:4, major:179, minor:4
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:5, major:179, minor:5
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:6, major:179, minor:6
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:7, major:179, minor:7
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:8, major:179, minor:8
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:9, major:179, minor:9
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:32, major:179, minor:32
+D/Vold    (  191): Volume sdcard state changing 2 (Pending) -> 1 (Idle-Unmounted)
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:10, major:179, minor:10
+W/Vold    (  191): Duplicate state (1)
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:11, major:179, minor:11
+W/Vold    (  191): Duplicate state (1)
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:12, major:179, minor:12
+W/Vold    (  191): Duplicate state (1)
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:13, major:179, minor:13
+W/Vold    (  191): Duplicate state (1)
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:14, major:179, minor:14
+W/Vold    (  191): Duplicate state (1)
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:15, major:179, minor:15
+W/Vold    (  191): Duplicate state (1)
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:16, major:179, minor:16
+W/Vold    (  191): Duplicate state (1)
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:17, major:179, minor:17
+W/Vold    (  191): Duplicate state (1)
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:18, major:179, minor:18
+W/Vold    (  191): Duplicate state (1)
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:19, major:179, minor:19
+W/Vold    (  191): Duplicate state (1)
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:20, major:179, minor:20
+W/Vold    (  191): Duplicate state (1)
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:21, major:179, minor:21
+W/Vold    (  191): Duplicate state (1)
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:22, major:179, minor:22
+W/Vold    (  191): Duplicate state (1)
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:23, major:179, minor:23
+W/Vold    (  191): Duplicate state (1)
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:24, major:179, minor:24
+W/Vold    (  191): Duplicate state (1)
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:25, major:179, minor:25
+W/Vold    (  191): Duplicate state (1)
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:26, major:179, minor:26
+W/Vold    (  191): Duplicate state (1)
+D/QC-time-services(  296): Daemon:genoff_pre_init::Base = 0
+D/QC-time-services(  296): Daemon:ats_rtc_init: Time read from RTC -- year = 70, month = 6,day = 3
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:27, major:179, minor:27
+W/Vold    (  191): Duplicate state (1)
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:28, major:179, minor:28
+W/Vold    (  191): Duplicate state (1)
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:29, major:179, minor:29
+W/Vold    (  191): Duplicate state (1)
+D/Vold    (  191): Volume::createDeviceNode path:/dev/block/vold/179:30, major:179, minor:30
+W/Vold    (  191): Duplicate state (1)
+D/QSEECOMD: (  298): qseecom listener services process entry PPID = 1
+E/QSEECOMD: (  298): Listener: index = 0, hierarchy = 0
+E/Diag_Lib(  304): Thread state: conn_id=58, state=MAIN_THREAD_POWERUP_INIT
+D/QSEECOMD: (  298): Init dlopen(librpmb.so, RTLD_NOW) succeeds
+D/QSEECOMD: (  298): Init::Init dlsym(g_FSHandle rpmb_init_service) succeeds
+I/rpmb    (  298): RPMB Mult = 2048, Rel_sec_cnt = 1
+E/DrmLibRpmb(  298): rpmb_init succeeded! with ret = 0
+D/QSEECOMD: (  298): Init rpmb_init_service ret = 0
+D/QSEECOMD: (  298): RPMB system services: init (Listener ID = 8192)
+E/QSEECOMD: (  298): Listener: index = 1, hierarchy = 0
+D/QSEECOMD: (  298): Init dlopen(libssd.so, RTLD_NOW) succeeds
+D/QSEECOMD: (  298): Init::Init dlsym(g_FSHandle ssd_init_service) succeeds
+E/SSD     (  298): ssd_init_service succeeded!
+D/QSEECOMD: (  298): Init ssd_init_service ret = 0
+D/QSEECOMD: (  298): SSD system services: init (Listener ID = 12288)
+E/QSEECOMD: (  298): Listener: index = 2, hierarchy = 0
+E/QSEECOMD: (  298): Init dlopen(libsecureui.so, RLTD_NOW) is failed....
+D/QSEECOMD: (  298): SEC_UI_INIT failed, shall not start secure ui listener
+D/QSEECOMAPI: (  298): QSEECom_get_handle sb_length = 0x400
+D/QSEECOMAPI: (  298): App is not loaded in QSEE
+D/QC-time-services(  296): Daemon:Value read from RTC seconds = 15889418000
+D/QC-time-services(  296): Daemon:genoff_init_config: ATS_RTC initialized
+D/QC-time-services(  296): Daemon:genoff_pre_init::Base = 1
+D/QC-time-services(  296): Daemon: Storage Name: ats_1
+D/QC-time-services(  296): Daemon:Opening File: /data/time/ats_1
+D/QC-time-services(  296): Daemon:time_persistent_memory_opr:Genoff Read operation
+D/QC-time-services(  296): Daemon: read from file 1401580800 time 19:00:00 05/31/2014
+D/QC-time-services(  296): Daemon:genoff_pre_init::Base = 2
+D/QC-time-services(  296): Daemon: Storage Name: ats_2
+D/QC-time-services(  296): Daemon:Opening File: /data/time/ats_2
+D/QC-time-services(  296): Daemon:time_persistent_memory_opr:Genoff Read operation
+D/QC-time-services(  296): Daemon: read from file 1401580800 time 19:00:00 05/31/2014
+D/QC-time-services(  296): Daemon:genoff_pre_init::Base = 3
+D/QC-time-services(  296): Daemon: Storage Name: ats_3
+D/QC-time-services(  296): Daemon:Opening File: /data/time/ats_3
+D/QC-time-services(  296): Daemon:time_persistent_memory_opr:Genoff Read operation
+D/QC-time-services(  296): Daemon:Unable to open filefor read
+D/QC-time-services(  296): Daemon:genoff_post_init:Error in accessing storage
+D/QC-time-services(  296): Daemon:genoff_pre_init::Base = 4
+D/QC-time-services(  296): Daemon: Storage Name: ats_4
+D/QC-time-services(  296): Daemon:Opening File: /data/time/ats_4
+D/QC-time-services(  296): Daemon:time_persistent_memory_opr:Genoff Read operation
+D/QC-time-services(  296): Daemon:Unable to open filefor read
+D/QC-time-services(  296): Daemon:genoff_post_init:Error in accessing storage
+D/QC-time-services(  296): Daemon:genoff_pre_init::Base = 5
+D/QC-time-services(  296): Daemon: Storage Name: ats_5
+D/QC-time-services(  296): Daemon:Opening File: /data/time/ats_5
+D/QC-time-services(  296): Daemon:time_persistent_memory_opr:Genoff Read operation
+D/QC-time-services(  296): Daemon:Unable to open filefor read
+D/QC-time-services(  296): Daemon:genoff_post_init:Error in accessing storage
+D/QC-time-services(  296): Daemon:genoff_pre_init::Base = 6
+D/QC-time-services(  296): Daemon: Storage Name: ats_6
+D/QC-time-services(  296): Daemon:Opening File: /data/time/ats_6
+D/QC-time-services(  296): Daemon:time_persistent_memory_opr:Genoff Read operation
+D/QC-time-services(  296): Daemon:Unable to open filefor read
+D/QC-time-services(  296): Daemon:genoff_post_init:Error in accessing storage
+D/QC-time-services(  296): Daemon:genoff_pre_init::Base = 7
+D/QC-time-services(  296): Daemon: Storage Name: ats_7
+D/QC-time-services(  296): Daemon:Opening File: /data/time/ats_7
+D/QC-time-services(  296): Daemon:time_persistent_memory_opr:Genoff Read operation
+D/QC-time-services(  296): Daemon:Unable to open filefor read
+D/QC-time-services(  296): Daemon:genoff_post_init:Error in accessing storage
+D/QC-time-services(  296): Daemon:genoff_pre_init::Base = 8
+D/QC-time-services(  296): Daemon: Storage Name: ats_8
+D/QC-time-services(  296): Daemon:Opening File: /data/time/ats_8
+D/QC-time-services(  296): Daemon:time_persistent_memory_opr:Genoff Read operation
+D/QC-time-services(  296): Daemon:Unable to open filefor read
+D/QC-time-services(  296): Daemon:genoff_post_init:Error in accessing storage
+D/QC-time-services(  296): Daemon:genoff_pre_init::Base = 9
+D/QC-time-services(  296): Daemon: Storage Name: ats_9
+D/QC-time-services(  296): Daemon:Opening File: /data/time/ats_9
+D/QC-time-services(  296): Daemon:time_persistent_memory_opr:Genoff Read operation
+D/QC-time-services(  296): Daemon:Unable to open filefor read
+D/QC-time-services(  296): Daemon:genoff_post_init:Error in accessing storage
+D/QC-time-services(  296): Daemon:genoff_pre_init::Base = 10
+D/QC-time-services(  296): Daemon: Storage Name: ats_10
+D/QC-time-services(  296): Daemon:Opening File: /data/time/ats_10
+D/QC-time-services(  296): Daemon:time_persistent_memory_opr:Genoff Read operation
+D/QC-time-services(  296): Daemon:Unable to open filefor read
+D/QC-time-services(  296): Daemon:genoff_post_init:Error in accessing storage
+D/QC-time-services(  296): Daemon:genoff_pre_init::Base = 11
+D/QC-time-services(  296): Daemon: Storage Name: ats_11
+D/QC-time-services(  296): Daemon:Opening File: /data/time/ats_11
+D/QC-time-services(  296): Daemon:time_persistent_memory_opr:Genoff Read operation
+D/QC-time-services(  296): Daemon:Unable to open filefor read
+D/QC-time-services(  296): Daemon:genoff_post_init:Error in accessing storage
+D/QC-time-services(  296): Daemon:genoff_pre_init::Base = 12
+D/QC-time-services(  296): Daemon: Storage Name: ats_12
+D/QC-time-services(  296): Daemon:Opening File: /data/time/ats_12
+D/QC-time-services(  296): Daemon:time_persistent_memory_opr:Genoff Read operation
+D/QC-time-services(  296): Daemon:Unable to open filefor read
+D/QC-time-services(  296): Daemon:genoff_post_init:Error in accessing storage
+D/QC-time-services(  296): Daemon:genoff_pre_init::Base = 13
+D/QC-time-services(  296): Daemon: Storage Name: ats_13
+D/QC-time-services(  296): Daemon:Opening File: /data/time/ats_13
+D/QC-time-services(  296): Daemon:time_persistent_memory_opr:Genoff Read operation
+D/QC-time-services(  296): Daemon:Unable to open filefor read
+D/QC-time-services(  296): Daemon:genoff_post_init:Error in accessing storage
+D/QC-time-services(  296): Daemon:genoff_pre_init::Base = 14
+D/QC-time-services(  296): Daemon: Storage Name: ats_14
+D/QC-time-services(  296): Daemon:Opening File: /data/time/ats_14
+D/QC-time-services(  296): Daemon:time_persistent_memory_opr:Genoff Read operation
+D/QC-time-services(  296): Daemon:Unable to open filefor read
+D/QC-time-services(  296): Daemon:genoff_post_init:Error in accessing storage
+D/QC-time-services(  296): Daemon:genoff_init_config: Other bases initilized, exiting genoff_init
+D/QC-time-services(  296): Daemon:Try setting default time
+D/QC-time-services(  296): Daemon:genoff_opr: Base = 1, val = 0, operation = 1
+D/QC-time-services(  296): Daemon: genoff get for 1
+D/QC-time-services(  296): Daemon:rtc_get: Time read from RTC -- MM/DD/YY HH:MM:SS6/3/70 21:43:38
+D/QC-time-services(  296): Daemon:Value read from RTC seconds = 15889418000
+D/QC-time-services(  296): Daemon:Value read from RTC seconds = 15889418000
+D/QC-time-services(  296): Daemon:Value read from generif offset = 1401580800000
+D/QC-time-services(  296): Daemon:Final Time = 1417470218000
+D/QC-time-services(  296): Daemon:genoff_boot_tod_init: Setting system time to sec =1417470218, nsec =0
+E/QC-time-services(  296): Daemon:genoff_boot_tod_init: Unable to set TOD at boot up
+E/QC-time-services(  296): Daemon: Unable to set TOD at boot up
+D/QC-time-services(  296): Daemon:genoff_modem_qmi_init: Initiallizing QMI
+E/mm-camera(  299): server_process_module_init:59, int mods
+E/mm-camera-sensor(  299): module_sensor_init:2925 Enter
+E/wcnss_service(  301): CAL file not found
+D/QSEECOMAPI: (  298): Loaded image: APP id = 2
+E/mm-camera(  299): isp_util_gen_hws_caps: integrating kernel vfe is pending
+E/mm-camera(  299): isp_tintless_create: using BG stats for tintless!, isp version = 20
+E/mm-camera(  299): isp_tintless_open_version: E: 32
+E/mm-camera(  299): is_module_init: Enter
+E/mm-camera(  299): cpp_hardware_find_subdev:934: no cpp device found.
+E/mm-camera(  299): cpp_hardware_create:40: error: cannot find cpp subdev
+E/mm-camera(  299): cpp_module_create_cpp_ctrl:177, failed, cannnot create cpp hardware instance
+E/mm-camera(  299): cpp_module_init:63 failed
+E/mm-camera(  299): vpe_module_init:26 name=vpe
+E/mm-camera(  299): vpe_hardware_find_subdev:716: entity.name=video0 entity.revision=0
+E/mm-camera(  299): vpe_hardware_find_subdev:716: entity.name=v4l-subdev0 entity.revision=0
+E/mm-camera(  299): vpe_hardware_find_subdev:716: entity.name=v4l-subdev1 entity.revision=0
+E/mm-camera(  299): vpe_hardware_find_subdev:716: entity.name=v4l-subdev2 entity.revision=0
+E/mm-camera(  299): vpe_hardware_find_subdev:716: entity.name=v4l-subdev3 entity.revision=0
+E/mm-camera(  299): vpe_hardware_find_subdev:716: entity.name=v4l-subdev4 entity.revision=0
+E/mm-camera(  299): vpe_hardware_find_subdev:716: entity.name=v4l-subdev5 entity.revision=0
+E/mm-camera(  299): vpe_hardware_find_subdev:716: entity.name=v4l-subdev6 entity.revision=0
+E/mm-camera(  299): vpe_hardware_find_subdev:716: entity.name=v4l-subdev7 entity.revision=0
+E/mm-camera(  299): vpe_hardware_find_subdev:716: entity.name=v4l-subdev8 entity.revision=0
+E/mm-camera(  299): vpe_hardware_find_subdev:716: entity.name=v4l-subdev9 entity.revision=0
+E/mm-camera(  299): vpe_hardware_find_subdev:716: entity.name=v4l-subdev10 entity.revision=0
+E/mm-camera(  299): vpe_hardware_find_subdev:716: entity.name=v4l-subdev11 entity.revision=0
+E/mm-camera(  299): vpe_hardware_find_subdev:711: done enumerating media entities
+E/mm-camera(  299): vpe_hardware_find_subdev:716: entity.name=video1 entity.revision=0
+E/mm-camera(  299): vpe_hardware_find_subdev:711: done enumerating media entities
+E/mm-camera(  299): vpe_hardware_find_subdev:716: entity.name=video2 entity.revision=0
+E/mm-camera(  299): vpe_hardware_find_subdev:711: done enumerating media entities
+E/mm-camera(  299): vpe_hardware_find_subdev:683: no more media devices
+E/mm-camera(  299): vpe_hardware_find_subdev:728: no vpe device found.
+E/mm-camera(  299): vpe_hardware_create:31: error: cannot find vpe subdev
+E/mm-camera(  299): vpe_module_create_vpe_ctrl:141, failed, cannnot create vpe hardware instance
+E/mm-camera(  299): vpe_module_init:34 failed
+E/mm-camera(  299): c2d_module_init:28 name=c2d
+E/mm-camera(  299): c2d_module_init:67: info: C2D module_init successful
+E/mm-camera-img(  299): img_core_get_comp:37] role 0 name qcom.wavelet
+E/mm-camera-img(  299): img_core_get_comp:42] comp_index[0] role 0 name qcom.wavelet
+E/mm-camera-img(  299): img_core_get_comp:47] find component role 0 name qcom.wavelet
+E/mm-camera-img(  299): wd_comp_load:1537] WD library loaded successfully dsp 0
+E/mm-camera-img(  299): module_imglib_create_port:1254 portname imglib_d2_i0
+E/mm-camera-img(  299): img_core_get_comp:37] role 2 name qcom.faceproc
+E/mm-camera-img(  299): img_core_get_comp:42] comp_index[0] role 0 name qcom.wavelet
+E/mm-camera-img(  299): img_core_get_comp:42] comp_index[1] role 1 name qcom.hdr
+E/mm-camera-img(  299): img_core_get_comp:42] comp_index[2] role 2 name qcom.faceproc
+E/mm-camera-img(  299): img_core_get_comp:47] find component role 2 name qcom.faceproc
+E/Diag_Lib(  210): Setting internal use port to rmnet0
+E/Diag_Lib(  296): Setting internal use port to rmnet0
+E/QMI_FW  (  296): QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+E/QMI_FW  (  296): QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+E/QMI_FW  (  296): QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+E/QMI_FW  (  296): QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+E/QMI_FW  (  296): QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+E/QMI_FW  (  296): QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+E/QC-time-services(  296): Daemon:genoff_modem_qmi_init: qmi_client_get_service_list returned -2num_services 0
+I/wcnss_service(  301): wcnss_read_and_store_cal_data trying to read cal
+I/charger_monitor(  381): Starting charger monitor
+D/charger_monitor(  381): vadc path /sys/bus/spmi/devices/qpnp-vadc-df111c00/ vin_min_default 4300000 fast_chg 1
+I/qcom-bluetooth(  386): /system/etc/init.qcom.bt.sh: Bluetooth stack is Bluedroid
+W/linker  (  299): libmmcamera_faceproc.so has text relocations. This is wasting memory and is a security risk. Please fix.
+E/mm-camera-img(  299): img_core_get_comp:37] role 1 name qcom.hdr
+E/mm-camera-img(  299): img_core_get_comp:42] comp_index[0] role 0 name qcom.wavelet
+E/mm-camera-img(  299): img_core_get_comp:42] comp_index[1] role 1 name qcom.hdr
+E/mm-camera-img(  299): img_core_get_comp:47] find component role 1 name qcom.hdr
+D/charger_monitor(  381): skipped uevent listening
+D/charger_monitor(  381): init target 1500000
+I/Gecko   (  454): [454] WARNING: Tried to RegisterCallback without an AtExitManager: file /builds/slave/b2g_b2g-in_flm-kk_eng_dep-0000/build/gecko/ipc/chromium/src/base/at_exit.cc, line 40
+D/charger_monitor(  381): AICL: start
+I/mediaserver(  201): ServiceManager: 0xb81b6448
+I/AudioFlinger(  201): Using default 3000 mSec as standby time.
+E/MediaPlayerFactory(  201): calling dlopen on FACTORY_LIB
+D/QSEECOMD: (  298): Parent qseecom daemon process paused!!
+I/rmt_storage(  329): No EBR found
+V/AudioDaemonMain(  300): Audio daemon starting sequence..
+I/rmt_storage(  329): Error (-1) parsing MBR partitions
+I/rmt_storage(  329): Registering modemst1: 0x4a /boot/modem_fs1
+I/rmt_storage(  329): Registering modemst2: 0x4b /boot/modem_fs2
+I/rmt_storage(  329): Registering fsg: 0x58 /boot/modem_fsg
+I/rmt_storage(  329): Registering ssd: 0x5d ssd
+I/rmt_storage(  329): Registering fsc: 0xff /boot/modem_fsc
+I/rmt_storage(  329): 5 GPT partitions found
+V/AudioDaemon(  300): Start audiod daemon
+V/AudioDaemon(  300): readyToRun: open snd card state node files
+V/AudioDaemon(  300): Start threadLoop()
+D/AudioDaemon(  300): Opening sound card state : /proc/asound/card---/state
+E/AudioDaemon(  300): Open /proc/asound/card---/state failed : No such file or directory
+V/AudioDaemon(  300): bool android::AudioDaemon::getStateFDs(std::vector<std::pair<int, int> >&): 0 sound cards detected
+E/AudioDaemon(  300): Sleeping for 100 ms
+D/charger_monitor(  381): AICL: step up: input_current_max 600000 usb_target_ua 1500000
+E/MediaPlayerFactory(  201): calling dlsym on pFactoryLib for FACTORY_CREATE_FN
+E/MediaPlayerFactory(  201): registering DASH Player factory...
+D/charger_monitor(  381): AICL: step up: input_current_max 700000 usb_target_ua 1500000
+D/QSEECOMD: (  506): qseecom listener service threads starting!!!
+D/QSEECOMD: (  506): Total listener services to start = 5
+E/QSEECOMD: (  506): Listener: index = 0, hierarchy = 1
+D/QSEECOMD: (  506): Init dlopen(librpmb.so, RTLD_NOW) succeeds
+D/QSEECOMD: (  506): Init::Init dlsym(g_FSHandle rpmb_start) succeeds
+D/QSEECOMAPI: (  506): QSEECom_register_listener 8192 sb_length = 0x5000
+D/QSEECOMD: (  506): Init rpmb_start ret = 0
+D/QSEECOMD: (  506): RPMB system services: Started (Listener ID = 8192)
+E/QSEECOMD: (  506): Listener: index = 1, hierarchy = 1
+D/QSEECOMD: (  506): Init dlopen(libssd.so, RTLD_NOW) succeeds
+D/QSEECOMD: (  506): Init::Init dlsym(g_FSHandle ssd_start) succeeds
+D/QSEECOMAPI: (  506): QSEECom_register_listener 12288 sb_length = 0x5000
+I/CameraService(  201): CameraService started (pid=201)
+D/QSEECOMD: (  506): Init ssd_start ret = 0
+D/QSEECOMD: (  506): SSD system services: Started (Listener ID = 12288)
+E/QSEECOMD: (  506): Listener: index = 2, hierarchy = 1
+E/QSEECOMD: (  506): Init dlopen(libsecureui.so, RLTD_NOW) is failed....
+E/QSEECOMD: (  506): Listener: index = 3, hierarchy = 1
+D/charger_monitor(  381): AICL: step up: input_current_max 800000 usb_target_ua 1500000
+I/rmt_storage(  329): rmt_storage_connect_cb: clnt_h=0x1 conn_h=0xb7215da8
+I/rmt_storage(  329): rmt_storage_open_cb: /boot/modem_fs1: clnt_h=0x1: req_h=0x1 msg_id=1: Client found
+I/rmt_storage(  329): rmt_storage_open_cb: /boot/modem_fs1: clnt_h=0x1: req_h=0x1 msg_id=1: Send response: res=0 err=0
+I/rmt_storage(  329): rmt_storage_connect_cb: clnt_h=0x2 conn_h=0xb7215e00
+I/rmt_storage(  329): rmt_storage_open_cb: /boot/modem_fs2: clnt_h=0x2: req_h=0x2 msg_id=1: Client found
+I/rmt_storage(  329): rmt_storage_open_cb: /boot/modem_fs2: clnt_h=0x2: req_h=0x2 msg_id=1: Send response: res=0 err=0
+D/QSEECOMD: (  506): Init dlopen(libdrmtime.so, RTLD_NOW) succeeds
+D/QSEECOMD: (  506): Init::Init dlsym(g_FSHandle atime_start) succeeds
+D/QSEECOMAPI: (  506): QSEECom_register_listener 11 sb_length = 0x5000
+D/QSEECOMD: (  506): Init atime_start ret = 0
+D/QSEECOMD: (  506): time services: Started (Listener ID = 11)
+E/QSEECOMD: (  506): Listener: index = 4, hierarchy = 1
+D/QSEECOMD: (  506): Init dlopen(libdrmfs.so, RTLD_NOW) succeeds
+D/QSEECOMD: (  506): Init::Init dlsym(g_FSHandle fs_start) succeeds
+D/QSEECOMAPI: (  506): QSEECom_register_listener 10 sb_length = 0x5000
+D/QSEECOMD: (  506): Init fs_start ret = 0
+D/QSEECOMD: (  506): file system services: Started (Listener ID = 10)
+D/QSEECOMD: (  506): QSEECOM DAEMON RUNNING
+I/rmt_storage(  329): rmt_storage_connect_cb: clnt_h=0x3 conn_h=0xb7215e58
+I/rmt_storage(  329): rmt_storage_open_cb: /boot/modem_fsg: clnt_h=0x3: req_h=0x3 msg_id=1: Client found
+I/rmt_storage(  329): rmt_storage_open_cb: /boot/modem_fsg: clnt_h=0x3: req_h=0x3 msg_id=1: Send response: res=0 err=0
+I/rmt_storage(  329): rmt_storage_connect_cb: clnt_h=0x4 conn_h=0xb7215eb0
+I/rmt_storage(  329): rmt_storage_open_cb: /boot/modem_fsc: clnt_h=0x4: req_h=0x4 msg_id=1: Client found
+I/rmt_storage(  329): rmt_storage_open_cb: /boot/modem_fsc: clnt_h=0x4: req_h=0x4 msg_id=1: Send response: res=0 err=0
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fsg: clnt_h=0x3 Worker thread started
+I/rmt_storage(  329): wake lock name: rmt_storage_-1222548352, name creation success: 23
+I/rmt_storage(  329): rmt_storage_alloc_buff_cb: /boot/modem_fs1: clnt_h=0x1: req_h=0x5 msg_id=4: Alloc request received: Size: 1572864
+I/rmt_storage(  329): rmt_storage_alloc_buff_cb: /boot/modem_fs1: clnt_h=0x1: req_h=0x5 msg_id=4: Send response: res=0 err=0
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fsc: clnt_h=0x4 Worker thread started
+I/rmt_storage(  329): wake lock name: rmt_storage_-1222547768, name creation success: 23
+I/rmt_storage(  329): rmt_storage_rw_iovec_cb: /boot/modem_fs1: clnt_h=0x1: req_h=0x6 msg_id=3: R/W request received
+I/rmt_storage(  329): Shared mem address set to 0xb697b000
+I/rmt_storage(  329): wakelock acquired: 1, error no: 42
+D/charger_monitor(  381): AICL: step up: input_current_max 900000 usb_target_ua 1500000
+W/        (  205): could not open framebuffer
+D/charger_monitor(  381): AICL: step up: input_current_max 1000000 usb_target_ua 1500000
+E/mm-camera-img(  299): hdr_comp_load:1146] HDR library loaded successfully
+E/hdr     (  299): Port hdr_dummy initialized
+E/mm-camera-img(  299): module_imglib_create_dummy_port:1362 portname imglib_dymmy_d1_i0
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs1: clnt_h=0x1 Worker thread started
+I/rmt_storage(  329): wake lock name: rmt_storage_-1222549784, name creation success: 23
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2 Worker thread started
+I/rmt_storage(  329): wake lock name: rmt_storage_-1222548936, name creation success: 23
+D/charger_monitor(  381): AICL: step up: input_current_max 1100000 usb_target_ua 1500000
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs1: clnt_h=0x1: req_h=0x6 msg_id=3: Bytes read = 512
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs1: clnt_h=0x1: req_h=0x6 msg_id=3: Send response: res=0 err=0
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs1: clnt_h=0x1 About to block rmt_storage client thread (th_id: -1222549784) wakelock released: 0, error no: 22
+I/rmt_storage(  329):
+I/rmt_storage(  329): rmt_storage_rw_iovec_cb: /boot/modem_fs2: clnt_h=0x2: req_h=0x7 msg_id=3: R/W request received
+I/rmt_storage(  329): Shared mem address set to 0xb697b000
+I/rmt_storage(  329): wakelock acquired: 1, error no: 42
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2 Unblock worker thread (th_id: -1222548936)
+D/mm-camera-intf(  201): index = 0 flag = 3 mount_angle = 270 facing = 0
+D/mm-camera-intf(  201): index = 1 flag = 103 mount_angle = 270 facing = 1
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2: req_h=0x7 msg_id=3: Bytes read = 512
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2: req_h=0x7 msg_id=3: Send response: res=0 err=0
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2 About to block rmt_storage client thread (th_id: -1222548936) wakelock released: 1, error no: 0
+I/rmt_storage(  329):
+I/CameraService(  201): Loaded "QCamera Module" camera module
+I/rmt_storage(  329): rmt_storage_rw_iovec_cb: /boot/modem_fs2: clnt_h=0x2: req_h=0x8 msg_id=3: R/W request received
+I/rmt_storage(  329): wakelock acquired: 1, error no: 42
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2 Unblock worker thread (th_id: -1222548936)
+D/charger_monitor(  381): AICL: step up: input_current_max 1200000 usb_target_ua 1500000
+D/charger_monitor(  381): AICL: step up: input_current_max 1300000 usb_target_ua 1500000
+D/charger_monitor(  381): AICL: step up: input_current_max 1400000 usb_target_ua 1500000
+D/charger_monitor(  381): AICL: step up: input_current_max 1500000 usb_target_ua 1500000
+D/AudioDaemon(  300): Opening sound card state : /proc/asound/card0/state
+V/AudioDaemon(  300): bool android::AudioDaemon::getStateFDs(std::vector<std::pair<int, int> >&): 1 sound cards detected
+D/AudioDaemon(  300): read for sound card state change before while
+D/AudioDaemon(  300): sound card state file content: ONLINE
+D/AudioDaemon(  300): � before while
+E/AudioDaemon(  300): put cur_state to online
+D/AudioDaemon(  300): cur_state=0, bootup_complete=0
+E/AudioDaemon(  300): sound card up is deteced before while
+E/AudioDaemon(  300): bootup_complete set to 1
+D/AudioDaemon(  300): poll() for sound card state change
+I/AudioPolicyManagerBase(  201): loadAudioPolicyConfig() loaded /system/etc/audio_policy.conf
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2: req_h=0x8 msg_id=3: Bytes read = 1571840
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2: req_h=0x8 msg_id=3: Send response: res=0 err=0
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2 About to block rmt_storage client thread (th_id: -1222548936) wakelock released: 1, error no: 0
+I/rmt_storage(  329):
+D/audio_hw_primary(  201): adev_open: enter
+D/charger_monitor(  381): AICL: reached target, no vchg loop was on
+E/charger_monitor(  381): failed to start wakelock timer
+D/charger_monitor(  381): init target 1500000
+D/charger_monitor(  381): init target 1500000
+D/charger_monitor(  381): init target 1500000
+E/audio_route(  201): Control 'RX2 MIX2 INP2' doesn't exist - skipping
+E/audio_route(  201): Control 'RX1 MIX2 INP2' doesn't exist - skipping
+E/audio_route(  201): Control 'MI2S_DL_HL Switch' doesn't exist - skipping
+E/audio_route(  201): Control 'MI2S_DL_HL Switch' doesn't exist - skipping
+D/charger_monitor(  381): init target 1500000
+D/msm8974_platform(  201): platform_init: Opened sound card:0
+D/ACDB-LOADER(  201): ACDB -> Load file: /etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb
+D/ACDB-LOADER(  201): ACDB -> Load file: /etc/acdbdata/QRD/QRD_General_cal.acdb
+D/ACDB-LOADER(  201): ACDB -> Load file: /etc/acdbdata/QRD/QRD_Global_cal.acdb
+D/ACDB-LOADER(  201): ACDB -> Load file: /etc/acdbdata/QRD/QRD_Handset_cal.acdb
+D/ACDB-LOADER(  201): ACDB -> Load file: /etc/acdbdata/QRD/QRD_Hdmi_cal.acdb
+D/ACDB-LOADER(  201): ACDB -> Load file: /etc/acdbdata/QRD/QRD_Headset_cal.acdb
+D/ACDB-LOADER(  201): ACDB -> Load file: /etc/acdbdata/QRD/QRD_Speaker_cal.acdb
+D/ACDB-LOADER(  201): ACDB -> ACDB_CMD_INITIALIZE_V2
+D/ACDB-LOADER(  201): ACDB -> ACPH INIT
+D/        (  201): [ACPH]->Online service registered with ACPH
+D/        (  201): [ACPH]->ACPH init success
+D/ACDB-LOADER(  201): ACDB -> RTAC INIT
+D/        (  201): [ACPH]->DSP RTC service registered with ACPH
+D/ACDB-LOADER(  201): ACDB -> ADIE RTAC INIT
+D/        (  201): [ACPH]->ADIE RTC service registered with ACPH
+D/ACDB-LOADER(  201): No existing ION info in ACDB driver
+D/ACDB-LOADER(  201): ACDB -> ION_IOC_ALLOC
+D/ACDB-LOADER(  201): ACDB -> ION_IOC_SHARE
+D/ACDB-LOADER(  201): ACDB -> MMAP ADDR
+D/ACDB-LOADER(  201): ACDB -> register MEM to ACDB driver: 0xb5ddf000
+D/ACDB-LOADER(  201): ACDB -> send_asm_topology
+D/ACDB-LOADER(  201): ACDB -> ACDB_CMD_GET_AUDPROC_STREAM_TOPOLOGY_ID
+D/ACDB-LOADER(  201): ACDB -> send_adm_custom_topology
+D/ACDB-LOADER(  201): ACDB -> ACDB_CMD_GET_AUDIO_COPP_TOPOLOGIES
+D/ACDB-LOADER(  201): ACDB -> AUDIO_SET_ADM_CUSTOM_TOPOLOGY
+D/ACDB-LOADER(  201): ACDB -> send_asm_custom_topology
+D/ACDB-LOADER(  201): ACDB -> ACDB_CMD_GET_AUDIO_POPP_TOPOLOGIES
+D/        (  201): ACDBFILE_MGR: Property for the pid 00012E48 not found
+D/        (  201): ACDB_COMMAND: Failed to fetch the property info for pid 00012E48
+E/ACDB-LOADER(  201): Error: ACDB get asm topologies returned = -18
+D/ACDB-LOADER(  201): ACDB -> AUDIO_SET_ASM_CUSTOM_TOPOLOGY
+D/ACDB-LOADER(  201): send mbhc data
+D/ACDB-LOADER(  201): ACDB -> ACDB_CMD_GET_ANC_SETTING
+D/        (  201): Invalid AV file. It doesnt contain LUT for tblid 0000000A
+D/        (  201): Failed to fetch the lookup information of the device 0000001A
+E/ACDB-LOADER(  201): Error: ACDB ANC returned = -1
+D/ACDB-LOADER(  201): ACDB -> ACDB_CMD_GET_ANC_SETTING
+D/        (  201): Invalid AV file. It doesnt contain LUT for tblid 0000000A
+D/        (  201): Failed to fetch the lookup information of the device 0000001B
+E/ACDB-LOADER(  201): Error: ACDB ANC returned = -1
+D/ACDB-LOADER(  201): ACDB -> ACDB_CMD_GET_ANC_SETTING
+D/        (  201): Invalid AV file. It doesnt contain LUT for tblid 0000000A
+D/        (  201): Failed to fetch the lookup information of the device 0000001C
+E/ACDB-LOADER(  201): Error: ACDB ANC returned = -1
+D/ACDB-LOADER(  201): ACDB -> ACDB_CMD_GET_ANC_SETTING
+D/        (  201): Invalid AV file. It doesnt contain LUT for tblid 0000000A
+D/        (  201): Failed to fetch the lookup information of the device 0000001D
+E/ACDB-LOADER(  201): Error: ACDB ANC returned = -1
+D/ACDB-LOADER(  201): ACDB -> ACDB_CMD_GET_ANC_SETTING
+D/        (  201): Invalid AV file. It doesnt contain LUT for tblid 0000000A
+D/        (  201): Failed to fetch the lookup information of the device 0000001E
+E/ACDB-LOADER(  201): Error: ACDB ANC returned = -1
+D/ACDB-LOADER(  201): ACDB -> ACDB_CMD_GET_ANC_SETTING
+D/        (  201): Invalid AV file. It doesnt contain LUT for tblid 0000000A
+D/        (  201): Failed to fetch the lookup information of the device 0000001F
+E/ACDB-LOADER(  201): Error: ACDB ANC returned = -1
+D/ACDB-LOADER(  201): ACDB -> ACDB_CMD_GET_ANC_SETTING
+D/        (  201): Invalid AV file. It doesnt contain LUT for tblid 0000000A
+D/        (  201): Failed to fetch the lookup information of the device 00000067
+E/ACDB-LOADER(  201): Error: ACDB ANC returned = -1
+D/ACDB-LOADER(  201): ACDB -> init done!
+D/platform_parser(  201): platform_info_init: Failed to open /system/etc/platform_info.xml, using defaults.
+D/audio_hw_ssr(  201): audio_extn_ssr_update_enabled: surround sound recording is not supported
+I/AudioFlinger(  201): loadHwModule() Loaded primary audio interface from QCOM Audio HAL (audio) handle 1
+I/AudioFlinger(  201): HAL output buffer size 960 frames, normal mix buffer size 960 frames
+I/AudioMixer(  201): found effect "Multichannel Downmix To Stereo" from The Android Open Source Project
+I/AudioFlinger(  201): Using module 1 has the primary audio interface
+I/AudioFlinger(  201): AudioFlinger's thread 0xb5d90008 ready to run
+W/AudioFlinger(  201): Thread AudioOut_2 cannot connect to the power manager service
+D/audio_hw_primary(  201): out_set_parameters: enter: usecase(0: deep-buffer-playback) kvpairs: routing=2
+D/audio_hw_extn(  201): audio_extn_set_anc_parameters: anc_enabled:0
+W/AudioFlinger(  201): Thread AudioOut_2 cannot connect to the power manager service
+W/AudioFlinger(  201): Thread AudioOut_2 cannot connect to the power manager service
+E/AudioFlinger(  201): no wake lock to update!
+I/audio_a2dp_hw(  201): adev_open:  adev_open in A2dp_hw module
+I/AudioFlinger(  201): loadHwModule() Loaded a2dp audio interface from A2DP Audio HW HAL (audio) handle 3
+I/AudioFlinger(  201): loadHwModule() Loaded usb audio interface from USB audio HW HAL (audio) handle 4
+I/r_submix(  201): adev_open(name=audio_hw_if)
+I/r_submix(  201): adev_init_check()
+I/AudioFlinger(  201): loadHwModule() Loaded r_submix audio interface from Wifi Display audio HAL (audio) handle 5
+I/AudioPolicyService(  201): Loaded audio policy from LEGACY Audio Policy HAL (audio_policy)
+I/qdhwcomposer(  205): Initializing Qualcomm Hardware Composer
+I/qdhwcomposer(  205): MDP version: 304
+D/qdhwcomposer(  205): hwc_getDisplayAttributes disp = 0, width = 480
+D/qdhwcomposer(  205): hwc_getDisplayAttributes disp = 0, height = 854
+E/qdhwcomposer(  205): Unknown display attribute 0
+I/QCOM PowerHAL(  205): QCOM power HAL initing.
+D/qdhwcomposer(  205): hwc_blank: Unblanking display: 0
+D/qdhwcomposer(  205): hwc_blank: Done unblanking display: 0
+W/Gonk    (  205): Could not open boot animation
+W/Gonk    (  205): Show solid color frame for bootAnim
+D/qdutils (  205): DEBUG_CALC_FPS: 0
+D/qdutils (  205): period: 10
+D/qdutils (  205): ignorethresh_us: 500000
+E/Diag_Lib(  351): qmi_init:  Not initialized, calling process init sequence
+E/Diag_Lib(  351): Setting internal use port to rmnet0
+E/Diag_Lib(  340): qmi_init:  Not initialized, calling process init sequence
+E/Diag_Lib(  340): Setting internal use port to rmnet0
+I/GeckoConsole(  205): Could not read chrome manifest 'file:///system/b2g/chrome.manifest'.
+D/charger_monitor(  381): init target 1500000
+D/charger_monitor(  381): init target 1500000
+E/QMI_FW  (  296): QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+E/QMI_FW  (  296): QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+E/QMI_FW  (  296): QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+E/QC-time-services(  296): Daemon:genoff_modem_qmi_init: qmi_client_get_service_list returned 0num_services 1
+E/QMI_FW  (  296): QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+E/QMI_FW  (  296): QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+E/QMI_FW  (  296): QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+E/QMI_FW  (  296): QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+E/QMI_FW  (  296): QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+E/QMI_FW  (  296): QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+E/QMI_FW  (  296): QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+E/QMI_FW  (  296): QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+E/QMI_FW  (  296): QMUXD: WARNING qmi_qmux_if_pwr_up_init failed! rc=-1
+D/QC-time-services(  296): Daemon:rtc_get: Time read from RTC -- MM/DD/YY HH:MM:SS6/3/70 21:43:40
+D/QC-time-services(  296): Daemon:Value read from RTC seconds = 15889420000
+D/QC-time-services(  296): Daemon:genoff_modem_qmi_init: Initial transaction successfull
+E/QC-time-services(  296): Daemon:tod_update_ind_cb: Got Update from modem msg_id 40
+D/QC-time-services(  296): Daemon: Time-services: All initializations done
+E/QC-time-services(  296): Daemon: Time-services: Waiting to acceptconnection
+D/charger_monitor(  381): init target 1500000
+V/NatController(  197): runCmd(/system/bin/iptables -F natctrl_FORWARD) res=0
+V/NatController(  197): runCmd(/system/bin/iptables -A natctrl_FORWARD -j DROP) res=0
+V/NatController(  197): runCmd(/system/bin/iptables -t nat -F natctrl_nat_POSTROUTING) res=0
+V/NatController(  197): runCmd(/system/bin/ip route flush cache) res=0
+V/NatController(  197): runCmd(/system/bin/iptables -F natctrl_tether_counters) res=1
+I/ThermalEngine(  210): qmi: Instance id 45 for fusion TS
+I/ThermalEngine(  210): MODEM thermal mitigation available.
+I/ThermalEngine(  210): ACTION: MODEM - Pending request: pa mitigation succeeded for level 0.
+I/ThermalEngine(  210): Mitigation:Modem:0
+I/ThermalEngine(  210): ACTION: MODEM - Pending request: cpuv_restriction_cold mitigation succeeded for level 0.
+I/ThermalEngine(  210): Mitigation:VDD[MODEM-cpuv_restriction_cold]:0
+I/ThermalEngine(  210): ADSP thermal mitigation available.
+V/NatController(  197): runCmd(/system/bin/iptables -X natctrl_tether_counters) res=1
+I/ThermalEngine(  210): ACTION: ADSP - Pending request: cpuv_restriction_cold mitigation succeeded for level 0.
+I/ThermalEngine(  210): Mitigation:VDD[ADSP-cpuv_restriction_cold]:0
+V/NatController(  197): runCmd(/system/bin/iptables -N natctrl_tether_counters) res=0
+E/ServiceManager(  190): add_service('android.security.keystore',0xc) uid=0 - ALREADY REGISTERED, OVERRIDE
+I/ServiceManager(  190): service 'android.security.keystore' died
+I/VolumeManager(  205): changing state from 'Uninitialized' to 'Starting'
+I/VolumeManager(  205): Connected to vold
+I/VolumeManager(  205): Volume sdcard (1): changing state from Init to Idle (1 observers)
+I/VolumeManager(  205): Volume sdcard1 (2): changing state from Init to NoMedia (1 observers)
+I/VolumeManager(  205): Volume sdcard1: IsRemovable set to 1 state NoMedia
+I/VolumeManager(  205): Volume sdcard1: IsHotSwappable set to 1 state NoMedia
+I/VolumeManager(  205): Unable to open volume configuration file '/system/etc/volume.cfg' - ignoring
+I/VolumeManager(  205): READY: Volume: sdcard (1) is Idle and inserted @ /storage/sdcard gen -1 locked 1
+I/VolumeManager(  205): READY:   Sharing dis Mounting n Formating n Unmounting n
+I/VolumeManager(  205): READY: Volume: sdcard1 (2) is NoMedia and missing @ /storage/sdcard1 gen -1 locked 1
+I/VolumeManager(  205): READY:   Sharing dis Mounting n Formating n Unmounting n
+I/VolumeManager(  205): changing state from 'Starting' to 'Volumes Ready'
+I/AutoMounter(  205): AutoMounter state changed from IDLE to UMS_CONFIGURED
+I/AutoMounter(  205): UpdateState: ums:A1C1E0 mtp:A1C0E0 mode:0 usb:1 tryToShare:0 state:UMS_CONFIGURED
+I/AutoMounter(  205): UpdateState: Volume sdcard is Idle and inserted
+I/AutoMounter(  205): UpdateState: Mounting sdcard
+I/VolumeManager(  205): Volume sdcard (1): changing state from Idle to Checking (2 observers)
+E/Vold    (  191): Volume::mountVol DeviceNodes n:1
+I/Vold    (  191): /dev/block/vold/179:30 being considered for volume sdcard
+D/Vold    (  191): Volume sdcard state changing 1 (Idle-Unmounted) -> 3 (Checking)
+W/Vold    (  191): Skipping fs checks
+D/Vold    (  191): blkid identified as /dev/block/vold/179:30: LABEL="Internal SD" UUID="D32E-8B14" TYPE="vfat"
+I/VolumeManager(  205): Volume sdcard (1): changing state from Checking to Check-Mounted (2 observers)
+I/AutoMounter(  205): AutoMounter state changed from UMS_CONFIGURED to IDLE
+I/AutoMounter(  205): UpdateState: ums:A1C1E0 mtp:A1C0E0 mode:0 usb:1 tryToShare:0 state:IDLE
+I/AutoMounter(  205): UpdateState: Volume sdcard is Check-Mounted and inserted
+D/Vold    (  191): Volume sdcard state changing 3 (Checking) -> 4 (Mounted)
+I/Gecko   (  205): MobileConnectionService: init complete
+I/Gecko   (  205): 1417470221802	Marionette	INFO	Marionette enabled via build flag and pref
+I/VolumeManager(  205): Volume sdcard (1): changing state from Check-Mounted to Mounted @ '/storage/sdcard' (2 observers) mountGeneration = 1, locked = 1
+I/AutoMounter(  205): UpdateState: Volume sdcard1 is NoMedia and missing
+D/charger_monitor(  381): init target 1500000
+D/MDnsDS  (  197): MDnsSdListener::Hander starting up
+D/MDnsDS  (  197): MDnsSdListener starting to monitor
+D/MDnsDS  (  197): Going to poll with pollCount 1
+I/Gecko   (  205): 1417470222909	Marionette	INFO	Listening on port 2828
+D/EventHub(  205): No input device configuration file found for device 'msm8x10-skuaa-snd-card Headset Jack'.
+I/EventHub(  205): New device: id=1, fd=71, path='/dev/input/event8', name='msm8x10-skuaa-snd-card Headset Jack', classes=0x80, configuration='', keyLayout='', keyCharacterMap='', builtinKeyboard=false, usingSuspendBlockIoctl=true, usingClockIoctl=true
+D/EventHub(  205): No input device configuration file found for device 'msm8x10-skuaa-snd-card Button Jack'.
+W/EventHub(  205): Unable to disable kernel key repeat for /dev/input/event7: Function not implemented
+I/EventHub(  205): New device: id=2, fd=73, path='/dev/input/event7', name='msm8x10-skuaa-snd-card Button Jack', classes=0x41, configuration='', keyLayout='/system/usr/keylayout/Generic.kl', keyCharacterMap='/system/usr/keychars/Generic.kcm', builtinKeyboard=false, usingSuspendBlockIoctl=true, usingClockIoctl=true
+D/EventHub(  205): No input device configuration file found for device 'qpnp_pon'.
+W/EventHub(  205): Unable to disable kernel key repeat for /dev/input/event5: Function not implemented
+I/EventHub(  205): New device: id=3, fd=74, path='/dev/input/event5', name='qpnp_pon', classes=0x1, configuration='', keyLayout='/system/usr/keylayout/Generic.kl', keyCharacterMap='/system/usr/keychars/Generic.kcm', builtinKeyboard=false, usingSuspendBlockIoctl=true, usingClockIoctl=true
+D/EventHub(  205): No input device configuration file found for device 'compass'.
+D/EventHub(  205): No input device configuration file found for device 'bma2x2'.
+D/EventHub(  205): No input device configuration file found for device 'stk3x1x-ps'.
+D/EventHub(  205): No input device configuration file found for device 'stk3x1x-als'.
+D/EventHub(  205): No input device configuration file found for device 'gpio-keys'.
+W/EventHub(  205): Unable to disable kernel key repeat for /dev/input/event6: Function not implemented
+I/EventHub(  205): New device: id=8, fd=75, path='/dev/input/event6', name='gpio-keys', classes=0x1, configuration='', keyLayout='/system/usr/keylayout/gpio-keys.kl', keyCharacterMap='/system/usr/keychars/Generic.kcm', builtinKeyboard=false, usingSuspendBlockIoctl=true, usingClockIoctl=true
+D/EventHub(  205): No input device configuration file found for device 'Goodix-TS'.
+W/EventHub(  205): Unable to disable kernel key repeat for /dev/input/event0: Function not implemented
+I/EventHub(  205): New device: id=9, fd=76, path='/dev/input/event0', name='Goodix-TS', classes=0x15, configuration='', keyLayout='/system/usr/keylayout/Generic.kl', keyCharacterMap='/system/usr/keychars/Generic.kcm', builtinKeyboard=false, usingSuspendBlockIoctl=true, usingClockIoctl=true
+I/InputReader(  205): Device added: id=-1, name='Virtual', sources=0x00000301
+I/InputReader(  205): Device reconfigured: id=9, name='Goodix-TS', size 480x854, orientation 0, mode 1, display id 0
+I/InputReader(  205): Device added: id=9, name='Goodix-TS', sources=0x00001103
+I/InputReader(  205): Device added: id=8, name='gpio-keys', sources=0x00000101
+I/InputReader(  205): Device added: id=3, name='qpnp_pon', sources=0x00000101
+I/InputReader(  205): Device added: id=2, name='msm8x10-skuaa-snd-card Button Jack', sources=0x00000501
+I/InputReader(  205): Device added: id=1, name='msm8x10-skuaa-snd-card Headset Jack', sources=0x80000000
+E/Sensors (  205): couldn't find 'lightsensor-level' input device
+I/rmt_storage(  329): rmt_storage_connect_cb: clnt_h=0x5 conn_h=0xb7216178
+I/rmt_storage(  329): rmt_storage_rw_iovec_cb: /boot/modem_fs1: clnt_h=0x1: req_h=0x9 msg_id=3: R/W request received
+I/rmt_storage(  329): wakelock acquired: 1, error no: 42
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs1: clnt_h=0x1 Unblock worker thread (th_id: -1222549784)
+E/Sensors (  205): couldn't find 'cm36283-ls' input device
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs1: clnt_h=0x1: req_h=0x9 msg_id=3: Bytes written = 1572864
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs1: clnt_h=0x1: req_h=0x9 msg_id=3: Send response: res=0 err=0
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs1: clnt_h=0x1 About to block rmt_storage client thread (th_id: -1222549784) wakelock released: 1, error no: 22
+I/rmt_storage(  329):
+I/rmt_storage(  329): rmt_storage_disconnect_cb: clnt_h=0x0x5 conn_h=0x0xb7216178
+E/Sensors (  205): couldn't find 'proximity' input device
+E/Sensors (  205): couldn't find 'cm36283-ps' input device
+E/Sensors (  205): couldn't find 'MPU3050' input device
+E/Sensors (  205): get sensor chip id is 248
+E/Sensors (  205): couldn't find 'bmp18x' input device
+D/Sensors (  205): ID_M = 1, handle = 1, en = 0
+E/Sensors (  205): change G sensor state "0 -> 90"
+D/Sensors (  205): ID_M = 1, handle = 2, en = 0
+E/Sensors (  205): change G sensor state "90 -> 0"
+E/Sensors (  205): change G sensor state "0 -> 1"
+I/HWComposer(  205): Creating new instance
+I/qdhwcomposer(  205): hwc_registerProcs
+I/qdhwcomposer(  205): Initializing UEVENT Thread
+I/qdhwcomposer(  205): Initializing VSYNC Thread
+I/qdhwcomposer(  205): vsync_loop: Reading event 0 for dpy 0 from /sys/class/graphics/fb0/vsync_event
+I/qdhwcomposer(  205): vsync_loop: Reading event 1 for dpy 0 from /sys/class/graphics/fb0/show_blank_event
+I/qdhwcomposer(  205): vsync_loop: Reading event 0 for dpy 1 from /sys/class/graphics/fb-1/vsync_event
+I/qdhwcomposer(  205): vsync_loop: Reading event 1 for dpy 1 from /sys/class/graphics/fb-1/show_blank_event
+E/Diag_Lib(  359): qmi_init:  Not initialized, calling process init sequence
+E/Diag_Lib(  359): Setting internal use port to rmnet0
+I/Gecko:DumpUtils(  205): nsVolume: sdcard state Mounted @ '/storage/sdcard' gen 1 locked 0 fake 0 media 1 sharing 0 formatting 0 unmounting 0 removable 0 hotswappable 0
+I/AutoMounter(  205): AutoMounter state changed from IDLE to UMS_CONFIGURED
+I/AutoMounter(  205): UpdateState: ums:A1C1E0 mtp:A1C0E0 mode:0 usb:1 tryToShare:0 state:UMS_CONFIGURED
+I/AutoMounter(  205): UpdateState: Volume sdcard is Mounted and inserted @ /storage/sdcard gen 1 locked 0 sharing dis
+I/AutoMounter(  205): UpdateState: Volume sdcard1 is NoMedia and missing
+I/PerformanceTiming(  205): Performance Entry: b2g|mark|gecko-shell-html-load|514.175000|0.000000|1417470224654
+I/PerformanceTiming(  205): Performance Entry: b2g|mark|gecko-settings-loadstart|529.310000|0.000000|1417470224669
+I/PerformanceTiming(  205): Performance Entry: b2g|mark|gecko-shell-loadstart|1056.635000|0.000000|1417470225196
+I/Gecko   (  205): AlarmService: init()
+I/Gecko   (  205): AlarmService: _restoreAlarmsFromDb()
+W/GeckoConsole(  205): [JavaScript Warning: "Empty string passed to getElementById()." {file: "chrome://b2g/content/shell.html" line: 0}]
+I/PerformanceTiming(  205): Performance Entry: b2g|measure|gecko-shell-jsm-loaded|1056.635000|591.760000|1417470225788
+I/Gecko   (  205):
+I/Gecko   (  205): ###!!! [Parent][OnMaybeDequeueOne] Error: Channel closing: too late to send/recv, messages will be lost
+I/Gecko   (  205):
+I/(Nuwa)  (  454): Could not read chrome manifest 'file:///system/b2g/chrome.manifest'.
+I/Gecko   (  205): AlarmService: Callback after getting alarms from database: []
+I/Gecko   (  205): AlarmService: Current alarm: null
+I/Gecko   (  205): AlarmService: Alarm queue: []
+I/Gonk    (  205): Connected to netd
+E/BandwidthController(  197): No such iface wlan0 to delete
+D/WLAN_PSA(  209): NL BCAST MSG KDriver Not ready yet : KNLREADY
+D/WLAN_PSA(  209): NL BCAST MSG Received, Kernel ready, connect LN
+D/WLAN_PSA(  209): Register APP Socket to kernel
+V/WLAN_PSA(  209): NL MSG, len[020], NL type[0x18] WNI type[0x   0] len[000]
+V/WLAN_PSA(  209): NL MSG, len[009], NL type[0xEE08] WNI type[0x4541] len[17497]
+V/WLAN_PSA(  209): NL MSG, len[056], NL type[0x11] WNI type[0x   2] len[036]
+V/WLAN_PSA(  209): NL MSG, len[009], NL type[0xFFFF] WNI type[0x4541] len[17497]
+V/WLAN_PSA(  209): NL MSG, len[056], NL type[0x11] WNI type[0x   2] len[036]
+D/QsoftapCmd(  197): Got softap fwreload command we are passing on
+D/SoftapController(  197): Softap fwReload - Ok
+I/Gonk    (  205): RIL[0]: OnConnectSuccess
+I/Gonk    (  205): RIL[1]: OnConnectSuccess
+W/AudioPolicyManager(  201): setPhoneState() setting same state 0
+I/rmt_storage(  329): rmt_storage_connect_cb: clnt_h=0x6 conn_h=0xb7216178
+I/rmt_storage(  329): rmt_storage_rw_iovec_cb: /boot/modem_fs2: clnt_h=0x2: req_h=0xa msg_id=3: R/W request received
+I/rmt_storage(  329): wakelock acquired: 1, error no: 42
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2 Unblock worker thread (th_id: -1222548936)
+I/Gecko   (  454): ###################################### forms.js loaded
+I/Gecko   (  454): ############################### browserElementPanning.js loaded
+I/Gecko   (  454): ###################################### BrowserElementCopyPaste.js loaded
+I/Gecko   (  454): ######################## BrowserElementChildPreload.js loaded
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2: req_h=0xa msg_id=3: Bytes written = 1572864
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2: req_h=0xa msg_id=3: Send response: res=0 err=0
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2 About to block rmt_storage client thread (th_id: -1222548936) wakelock released: 1, error no: 0
+I/rmt_storage(  329):
+I/rmt_storage(  329): rmt_storage_disconnect_cb: clnt_h=0x0x6 conn_h=0x0xb7216178
+W/AudioFlinger(  201): Thread AudioOut_2 cannot connect to the power manager service
+D/audio_hw_primary(  201): out_set_parameters: enter: usecase(0: deep-buffer-playback) kvpairs: fm_volume=0.1773175299
+D/audio_hw_extn(  201): audio_extn_set_anc_parameters: anc_enabled:0
+D/audio_hw_fm(  201): audio_extn_fm_set_parameters: set_fm_volume usecase
+D/audio_hw_fm(  201): fm_set_volume: (0.177318)
+W/AudioFlinger(  201): Thread AudioOut_2 cannot connect to the power manager service
+E/AudioFlinger(  201): no wake lock to update!
+I/Gecko   (  205): AlarmService: _onSystemClockChanged
+I/Gecko   (  205): AlarmService: _restoreAlarmsFromDb()
+V/WLAN_PSA(  209): NL MSG, len[048], NL type[0x11] WNI type[0x5050] len[028]
+V/WLAN_PSA(  209): NL MSG, len[048], NL type[0x11] WNI type[0x5050] len[028]
+V/WLAN_PSA(  209): NL MSG, len[048], NL type[0x11] WNI type[0x5050] len[028]
+E/GeckoConsole(  205): [JavaScript Error: "Settings queue head blocked at {164dbb9f-fac4-4165-8594-709db35d4960} for 27358441.778 secs, Settings API may be soft lockup. Lock from: SettingsServiceLock@jar:file:///system/b2g/omni.ja!/components/SettingsService.js:78:17
+E/GeckoConsole(  205): createLock@jar:file:///system/b2g/omni.ja!/components/SettingsService.js:301:16
+E/GeckoConsole(  205): RadioInterface@jar:file:///system/b2g/omni.ja!/components/RadioInterfaceLayer.js:653:14
+E/GeckoConsole(  205): RadioInterfaceLayer@jar:file:///system/b2g/omni.ja!/components/RadioInterfaceLayer.js:409:31
+E/GeckoConsole(  205): XPCOMUtils__getFactory/factory.createInstance@resource://gre/modules/XPCOMUtils.jsm:324:19
+E/GeckoConsole(  205): @jar:file:///system/b2g/omni.ja!/components/MobileConnectionService.js:74:11
+E/GeckoConsole(  205): XPCU_defineLazyGetter/<.get@resource://gre/modules/XPCOMUtils.jsm:196:21
+E/GeckoConsole(  205): MobileConnectionService@jar:file:///system/b2g/omni.ja!/components/MobileConnectionService.js:1405:7
+E/GeckoConsole(  205): XPCOMUtils__getFactory/factory.createInstance@resource://gre/modules/XPCOMUtils.jsm:324:19
+E/GeckoConsole(  205): XPCU_serviceLambda@resource://gre/modules/XPCOMUtils.jsm:228:14
+E/GeckoConsole(  205): XPCU_defineLazyGette
+I/Gecko   (  205): -*- SettingsRequestManager: Settings queue head blocked at {164dbb9f-fac4-4165-8594-709db35d4960} for 27358441.778 secs, Settings API may be soft lockup. Lock from: SettingsServiceLock@jar:file:///system/b2g/omni.ja!/components/SettingsService.js:78:17
+I/Gecko   (  205): createLock@jar:file:///system/b2g/omni.ja!/components/SettingsService.js:301:16
+I/Gecko   (  205): RadioInterface@jar:file:///system/b2g/omni.ja!/components/RadioInterfaceLayer.js:653:14
+I/Gecko   (  205): RadioInterfaceLayer@jar:file:///system/b2g/omni.ja!/components/RadioInterfaceLayer.js:409:31
+I/Gecko   (  205): XPCOMUtils__getFactory/factory.createInstance@resource://gre/modules/XPCOMUtils.jsm:324:19
+I/Gecko   (  205): @jar:file:///system/b2g/omni.ja!/components/MobileConnectionService.js:74:11
+I/Gecko   (  205): XPCU_defineLazyGetter/<.get@resource://gre/modules/XPCOMUtils.jsm:196:21
+I/Gecko   (  205): MobileConnectionService@jar:file:///system/b2g/omni.ja!/components/MobileConnectionService.js:1405:7
+I/Gecko   (  205): XPCOMUtils__getFactory/factory.createInstance@resource://gre/modules/XPCOMUtils.jsm:324:19
+I/Gecko   (  205): XPCU_serviceLambda@resource://gre/modules/XPCOMUtils.jsm:228:14
+I/Gecko   (  205): XPCU_defineL
+E/GeckoConsole(  205): [JavaScript Error: "Settings queue head blocked at {164dbb9f-fac4-4165-8594-709db35d4960} for 27358441.794 secs, Settings API may be soft lockup. Lock from: SettingsServiceLock@jar:file:///system/b2g/omni.ja!/components/SettingsService.js:78:17
+E/GeckoConsole(  205): createLock@jar:file:///system/b2g/omni.ja!/components/SettingsService.js:301:16
+E/GeckoConsole(  205): RadioInterface@jar:file:///system/b2g/omni.ja!/components/RadioInterfaceLayer.js:653:14
+E/GeckoConsole(  205): RadioInterfaceLayer@jar:file:///system/b2g/omni.ja!/components/RadioInterfaceLayer.js:409:31
+E/GeckoConsole(  205): XPCOMUtils__getFactory/factory.createInstance@resource://gre/modules/XPCOMUtils.jsm:324:19
+E/GeckoConsole(  205): @jar:file:///system/b2g/omni.ja!/components/MobileConnectionService.js:74:11
+E/GeckoConsole(  205): XPCU_defineLazyGetter/<.get@resource://gre/modules/XPCOMUtils.jsm:196:21
+E/GeckoConsole(  205): MobileConnectionService@jar:file:///system/b2g/omni.ja!/components/MobileConnectionService.js:1405:7
+E/GeckoConsole(  205): XPCOMUtils__getFactory/factory.createInstance@resource://gre/modules/XPCOMUtils.jsm:324:19
+E/GeckoConsole(  205): XPCU_serviceLambda@resource://gre/modules/XPCOMUtils.jsm:228:14
+E/GeckoConsole(  205): XPCU_defineLazyGette
+I/Gecko   (  205): -*- SettingsRequestManager: Settings queue head blocked at {164dbb9f-fac4-4165-8594-709db35d4960} for 27358441.794 secs, Settings API may be soft lockup. Lock from: SettingsServiceLock@jar:file:///system/b2g/omni.ja!/components/SettingsService.js:78:17
+I/Gecko   (  205): createLock@jar:file:///system/b2g/omni.ja!/components/SettingsService.js:301:16
+I/Gecko   (  205): RadioInterface@jar:file:///system/b2g/omni.ja!/components/RadioInterfaceLayer.js:653:14
+I/Gecko   (  205): RadioInterfaceLayer@jar:file:///system/b2g/omni.ja!/components/RadioInterfaceLayer.js:409:31
+I/Gecko   (  205): XPCOMUtils__getFactory/factory.createInstance@resource://gre/modules/XPCOMUtils.jsm:324:19
+I/Gecko   (  205): @jar:file:///system/b2g/omni.ja!/components/MobileConnectionService.js:74:11
+I/Gecko   (  205): XPCU_defineLazyGetter/<.get@resource://gre/modules/XPCOMUtils.jsm:196:21
+I/Gecko   (  205): MobileConnectionService@jar:file:///system/b2g/omni.ja!/components/MobileConnectionService.js:1405:7
+I/Gecko   (  205): XPCOMUtils__getFactory/factory.createInstance@resource://gre/modules/XPCOMUtils.jsm:324:19
+I/Gecko   (  205): XPCU_serviceLambda@resource://gre/modules/XPCOMUtils.jsm:228:14
+I/Gecko   (  205): XPCU_defineL
+I/Gecko   (  205): AlarmService: Callback after getting alarms from database: []
+I/Gecko   (  205): AlarmService: Current alarm: null
+I/Gecko   (  205): AlarmService: Alarm queue: []
+I/Gecko   (  205): Extension error: [Exception... "Failed to open input source 'moz-extension://ac46c7fe-92ca-442a-8f35-0655c3b540ae/manifest.json'"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/Extension.jsm :: readJSON/< :: line 564"  data: yes] undefined:564
+E/GeckoConsole(  205): [JavaScript Error: "[Exception... "Failed to open input source 'moz-extension://ac46c7fe-92ca-442a-8f35-0655c3b540ae/manifest.json'"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/Extension.jsm :: readJSON/< :: line 564"  data: yes]" {file: "resource://gre/modules/Extension.jsm" line: 721}]
+D/WifiHW  (  205): value read from /data/misc/wifi/wpa_supplicant.conf file is ctrl_interface=/data/misc/wifi/sockets
+D/WifiHW  (  205): disable_scan_offload=1
+D/WifiHW  (  205): update_config=1
+D/WifiHW  (  205): p2p_disabled=1
+D/WifiHW  (  205): p2p_no_group_iface=1
+D/wpa_supplicant(  975): wpa_supplicant v2.1-devel-4.4.2
+D/wpa_supplicant(  975): Add randomness: count=1 entropy=0
+D/wpa_supplicant(  975): random pool - hexdump(len=128): [REMOVED]
+D/wpa_supplicant(  975): random_mix_pool - hexdump(len=8): [REMOVED]
+D/wpa_supplicant(  975): random_mix_pool - hexdump(len=20): [REMOVED]
+D/wpa_supplicant(  975): random pool - hexdump(len=128): [REMOVED]
+D/wpa_supplicant(  975): random: Added entropy from /data/misc/wifi/entropy.bin (own_pool_ready=2)
+D/wpa_supplicant(  975): random: Trying to read entropy from /dev/random
+D/wpa_supplicant(  975): Get randomness: len=20 entropy=1
+D/wpa_supplicant(  975): random from os_get_random - hexdump(len=20): [REMOVED]
+D/wpa_supplicant(  975): random_mix_pool - hexdump(len=20): [REMOVED]
+D/wpa_supplicant(  975): random from internal pool - hexdump(len=16): [REMOVED]
+D/wpa_supplicant(  975): random_mix_pool - hexdump(len=20): [REMOVED]
+D/wpa_supplicant(  975): random from internal pool - hexdump(len=16): [REMOVED]
+D/wpa_supplicant(  975): mixed random - hexdump(len=20): [REMOVED]
+D/wpa_supplicant(  975): random: Updated entropy file /data/misc/wifi/entropy.bin (own_pool_ready=2)
+D/wpa_supplicant(  975): Global control interface '@android:wpa_wlan0'
+D/wpa_supplicant(  975): Using Android control socket 'wpa_wlan0'
+I/wpa_supplicant(  975): Successfully initialized wpa_supplicant
+D/wpa_supplicant(  975): Override interface parameter: ctrl_interface ('(null)' -> '/data/misc/wifi/sockets')
+D/wpa_supplicant(  975): Initializing interface 'wlan0' conf '/data/misc/wifi/wpa_supplicant.conf' driver 'nl80211' ctrl_interface '/data/misc/wifi/sockets' bridge 'N/A'
+D/wpa_supplicant(  975): Configuration file '/data/misc/wifi/wpa_supplicant.conf' -> '/data/misc/wifi/wpa_supplicant.conf'
+D/wpa_supplicant(  975): Reading configuration file '/data/misc/wifi/wpa_supplicant.conf'
+D/wpa_supplicant(  975): ctrl_interface='/data/misc/wifi/sockets'
+D/wpa_supplicant(  975): disable_scan_offload=1
+D/wpa_supplicant(  975): update_config=1
+D/wpa_supplicant(  975): p2p_disabled=1
+D/wpa_supplicant(  975): p2p_no_group_iface=1
+D/wpa_supplicant(  975): Reading configuration file '/system/etc/wifi/wpa_supplicant_overlay.conf'
+D/wpa_supplicant(  975): disable_scan_offload=1
+D/wpa_supplicant(  975): p2p_disabled=1
+I/Gecko   (  205): Extension error: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [nsIXPCComponents_Utils.import]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: chrome://extensions/content/ext-bookmarks.js :: <TOP_LEVEL> :: line 3"  data: no] undefined:3
+I/wpa_supplicant(  975): rfkill: Cannot open RFKILL control device
+D/wpa_supplicant(  975): nl80211: RFKILL status not available
+E/GeckoConsole(  205): [JavaScript Error: "[Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [nsIXPCComponents_Utils.import]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: chrome://extensions/content/ext-bookmarks.js :: <TOP_LEVEL> :: line 3"  data: no]" {file: "resource://gre/modules/Extension.jsm" line: 721}]
+D/wpa_supplicant(  975): nl80211: Using driver-based off-channel TX
+D/wpa_supplicant(  975): nl80211: Using driver-based roaming
+D/wpa_supplicant(  975): nl80211: TDLS supported
+D/wpa_supplicant(  975): nl80211: TDLS external setup
+D/wpa_supplicant(  975): nl80211: Supports Probe Response offload in AP mode
+D/wpa_supplicant(  975): nl80211: Supported vendor event: vendor_id=0x1374 subcmd=10
+D/wpa_supplicant(  975): nl80211: Use separate P2P group interface (driver advertised support)
+D/wpa_supplicant(  975): nl80211: Enable multi-channel concurrent (driver advertised support)
+D/wpa_supplicant(  975): nl80211: Driver is new enough to support monitor-less mode
+D/wpa_supplicant(  975): nl80211: interface wlan0 in phy phy0
+D/wpa_supplicant(  975): nl80211: Set mode ifindex 22 iftype 2 (STATION)
+D/wpa_supplicant(  975): nl80211: Subscribe to mgmt frames with non-AP handle 0xb83db4e0
+D/wpa_supplicant(  975): nl80211: Register frame type=0xd0 nl_handle=0xb83db4e0
+D/wpa_supplicant(  975): nl80211: Register frame match - hexdump(len=2): 04 0a
+D/wpa_supplicant(  975): nl80211: Register frame type=0xd0 nl_handle=0xb83db4e0
+D/wpa_supplicant(  975): nl80211: Register frame match - hexdump(len=2): 04 0b
+D/wpa_supplicant(  975): nl80211: Register frame type=0xd0 nl_handle=0xb83db4e0
+D/wpa_supplicant(  975): nl80211: Register frame match - hexdump(len=2): 04 0c
+D/wpa_supplicant(  975): nl80211: Register frame type=0xd0 nl_handle=0xb83db4e0
+D/wpa_supplicant(  975): nl80211: Register frame match - hexdump(len=2): 04 0d
+D/wpa_supplicant(  975): nl80211: Register frame type=0xd0 nl_handle=0xb83db4e0
+D/wpa_supplicant(  975): nl80211: Register frame match - hexdump(len=6): 04 09 50 6f 9a 09
+D/wpa_supplicant(  975): nl80211: Register frame type=0xd0 nl_handle=0xb83db4e0
+D/wpa_supplicant(  975): nl80211: Register frame match - hexdump(len=5): 7f 50 6f 9a 09
+D/wpa_supplicant(  975): nl80211: Register frame type=0xd0 nl_handle=0xb83db4e0
+D/wpa_supplicant(  975): nl80211: Register frame match - hexdump(len=2): 08 01
+D/wpa_supplicant(  975): nl80211: Register frame type=0xd0 nl_handle=0xb83db4e0
+D/wpa_supplicant(  975): nl80211: Register frame match - hexdump(len=2): 04 0e
+D/wpa_supplicant(  975): nl80211: Register frame type=0xd0 nl_handle=0xb83db4e0
+D/wpa_supplicant(  975): nl80211: Register frame match - hexdump(len=1): 06
+D/wpa_supplicant(  975): nl80211: Register frame type=0xd0 nl_handle=0xb83db4e0
+D/wpa_supplicant(  975): nl80211: Register frame match - hexdump(len=2): 0a 07
+D/wpa_supplicant(  975): nl80211: Register frame type=0xd0 nl_handle=0xb83db4e0
+D/wpa_supplicant(  975): nl80211: Register frame match - hexdump(len=2): 0a 11
+V/WLAN_PSA(  209): NL MSG, len[048], NL type[0x11] WNI type[0x5050] len[028]
+D/wpa_supplicant(  975): netlink: Operstate: linkmode=1, operstate=5
+D/wpa_supplicant(  975): nl80211: driver param='(null)'
+D/wpa_supplicant(  975): nl80211: Regulatory information - country=00
+D/wpa_supplicant(  975): nl80211: 2402-2472 @ 40 MHz
+D/wpa_supplicant(  975): nl80211: 2457-2482 @ 40 MHz
+D/wpa_supplicant(  975): nl80211: 2474-2494 @ 20 MHz
+D/wpa_supplicant(  975): nl80211: 5170-5250 @ 80 MHz
+D/wpa_supplicant(  975): nl80211: 5735-5835 @ 80 MHz
+D/wpa_supplicant(  975): nl80211: 57240-63720 @ 2160 MHz
+D/wpa_supplicant(  975): nl80211: Added 802.11b mode based on 802.11g information
+D/wpa_supplicant(  975): wlan0: Own MAC address: 00:0a:f5:3b:33:bc
+D/wpa_supplicant(  975): wpa_driver_nl80211_set_key: ifindex=22 (wlan0) alg=0 addr=0x0 key_idx=0 set_tx=0 seq_len=0 key_len=0
+D/wpa_supplicant(  975): wpa_driver_nl80211_set_key: ifindex=22 (wlan0) alg=0 addr=0x0 key_idx=1 set_tx=0 seq_len=0 key_len=0
+D/wpa_supplicant(  975): wpa_driver_nl80211_set_key: ifindex=22 (wlan0) alg=0 addr=0x0 key_idx=2 set_tx=0 seq_len=0 key_len=0
+D/wpa_supplicant(  975): wpa_driver_nl80211_set_key: ifindex=22 (wlan0) alg=0 addr=0x0 key_idx=3 set_tx=0 seq_len=0 key_len=0
+D/wpa_supplicant(  975): wpa_driver_nl80211_set_key: ifindex=22 (wlan0) alg=0 addr=0x0 key_idx=4 set_tx=0 seq_len=0 key_len=0
+D/wpa_supplicant(  975): wpa_driver_nl80211_set_key: ifindex=22 (wlan0) alg=0 addr=0x0 key_idx=5 set_tx=0 seq_len=0 key_len=0
+D/wpa_supplicant(  975): wlan0: RSN: flushing PMKID list in the driver
+D/wpa_supplicant(  975): nl80211: Flush PMKIDs
+D/wpa_supplicant(  975): wlan0: State: DISCONNECTED -> INACTIVE
+D/wpa_supplicant(  975): TDLS: TDLS operation supported by driver
+D/wpa_supplicant(  975): TDLS: Driver uses external link setup
+D/wpa_supplicant(  975): WPS: Set UUID for interface wlan0
+D/wpa_supplicant(  975): WPS: UUID based on MAC address - hexdump(len=16): 8b cc 08 67 c1 8d 53 50 b9 3c eb 5d 43 cd 38 ec
+D/wpa_supplicant(  975): EAPOL: SUPP_PAE entering state DISCONNECTED
+D/wpa_supplicant(  975): EAPOL: Supplicant port status: Unauthorized
+D/wpa_supplicant(  975): nl80211: Set supplicant port unauthorized for 00:00:00:00:00:00
+D/wpa_supplicant(  975): EAPOL: KEY_RX entering state NO_KEY_RECEIVE
+D/wpa_supplicant(  975): EAPOL: SUPP_BE entering state INITIALIZE
+D/wpa_supplicant(  975): EAP: EAP entering state DISABLED
+D/wpa_supplicant(  975): EAPOL: Supplicant port status: Unauthorized
+D/wpa_supplicant(  975): nl80211: Set supplicant port unauthorized for 00:00:00:00:00:00
+D/wpa_supplicant(  975): EAPOL: Supplicant port status: Unauthorized
+D/wpa_supplicant(  975): nl80211: Set supplicant port unauthorized for 00:00:00:00:00:00
+D/wpa_supplicant(  975): Using existing control interface directory.
+D/wpa_supplicant(  975): wlan0: Added interface wlan0
+D/wpa_supplicant(  975): wlan0: State: INACTIVE -> DISCONNECTED
+D/wpa_supplicant(  975): wpa_driver_nl80211_set_operstate: operstate 0->0 (DORMANT)
+D/wpa_supplicant(  975): netlink: Operstate: linkmode=-1, operstate=5
+D/wpa_supplicant(  975): random: Got 20/20 bytes from /dev/random
+D/wpa_supplicant(  975): Get randomness: len=20 entropy=0
+D/wpa_supplicant(  975): random from os_get_random - hexdump(len=20): [REMOVED]
+D/wpa_supplicant(  975): random_mix_pool - hexdump(len=20): [REMOVED]
+D/wpa_supplicant(  975): random from internal pool - hexdump(len=16): [REMOVED]
+D/wpa_supplicant(  975): random_mix_pool - hexdump(len=20): [REMOVED]
+D/wpa_supplicant(  975): random from internal pool - hexdump(len=16): [REMOVED]
+D/wpa_supplicant(  975): mixed random - hexdump(len=20): [REMOVED]
+D/wpa_supplicant(  975): random: Updated entropy file /data/misc/wifi/entropy.bin (own_pool_ready=2)
+D/wpa_supplicant(  975): CTRL_IFACE monitor attached - hexdump(len=39): 2f 64 61 74 61 2f 6d 69 73 63 2f 77 69 66 69 2f 73 6f 63 6b 65 74 73 2f 77 70 61 5f 63 74 72 6c ...
+D/wpa_supplicant(  975): RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+D/wpa_supplicant(  975): RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+D/wpa_supplicant(  975): nl80211: if_removed already cleared - ignore event
+D/wpa_supplicant(  975): RX ctrl_iface - hexdump(len=9): 4c 4f 47 5f 4c 45 56 45 4c
+D/wpa_supplicant(  975): wlan0: Control interface command 'LOG_LEVEL'
+D/wpa_supplicant(  975): RX ctrl_iface - hexdump(len=6): 53 54 41 54 55 53
+D/wpa_supplicant(  975): wlan0: Control interface command 'STATUS'
+D/wpa_supplicant(  975): CTRL_IFACE monitor send - hexdump(len=39): 2f 64 61 74 61 2f 6d 69 73 63 2f 77 69 66 69 2f 73 6f 63 6b 65 74 73 2f 77 70 61 5f 63 74 72 6c ...
+D/wpa_supplicant(  975): RX ctrl_iface - hexdump(len=23): 44 52 49 56 45 52 20 53 45 54 53 55 53 50 45 4e 44 4d 4f 44 45 20 31
+D/wpa_supplicant(  975): wlan0: Control interface command 'DRIVER SETSUSPENDMODE 1'
+D/wpa_supplicant(  975): wpa_driver_nl80211_driver_cmd SETSUSPENDMODE 1 len = 0, 4096
+D/wpa_supplicant(  975): RX ctrl_iface - hexdump(len=23): 44 52 49 56 45 52 20 53 45 54 53 55 53 50 45 4e 44 4d 4f 44 45 20 31
+D/wpa_supplicant(  975): wlan0: Control interface command 'DRIVER SETSUSPENDMODE 1'
+D/wpa_supplicant(  975): wpa_driver_nl80211_driver_cmd SETSUSPENDMODE 1 len = 0, 4096
+D/wpa_supplicant(  975): RX ctrl_iface - hexdump(len=23): 44 52 49 56 45 52 20 53 45 54 53 55 53 50 45 4e 44 4d 4f 44 45 20 31
+D/wpa_supplicant(  975): wlan0: Control interface command 'DRIVER SETSUSPENDMODE 1'
+D/wpa_supplicant(  975): wpa_driver_nl80211_driver_cmd SETSUSPENDMODE 1 len = 0, 4096
+D/wpa_supplicant(  975): RX ctrl_iface - hexdump(len=13): 4c 49 53 54 5f 4e 45 54 57 4f 52 4b 53
+D/wpa_supplicant(  975): wlan0: Control interface command 'LIST_NETWORKS'
+D/wpa_supplicant(  975): RX ctrl_iface - hexdump(len=14): 44 52 49 56 45 52 20 4d 41 43 41 44 44 52
+D/wpa_supplicant(  975): wlan0: Control interface command 'DRIVER MACADDR'
+D/wpa_supplicant(  975): RX ctrl_iface - hexdump(len=8): 53 45 54 20 70 73 20 31
+D/wpa_supplicant(  975): wlan0: Control interface command 'SET ps 1'
+D/wpa_supplicant(  975): CTRL_IFACE SET 'ps'='1'
+D/wpa_supplicant(  975): nl80211: set_p2p_powersave (legacy_ps=1 opp_ps=-1 ctwindow=-1)
+D/wpa_supplicant(  975): RX ctrl_iface - hexdump(len=8): 53 45 54 20 70 73 20 31
+D/wpa_supplicant(  975): wlan0: Control interface command 'SET ps 1'
+D/wpa_supplicant(  975): CTRL_IFACE SET 'ps'='1'
+D/wpa_supplicant(  975): nl80211: set_p2p_powersave (legacy_ps=1 opp_ps=-1 ctwindow=-1)
+D/wpa_supplicant(  975): RX ctrl_iface - hexdump(len=8): 53 45 54 20 70 73 20 31
+D/wpa_supplicant(  975): wlan0: Control interface command 'SET ps 1'
+D/wpa_supplicant(  975): CTRL_IFACE SET 'ps'='1'
+D/wpa_supplicant(  975): nl80211: set_p2p_powersave (legacy_ps=1 opp_ps=-1 ctwindow=-1)
+D/wpa_supplicant(  975): RX ctrl_iface - hexdump(len=9): 41 50 5f 53 43 41 4e 20 31
+D/wpa_supplicant(  975): wlan0: Control interface command 'AP_SCAN 1'
+D/wpa_supplicant(  975): RX ctrl_iface - hexdump(len=11): 53 41 56 45 5f 43 4f 4e 46 49 47
+D/wpa_supplicant(  975): wlan0: Control interface command 'SAVE_CONFIG'
+D/wpa_supplicant(  975): Writing configuration file '/data/misc/wifi/wpa_supplicant.conf'
+D/wpa_supplicant(  975): Configuration file '/data/misc/wifi/wpa_supplicant.conf' written successfully
+D/wpa_supplicant(  975): CTRL_IFACE: SAVE_CONFIG - Configuration updated
+I/VolumeManager(  205): SetUnmountRequested for volume sdcard to 0 CanBeMounted = 1
+I/VolumeManager(  205): SetMountRequested for volume sdcard to 0 CanBeMounted = 1
+I/VolumeManager(  205): SetSharingMode for volume sdcard to 1 canBeShared = 1
+I/AutoMounter(  205): AutoMounter state changed from UMS_CONFIGURED to IDLE
+I/AutoMounter(  205): UpdateState: ums:A1C1E0 mtp:A1C0E0 mode:0 usb:1 tryToShare:0 state:IDLE
+I/AutoMounter(  205): UpdateState: Volume sdcard is Mounted and inserted @ /storage/sdcard gen 1 locked 0 sharing en-n
+I/AutoMounter(  205): UpdateState: Volume sdcard1 is NoMedia and missing
+I/AutoMounter(  205): AutoMounter state changed from IDLE to UMS_CONFIGURED
+I/AutoMounter(  205): UpdateState: ums:A1C1E0 mtp:A1C0E0 mode:0 usb:1 tryToShare:0 state:UMS_CONFIGURED
+I/AutoMounter(  205): UpdateState: Volume sdcard is Mounted and inserted @ /storage/sdcard gen 1 locked 0 sharing en-n
+I/AutoMounter(  205): UpdateState: Volume sdcard1 is NoMedia and missing
+I/VolumeManager(  205): SetUnmountRequested for volume sdcard1 to 0 CanBeMounted = 1
+I/VolumeManager(  205): SetMountRequested for volume sdcard1 to 0 CanBeMounted = 1
+I/VolumeManager(  205): SetSharingMode for volume sdcard1 to 1 canBeShared = 1
+I/AutoMounter(  205): AutoMounter state changed from UMS_CONFIGURED to IDLE
+I/AutoMounter(  205): UpdateState: ums:A1C1E0 mtp:A1C0E0 mode:0 usb:1 tryToShare:0 state:IDLE
+I/AutoMounter(  205): UpdateState: Volume sdcard is Mounted and inserted @ /storage/sdcard gen 1 locked 0 sharing en-n
+I/AutoMounter(  205): UpdateState: Volume sdcard1 is NoMedia and missing
+I/AutoMounter(  205): AutoMounter state changed from IDLE to UMS_CONFIGURED
+I/AutoMounter(  205): UpdateState: ums:A1C1E0 mtp:A1C0E0 mode:0 usb:1 tryToShare:0 state:UMS_CONFIGURED
+I/AutoMounter(  205): UpdateState: Volume sdcard is Mounted and inserted @ /storage/sdcard gen 1 locked 0 sharing en-n
+I/AutoMounter(  205): UpdateState: Volume sdcard1 is NoMedia and missing
+I/PerformanceTiming(  205): Performance Entry: b2g|mark|gecko-shell-bootstrap|6120.460000|0.000000|1444828671960
+I/PerformanceTiming(  205): Performance Entry: b2g|mark|gecko-shell-start|6138.970000|0.000000|1444828671979
+I/Gecko   (  205): ###################################### forms.js loaded
+I/Gecko   (  205): ###################################### BrowserElementCopyPaste.js loaded
+I/Gecko   (  205): ############################### browserElementPanning.js loaded
+I/Gecko   (  205): ######################## BrowserElementChildPreload.js loaded
+I/Gecko   (  205): ######################## extensions.js loaded
+I/Gecko   (  205): *** UTM:SVC TimerManager:registerTimer - id: user-agent-updates-timer
+I/GeckoConsole(  205): UTM:SVC TimerManager:registerTimer - id: user-agent-updates-timer
+I/PerformanceTiming(  205): Performance Entry: b2g|mark|gecko-shell-system-frame-set|6437.310000|0.000000|1444828672277
+I/PerformanceTiming(  205): Performance Entry: b2g|mark|gecko-shell-notify-content-start|6633.435000|0.000000|1444828672473
+D/wpa_supplicant(  975): EAPOL: disable timer tick
+D/wpa_supplicant(  975): EAPOL: Supplicant port status: Unauthorized
+D/wpa_supplicant(  975): nl80211: Set supplicant port unauthorized for 00:00:00:00:00:00
+I/(Preallocated app)(  948): PAC file installed from data: URI
+I/PerformanceTiming(  205): Performance Entry: system.gaiamobile.org|mark|loadEnd|1162.050000|0.000000|1444828673438
+D/charger_monitor(  381): init target 1500000
+V/WLAN_PSA(  209): NL MSG, len[048], NL type[0x11] WNI type[0x5050] len[028]
+I/Gecko   (  205): XXX FIXME : Dispatch a mozChromeEvent: webapps-registry-ready
+I/MP-Decision( 1001): OPTION ENABLED: Adjusting average
+I/MP-Decision( 1001): Decision parameters CPU 0: Nw=0.000000, Tw=0, Ns=0.000000, Ts=0
+I/MP-Decision( 1001): util_h_and=0, util_h_or=0, util_low=0
+I/MP-Decision( 1001): Decision parameters CPU 1: Nw=1.900000, Tw=140, Ns=1.100000, Ts=190
+I/MP-Decision( 1001): util_h_and=35, util_h_or=75, util_low=20
+I/MP-Decision( 1001): Decision parameters: poll_ms: 9 decision_ms: 50
+I/MP-Decision( 1001): Available core list/order for available_cpus - 2:  0 1
+I/Gecko   (  205): Attempting load of libEGL.so
+E/libEGL  (  205): validate_display:254 error 3008 (EGL_BAD_DISPLAY)
+D/libEGL  (  205): loaded /vendor/lib/egl/libEGL_adreno.so
+D/libEGL  (  205): loaded /vendor/lib/egl/libGLESv1_CM_adreno.so
+D/libEGL  (  205): loaded /vendor/lib/egl/libGLESv2_adreno.so
+I/Adreno-EGL(  205): <qeglDrvAPI_eglInitialize:410>: EGL 1.4 QUALCOMM build: Nondeterministic_AU_msm8610_B2G_KK_3.6__release_AU ()
+I/Adreno-EGL(  205): OpenGL ES Shader Compiler Version: E031.24.00.14
+I/Adreno-EGL(  205): Build Date: 10/21/14 Tue
+I/Adreno-EGL(  205): Local Branch:
+I/Adreno-EGL(  205): Remote Branch: quic/LNX.LF.3.5.2.1_1
+I/Adreno-EGL(  205): Local Patches: NONE
+I/Adreno-EGL(  205): Reconstruct Branch: NOTHING
+I/rmt_storage(  329): rmt_storage_connect_cb: clnt_h=0x7 conn_h=0xb7216178
+I/rmt_storage(  329): rmt_storage_rw_iovec_cb: /boot/modem_fs1: clnt_h=0x1: req_h=0xb msg_id=3: R/W request received
+I/rmt_storage(  329): wakelock acquired: 1, error no: 42
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs1: clnt_h=0x1 Unblock worker thread (th_id: -1222549784)
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs1: clnt_h=0x1: req_h=0xb msg_id=3: Bytes written = 1572864
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs1: clnt_h=0x1: req_h=0xb msg_id=3: Send response: res=0 err=0
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs1: clnt_h=0x1 About to block rmt_storage client thread (th_id: -1222549784) wakelock released: 1, error no: 22
+I/rmt_storage(  329):
+I/rmt_storage(  329): rmt_storage_disconnect_cb: clnt_h=0x0x7 conn_h=0x0xb7216178
+I/Gecko   (  205): Can't find symbol 'GetActiveUniformName'.
+I/GeckoConsole(  205): OpenGL compositor Initialized Succesfully.
+I/GeckoConsole(  205): Version: OpenGL ES 3.0 V@66.0 AU@ (CL@)
+I/GeckoConsole(  205): Vendor: Qualcomm
+I/GeckoConsole(  205): Renderer: Adreno (TM) 305
+I/GeckoConsole(  205): FBO Texture Target: TEXTURE_2D
+I/Gecko   (  205): XXX FIXME : Dispatch a mozChromeEvent: system-first-paint
+E/Sensors (  205): change G sensor state "1 -> 0"
+I/Gecko   (  205): LogShake.jsm: Disabling QA Mode
+I/GeckoDump(  205): AUS:Settings: Not a dogfooder!
+E/GeckoConsole(  205): [JavaScript Error: "NS_ERROR_FILE_NOT_FOUND: Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [nsIXPCComponents_Utils.import]"]
+E/GeckoConsole(  205): [JavaScript Error: "NS_ERROR_FILE_NOT_FOUND: Failed to open input source 'moz-extension://ac46c7fe-92ca-442a-8f35-0655c3b540ae/manifest.json'"]
+I/GeckoDump(  205): AdbController: Starting USB debugger on /data/local/debugger-socket
+W/AudioFlinger(  201): Thread AudioOut_2 cannot connect to the power manager service
+W/AudioFlinger(  201): Thread AudioOut_2 cannot connect to the power manager service
+E/AudioFlinger(  201): no wake lock to update!
+I/GeckoDump(  205): XXX FIXME : Got a mozContentEvent: system-message-listener-ready
+I/Gecko   (  205): XXX FIXME : Dispatch a mozChromeEvent: volume-state-changed
+I/PerformanceTiming(  205): Performance Entry: system.gaiamobile.org|mark|ftuSkip|6641.025000|0.000000|1444828678917
+V/WLAN_PSA(  209): NL MSG, len[048], NL type[0x11] WNI type[0x5050] len[028]
+I/Gecko   (  948): ######################## extensions.js loaded
+W/New Home Screen(  948): [JavaScript Warning: "Use of nsIFile in content process is deprecated." {file: "jar:file:///system/b2g/omni.ja!/components/DirectoryProvider.js" line: 81}]
+W/New Home Screen(  948): [JavaScript Warning: "Error in parsing value for 'text-align'.  Declaration dropped." {file: "app://homescreen.gaiamobile.org/index.html#root" line: 43 column: 18 source: "      text-align: -moz-start;"}]
+W/New Home Screen(  948): [JavaScript Warning: "Error in parsing value for 'text-align'.  Declaration dropped." {file: "app://homescreen.gaiamobile.org/index.html#root" line: 43 column: 18 source: "      text-align: -moz-start;"}]
+I/PerformanceTiming(  948): Performance Entry: homescreen.gaiamobile.org|mark|navigationLoaded|949.265000|0.000000|1444828679970
+W/libsuspend(  205): Error writing 'on' to /sys/power/state: Invalid argument
+I/libsuspend(  205): Selected autosleep
+I/QCOM PowerHAL(  205): Got set_interactive hint
+E/QCOM PowerHAL(  205): Invalid hint ID.
+D/qdhwcomposer(  205): hwc_blank: Unblanking display: 0
+D/qdhwcomposer(  205): hwc_blank: Done unblanking display: 0
+I/qdhwcomposer(  205): handle_blank_event: dpy:0 panel power state: 1
+I/PerformanceTiming(  948): Performance Entry: homescreen.gaiamobile.org|mark|navigationInteractive|1248.330000|0.000000|1444828680269
+I/PerformanceTiming(  205): Performance Entry: system.gaiamobile.org|mark|visuallyLoaded|8615.985000|0.000000|1444828680892
+I/PerformanceTiming(  948): Performance Entry: homescreen.gaiamobile.org|mark|visuallyLoaded|3050.410000|0.000000|1444828682071
+I/PerformanceTiming(  948): Performance Entry: homescreen.gaiamobile.org|mark|contentInteractive|3050.740000|0.000000|1444828682071
+I/Gecko   (  205): UpdatePrompt: Sending stored update error
+I/GeckoDump(  205): XXX FIXME : Got a mozContentEvent: update-prompt-ready
+V/WLAN_PSA(  209): NL MSG, len[048], NL type[0x11] WNI type[0x5050] len[028]
+I/Gecko   (  205): ###################################### BrowserElementCopyPaste.js loaded
+I/Gecko   (  205): ############################### browserElementPanning.js loaded
+I/Gecko   (  205): ######################## BrowserElementChildPreload.js loaded
+I/Gecko   (  205): ######################## extensions.js loaded
+I/PerformanceTiming(  205): Performance Entry: system.gaiamobile.org|mark|osLogoEnd|12528.040000|0.000000|1444828684804
+D/skia    (  948): START /proc/cpuinfo:
+D/skia    (  948): Processor	: ARMv7 Processor rev 3 (v7l)
+D/skia    (  948): processor	: 0
+D/skia    (  948): BogoMIPS	: 38.40
+D/skia    (  948):
+D/skia    (  948): processor	: 1
+D/skia    (  948): BogoMIPS	: 38.40
+D/skia    (  948):
+D/skia    (  948): Features	: swp half thumb fastmult vfp edsp neon vfpv3 tls vfpv4 idiva idivt
+D/skia    (  948): CPU implementer	: 0x41
+D/skia    (  948): CPU architecture: 7
+D/skia    (  948): CPU variant	: 0x0
+D/skia    (  948): CPU part	: 0xc07
+D/skia    (  948): CPU revision	: 3
+D/skia    (  948):
+D/skia    (  948): Hardware	: Qualcomm MSM8210
+D/skia    (  948): Revision	: 0000
+D/skia    (  948): Serial		: 0000000000000000
+D/skia    (  948):
+D/skia    (  948): END /proc/cpuinfo
+D/skia    (  948): Device supports ARM NEON instructions!
+E/New Home Screen(  948): Content JS ERROR: Failed to retrieve icon [object DOMError]
+E/New Home Screen(  948):     at proto.refresh/< (app://homescreen.gaiamobile.org/gaia_build_defer_index.js:87:569)
+I/GeckoConsole(  205): Content JS LOG: defaultAdapter changed. address: 00:00:00:00:00:00
+I/GeckoConsole(  205):     at onManagerAttributeChanged (app://callscreen.gaiamobile.org/gaia_build_defer_index.js:439:653)
+I/PerformanceTiming(  205): Performance Entry: system.gaiamobile.org|mark|fullyLoaded|15412.775000|0.000000|1444828687688
+I/GeckoConsole(  205): Content JS LOG: Error handling bluetooth request
+I/GeckoConsole(  205):     at BluetoothHelper/_handleRequest/request.onerror (app://callscreen.gaiamobile.org/gaia_build_defer_index.js:439:211)
+I/GeckoConsole(  205): PAC file installed from data: URI
+V/WLAN_PSA(  209): NL MSG, len[048], NL type[0x11] WNI type[0x5050] len[028]
+E/New Home Screen(  948): Content JS ERROR: Failed to retrieve icon [object DOMError]
+E/New Home Screen(  948):     at proto.refresh/< (app://homescreen.gaiamobile.org/gaia_build_defer_index.js:87:569)
+I/Gecko   (  205): UpdatePrompt: Forcing update check
+I/Gecko   (  205): *** AUS:SVC Checker: checkForUpdates, force: true
+I/GeckoConsole(  205): AUS:SVC Checker: checkForUpdates, force: true
+I/Gecko   (  205): *** AUS:SVC Checker:getUpdateURL - update URL: https://aus5.mozilla.org/update/3/B2G/44.0a1/20151014035118/flame-eng/en-US/default/Boot2Gecko%202.5.0.0-prerelease%20(SDK%2019)/default/default/update.xml?force=1
+I/GeckoConsole(  205): AUS:SVC Checker:getUpdateURL - update URL: https://aus5.mozilla.org/update/3/B2G/44.0a1/20151014035118/flame-eng/en-US/default/Boot2Gecko%202.5.0.0-prerelease%20(SDK%2019)/default/default/update.xml?force=1
+I/Gecko   (  205): *** AUS:SVC gCanCheckForUpdates - able to check for updates
+I/GeckoConsole(  205): AUS:SVC gCanCheckForUpdates - able to check for updates
+I/Gecko   (  205): *** AUS:SVC Checker:checkForUpdates - sending request to: https://aus5.mozilla.org/update/3/B2G/44.0a1/20151014035118/flame-eng/en-US/default/Boot2Gecko%202.5.0.0-prerelease%20(SDK%2019)/default/default/update.xml?force=1
+I/GeckoConsole(  205): AUS:SVC Checker:checkForUpdates - sending request to: https://aus5.mozilla.org/update/3/B2G/44.0a1/20151014035118/flame-eng/en-US/default/Boot2Gecko%202.5.0.0-prerelease%20(SDK%2019)/default/default/update.xml?force=1
+I/GeckoDump(  205): XXX FIXME : Got a mozContentEvent: force-update-check
+I/Gecko   (  205): *** AUS:SVC Checker:onError - request.status: 2152398864
+I/GeckoConsole(  205): AUS:SVC Checker:onError - request.status: 2152398864
+I/Gecko   (  205): *** AUS:SVC getStatusTextFromCode - transfer error: Network is offline (go online), code: 2152398864
+I/GeckoConsole(  205): AUS:SVC getStatusTextFromCode - transfer error: Network is offline (go online), code: 2152398864
+I/Gecko   (  205): UpdatePrompt: Setting gecko.updateStatus: retry-when-online
+I/Gecko   (  205): *** AUS:SVC Creating UpdateService
+I/GeckoConsole(  205): AUS:SVC Creating UpdateService
+I/Gecko   (  205): *** AUS:SVC UpdateService:onError - error during background update. error code: 111, status text: Network is offline (go online)
+I/GeckoConsole(  205): AUS:SVC UpdateService:onError - error during background update. error code: 111, status text: Network is offline (go online)
+I/Gecko   (  205): *** AUS:SVC UpdateService:_registerOnlineObserver - waiting for the network to be online, then forcing another check
+I/GeckoConsole(  205): AUS:SVC UpdateService:_registerOnlineObserver - waiting for the network to be online, then forcing another check
+I/Gecko   (  205): XXX FIXME : Dispatch a mozChromeEvent: apps-update-check
+I/Gecko   (  205): UpdatePrompt: Forcing update check
+I/Gecko   (  205): *** AUS:SVC Checker: checkForUpdates, force: true
+I/GeckoConsole(  205): AUS:SVC Checker: checkForUpdates, force: true
+I/Gecko   (  205): *** AUS:SVC Checker:getUpdateURL - update URL: https://aus5.mozilla.org/update/3/B2G/44.0a1/20151014035118/flame-eng/en-US/default/Boot2Gecko%202.5.0.0-prerelease%20(SDK%2019)/default/default/update.xml?force=1
+I/GeckoConsole(  205): AUS:SVC Checker:getUpdateURL - update URL: https://aus5.mozilla.org/update/3/B2G/44.0a1/20151014035118/flame-eng/en-US/default/Boot2Gecko%202.5.0.0-prerelease%20(SDK%2019)/default/default/update.xml?force=1
+I/Gecko   (  205): *** AUS:SVC Checker:checkForUpdates - sending request to: https://aus5.mozilla.org/update/3/B2G/44.0a1/20151014035118/flame-eng/en-US/default/Boot2Gecko%202.5.0.0-prerelease%20(SDK%2019)/default/default/update.xml?force=1
+I/GeckoConsole(  205): AUS:SVC Checker:checkForUpdates - sending request to: https://aus5.mozilla.org/update/3/B2G/44.0a1/20151014035118/flame-eng/en-US/default/Boot2Gecko%202.5.0.0-prerelease%20(SDK%2019)/default/default/update.xml?force=1
+I/GeckoDump(  205): XXX FIXME : Got a mozContentEvent: force-update-check
+I/Gecko   (  205): *** AUS:SVC Checker:onError - request.status: 2152398864
+I/GeckoConsole(  205): AUS:SVC Checker:onError - request.status: 2152398864
+I/Gecko   (  205): *** AUS:SVC getStatusTextFromCode - transfer error: Network is offline (go online), code: 2152398864
+I/GeckoConsole(  205): AUS:SVC getStatusTextFromCode - transfer error: Network is offline (go online), code: 2152398864
+I/Gecko   (  205): UpdatePrompt: Setting gecko.updateStatus: retry-when-online
+I/Gecko   (  205): *** AUS:SVC UpdateService:onError - error during background update. error code: 111, status text: Network is offline (go online)
+I/GeckoConsole(  205): AUS:SVC UpdateService:onError - error during background update. error code: 111, status text: Network is offline (go online)
+I/Gecko   (  205): *** AUS:SVC UpdateService:_registerOnlineObserver - observer already registered
+I/GeckoConsole(  205): AUS:SVC UpdateService:_registerOnlineObserver - observer already registered
+V/WLAN_PSA(  209): NL MSG, len[048], NL type[0x11] WNI type[0x5050] len[028]
+I/(Preallocated app)( 1075): PAC file installed from data: URI
+I/Gecko   (  205): XXX FIXME : Dispatch a mozChromeEvent: apps-update-check
+D/wpa_supplicant(  975): RX ctrl_iface - hexdump(len=18): 44 52 49 56 45 52 20 53 43 41 4e 2d 41 43 54 49 56 45
+D/wpa_supplicant(  975): wlan0: Control interface command 'DRIVER SCAN-ACTIVE'
+D/wpa_supplicant(  975): wpa_driver_nl80211_driver_cmd SCAN-ACTIVE len = 0, 4096
+D/wpa_supplicant(  975): RX ctrl_iface - hexdump(len=4): 53 43 41 4e
+D/wpa_supplicant(  975): wlan0: Control interface command 'SCAN'
+D/wpa_supplicant(  975): wlan0: Setting scan request: 0 sec 0 usec
+D/wpa_supplicant(  975): wlan0: State: DISCONNECTED -> SCANNING
+D/wpa_supplicant(  975): CTRL_IFACE monitor send - hexdump(len=39): 2f 64 61 74 61 2f 6d 69 73 63 2f 77 69 66 69 2f 73 6f 63 6b 65 74 73 2f 77 70 61 5f 63 74 72 6c ...
+D/wpa_supplicant(  975): wlan0: Starting AP scan for wildcard SSID
+D/wpa_supplicant(  975): wlan0: nl80211: scan request
+D/wpa_supplicant(  975): nl80211: Scan SSID - hexdump(len=0): [NULL]
+D/wpa_supplicant(  975): Scan requested (ret=0) - scan timeout 10 seconds
+D/wpa_supplicant(  975): nl80211: Event message available
+D/wpa_supplicant(  975): nl80211: Drv Event 33 (NL80211_CMD_TRIGGER_SCAN) received for wlan0
+D/wpa_supplicant(  975): wlan0: nl80211: Scan trigger
+D/wpa_supplicant(  975): wlan0: Event SCAN_STARTED (57) received
+D/wpa_supplicant(  975): wlan0: Own scan request started a scan
+I/wpa_supplicant(  975): wlan0: CTRL-EVENT-SCAN-STARTED
+D/wpa_supplicant(  975): CTRL_IFACE monitor send - hexdump(len=39): 2f 64 61 74 61 2f 6d 69 73 63 2f 77 69 66 69 2f 73 6f 63 6b 65 74 73 2f 77 70 61 5f 63 74 72 6c ...
+V/WLAN_PSA(  209): NL MSG, len[048], NL type[0x11] WNI type[0x5050] len[028]
+V/WLAN_PSA(  209): NL MSG, len[048], NL type[0x11] WNI type[0x5050] len[028]
+V/WLAN_PSA(  209): NL MSG, len[048], NL type[0x11] WNI type[0x5050] len[028]
+V/WLAN_PSA(  209): NL MSG, len[914], NL type[0x11] WNI type[0x5050] len[894]
+V/WLAN_PSA(  209): NL MSG, len[048], NL type[0x11] WNI type[0x5050] len[028]
+D/wpa_supplicant(  975): RX ctrl_iface - hexdump(len=19): 44 52 49 56 45 52 20 53 43 41 4e 2d 50 41 53 53 49 56 45
+D/wpa_supplicant(  975): wlan0: Control interface command 'DRIVER SCAN-PASSIVE'
+D/wpa_supplicant(  975): wpa_driver_nl80211_driver_cmd SCAN-PASSIVE len = 0, 4096
+V/WLAN_PSA(  209): NL MSG, len[914], NL type[0x11] WNI type[0x5050] len[894]
+D/wpa_supplicant(  975): nl80211: Event message available
+D/wpa_supplicant(  975): nl80211: Drv Event 34 (NL80211_CMD_NEW_SCAN_RESULTS) received for wlan0
+D/wpa_supplicant(  975): wlan0: nl80211: New scan results available
+D/wpa_supplicant(  975): wlan0: Event SCAN_RESULTS (3) received
+D/wpa_supplicant(  975): nl80211: Received scan results (1 BSSes)
+D/wpa_supplicant(  975): nl80211: Survey data missing
+D/wpa_supplicant(  975): Sorted scan results
+D/wpa_supplicant(  975): 30:b5:c2:57:14:81 freq=2437 qual=0 noise=0 level=-36 flags=0xb age=0
+D/wpa_supplicant(  975): IEs - hexdump(len=374): 00 06 48 61 63 6b 65 72 01 08 82 84 8b 96 24 30 48 6c 03 01 06 2a 01 00 2f 01 00 30 14 01 00 00 ...
+D/wpa_supplicant(  975): wlan0: BSS: Start scan result update 1
+D/wpa_supplicant(  975): wlan0: BSS: Add new id 0 BSSID 30:b5:c2:57:14:81 SSID 'Hacker'
+D/wpa_supplicant(  975): CTRL_IFACE monitor send - hexdump(len=39): 2f 64 61 74 61 2f 6d 69 73 63 2f 77 69 66 69 2f 73 6f 63 6b 65 74 73 2f 77 70 61 5f 63 74 72 6c ...
+D/wpa_supplicant(  975): BSS: last_scan_res_used=1/32 last_scan_full=0
+D/wpa_supplicant(  975): Add randomness: count=2 entropy=0
+D/wpa_supplicant(  975): random pool - hexdump(len=128): [REMOVED]
+D/wpa_supplicant(  975): random_mix_pool - hexdump(len=8): [REMOVED]
+D/wpa_supplicant(  975): random_mix_pool - hexdump(len=5): [REMOVED]
+D/wpa_supplicant(  975): random pool - hexdump(len=128): [REMOVED]
+D/wpa_supplicant(  975): wlan0: New scan results available (own=1 ext=0)
+D/wpa_supplicant(  975): CTRL_IFACE monitor send - hexdump(len=39): 2f 64 61 74 61 2f 6d 69 73 63 2f 77 69 66 69 2f 73 6f 63 6b 65 74 73 2f 77 70 61 5f 63 74 72 6c ...
+D/wpa_supplicant(  975): WPS: attr type=0x104a len=1
+D/wpa_supplicant(  975): WPS: attr type=0x1044 len=1
+D/wpa_supplicant(  975): WPS: attr type=0x103b len=1
+D/wpa_supplicant(  975): WPS: attr type=0x1047 len=16
+D/wpa_supplicant(  975): WPS: attr type=0x1021 len=7
+D/wpa_supplicant(  975): WPS: attr type=0x1023 len=9
+D/wpa_supplicant(  975): WPS: attr type=0x1024 len=6
+D/wpa_supplicant(  975): WPS: attr type=0x1042 len=3
+D/wpa_supplicant(  975): WPS: attr type=0x1054 len=8
+V/WLAN_PSA(  209): NL MSG, len[048], NL type[0x11] WNI type[0x5050] len[028]
+D/wpa_supplicant(  975): WPS: attr type=0x1011 len=25
+D/wpa_supplicant(  975): WPS: attr type=0x1008 len=2
+D/wpa_supplicant(  975): WPS: attr type=0x103c len=1
+D/wpa_supplicant(  975): WPS: attr type=0x1049 len=6
+D/wpa_supplicant(  975): WPS: WFA subelement id=0 len=1
+D/wpa_supplicant(  975): WPS: attr type=0x104a len=1
+D/wpa_supplicant(  975): WPS: attr type=0x1044 len=1
+D/wpa_supplicant(  975): WPS: attr type=0x103b len=1
+D/wpa_supplicant(  975): WPS: attr type=0x1047 len=16
+D/wpa_supplicant(  975): WPS: attr type=0x1021 len=7
+D/wpa_supplicant(  975): WPS: attr type=0x1023 len=9
+D/wpa_supplicant(  975): WPS: attr type=0x1024 len=6
+D/wpa_supplicant(  975): WPS: attr type=0x1042 len=3
+D/wpa_supplicant(  975): WPS: attr type=0x1054 len=8
+D/wpa_supplicant(  975): WPS: attr type=0x1011 len=25
+D/wpa_supplicant(  975): WPS: attr type=0x1008 len=2
+D/wpa_supplicant(  975): WPS: attr type=0x103c len=1
+D/wpa_supplicant(  975): WPS: attr type=0x1049 len=6
+V/WLAN_PSA(  209): NL MSG, len[048], NL type[0x11] WNI type[0x5050] len[028]
+D/wpa_supplicant(  975): WPS: WFA subelement id=0 len=1
+D/wpa_supplicant(  975): WPS: attr type=0x104a len=1
+D/wpa_supplicant(  975): WPS: attr type=0x1044 len=1
+D/wpa_supplicant(  975): WPS: attr type=0x103b len=1
+D/wpa_supplicant(  975): WPS: attr type=0x1047 len=16
+D/wpa_supplicant(  975): WPS: attr type=0x1021 len=7
+D/wpa_supplicant(  975): WPS: attr type=0x1023 len=9
+D/wpa_supplicant(  975): WPS: attr type=0x1024 len=6
+D/wpa_supplicant(  975): WPS: attr type=0x1042 len=3
+D/wpa_supplicant(  975): WPS: attr type=0x1054 len=8
+D/wpa_supplicant(  975): WPS: attr type=0x1011 len=25
+D/wpa_supplicant(  975): WPS: attr type=0x1008 len=2
+D/wpa_supplicant(  975): WPS: attr type=0x103c len=1
+D/wpa_supplicant(  975): WPS: attr type=0x1049 len=6
+D/wpa_supplicant(  975): WPS: WFA subelement id=0 len=1
+D/wpa_supplicant(  975): CTRL_IFACE monitor send - hexdump(len=39): 2f 64 61 74 61 2f 6d 69 73 63 2f 77 69 66 69 2f 73 6f 63 6b 65 74 73 2f 77 70 61 5f 63 74 72 6c ...
+D/wpa_supplicant(  975): WPS: attr type=0x104a len=1
+D/wpa_supplicant(  975): WPS: attr type=0x1044 len=1
+D/wpa_supplicant(  975): WPS: attr type=0x103b len=1
+D/wpa_supplicant(  975): WPS: attr type=0x1047 len=16
+D/wpa_supplicant(  975): WPS: attr type=0x1021 len=7
+D/wpa_supplicant(  975): WPS: attr type=0x1023 len=9
+D/wpa_supplicant(  975): WPS: attr type=0x1024 len=6
+D/wpa_supplicant(  975): WPS: attr type=0x1042 len=3
+D/wpa_supplicant(  975): WPS: attr type=0x1054 len=8
+D/wpa_supplicant(  975): WPS: attr type=0x1011 len=25
+D/wpa_supplicant(  975): WPS: attr type=0x1008 len=2
+D/wpa_supplicant(  975): WPS: attr type=0x103c len=1
+D/wpa_supplicant(  975): WPS: attr type=0x1049 len=6
+D/wpa_supplicant(  975): WPS: WFA subelement id=0 len=1
+D/wpa_supplicant(  975): WPS: AP 30:b5:c2:57:14:81 type 0 added
+D/wpa_supplicant(  975): WPS: AP[0] 30:b5:c2:57:14:81 type=0 tries=0 last_attempt=-1 sec ago blacklist=0
+D/wpa_supplicant(  975): wlan0: No suitable network found
+D/wpa_supplicant(  975): wlan0: Short-circuit new scan request since there are no enabled networks
+D/wpa_supplicant(  975): wlan0: State: SCANNING -> INACTIVE
+D/wpa_supplicant(  975): CTRL_IFACE monitor send - hexdump(len=39): 2f 64 61 74 61 2f 6d 69 73 63 2f 77 69 66 69 2f 73 6f 63 6b 65 74 73 2f 77 70 61 5f 63 74 72 6c ...
+D/wpa_supplicant(  975): wlan0: Checking for other virtual interfaces sharing same radio (phy0) in event_scan_results
+D/wpa_supplicant(  975): wlan0: P2P: Station mode scan operation not pending anymore (sta_scan_pending=0 p2p_cb_on_scan_complete=0)
+D/wpa_supplicant(  975): RTM_NEWLINK: operstate=0 ifi_flags=0x1003 ([UP])
+D/wpa_supplicant(  975): RTM_NEWLINK, IFLA_IFNAME: Interface 'wlan0' added
+D/wpa_supplicant(  975): nl80211: if_removed already cleared - ignore event
+V/WLAN_PSA(  209): NL MSG, len[048], NL type[0x11] WNI type[0x5050] len[028]
+D/wpa_supplicant(  975): RX ctrl_iface - hexdump(len=12): 53 43 41 4e 5f 52 45 53 55 4c 54 53
+D/wpa_supplicant(  975): wlan0: Control interface command 'SCAN_RESULTS'
+D/wpa_supplicant(  975): WPS: attr type=0x104a len=1
+D/wpa_supplicant(  975): WPS: attr type=0x1044 len=1
+D/wpa_supplicant(  975): WPS: attr type=0x103b len=1
+D/wpa_supplicant(  975): WPS: attr type=0x1047 len=16
+D/wpa_supplicant(  975): WPS: attr type=0x1021 len=7
+D/wpa_supplicant(  975): WPS: attr type=0x1023 len=9
+D/wpa_supplicant(  975): WPS: attr type=0x1024 len=6
+D/wpa_supplicant(  975): WPS: attr type=0x1042 len=3
+D/wpa_supplicant(  975): WPS: attr type=0x1054 len=8
+D/wpa_supplicant(  975): WPS: attr type=0x1011 len=25
+D/wpa_supplicant(  975): WPS: attr type=0x1008 len=2
+D/wpa_supplicant(  975): WPS: attr type=0x103c len=1
+D/wpa_supplicant(  975): WPS: attr type=0x1049 len=6
+D/wpa_supplicant(  975): WPS: WFA subelement id=0 len=1
+D/wpa_supplicant(  975): WPS: attr type=0x104a len=1
+D/wpa_supplicant(  975): WPS: attr type=0x1044 len=1
+D/wpa_supplicant(  975): WPS: attr type=0x103b len=1
+D/wpa_supplicant(  975): WPS: attr type=0x1047 len=16
+D/wpa_supplicant(  975): WPS: attr type=0x1021 len=7
+D/wpa_supplicant(  975): WPS: attr type=0x1023 len=9
+D/wpa_supplicant(  975): WPS: attr type=0x1024 len=6
+D/wpa_supplicant(  975): WPS: attr type=0x1042 len=3
+D/wpa_supplicant(  975): WPS: attr type=0x1054 len=8
+D/wpa_supplicant(  975): WPS: attr type=0x1011 len=25
+D/wpa_supplicant(  975): WPS: attr type=0x1008 len=2
+D/wpa_supplicant(  975): WPS: attr type=0x103c len=1
+D/wpa_supplicant(  975): WPS: attr type=0x1049 len=6
+D/wpa_supplicant(  975): WPS: WFA subelement id=0 len=1
+D/wpa_supplicant(  975): WPS: attr type=0x104a len=1
+D/wpa_supplicant(  975): WPS: attr type=0x1044 len=1
+D/wpa_supplicant(  975): WPS: attr type=0x103b len=1
+D/wpa_supplicant(  975): WPS: attr type=0x1047 len=16
+D/wpa_supplicant(  975): WPS: attr type=0x1021 len=7
+D/wpa_supplicant(  975): WPS: attr type=0x1023 len=9
+D/wpa_supplicant(  975): WPS: attr type=0x1024 len=6
+D/wpa_supplicant(  975): WPS: attr type=0x1042 len=3
+D/wpa_supplicant(  975): WPS: attr type=0x1054 len=8
+D/wpa_supplicant(  975): WPS: attr type=0x1011 len=25
+D/wpa_supplicant(  975): WPS: attr type=0x1008 len=2
+D/wpa_supplicant(  975): WPS: attr type=0x103c len=1
+D/wpa_supplicant(  975): WPS: attr type=0x1049 len=6
+D/wpa_supplicant(  975): WPS: WFA subelement id=0 len=1
+D/wpa_supplicant(  975): RX ctrl_iface - hexdump(len=19): 44 52 49 56 45 52 20 53 43 41 4e 2d 50 41 53 53 49 56 45
+D/wpa_supplicant(  975): wlan0: Control interface command 'DRIVER SCAN-PASSIVE'
+D/wpa_supplicant(  975): wpa_driver_nl80211_driver_cmd SCAN-PASSIVE len = 0, 4096
+I/Gecko   ( 1075): ######################## extensions.js loaded
+W/Built-in Keyboard( 1075): [JavaScript Warning: "Use of nsIFile in content process is deprecated." {file: "jar:file:///system/b2g/omni.ja!/components/DirectoryProvider.js" line: 81}]
+V/WLAN_PSA(  209): NL MSG, len[048], NL type[0x11] WNI type[0x5050] len[028]
+I/rmt_storage(  329): rmt_storage_connect_cb: clnt_h=0x8 conn_h=0xb7216178
+I/rmt_storage(  329): rmt_storage_rw_iovec_cb: /boot/modem_fs2: clnt_h=0x2: req_h=0xc msg_id=3: R/W request received
+I/rmt_storage(  329): wakelock acquired: 1, error no: 42
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2 Unblock worker thread (th_id: -1222548936)
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2: req_h=0xc msg_id=3: Bytes written = 1572864
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2: req_h=0xc msg_id=3: Send response: res=0 err=0
+I/rmt_storage(  329): rmt_storage_client_thread: /boot/modem_fs2: clnt_h=0x2 About to block rmt_storage client thread (th_id: -1222548936) wakelock released: 1, error no: 0
+I/rmt_storage(  329):
+I/rmt_storage(  329): rmt_storage_disconnect_cb: clnt_h=0x0x8 conn_h=0x0xb7216178
+I/PerformanceTiming(  948): Performance Entry: homescreen.gaiamobile.org|mark|fullyLoaded|22957.360000|0.000000|1444828701978
+I/(Preallocated app)( 1339): PAC file installed from data: URI
+V/WLAN_PSA(  209): NL MSG, len[048], NL type[0x11] WNI type[0x5050] len[028]

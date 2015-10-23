@@ -1,10 +1,8 @@
-let adb = require('./adb');
-let spawn = require('child_process').spawn;
-
 module.exports = async function getCrashReport(req, res) {
   // First we want to figure out whether the thing
   // is pending or submitted.
   let id = req.params.id;
+  let adb = req.adb;
   let [pending, submitted] = await Promise.all([
     adb.shell('ls /data/b2g/mozilla/Crash\\ Reports/pending'),
     adb.shell('ls /data/b2g/mozilla/Crash\\ Reports/submitted')
@@ -22,18 +20,17 @@ module.exports = async function getCrashReport(req, res) {
   }
 
   // Now stream the thing.
-  let cat = spawn('adb', [
+  let cat = adb.spawn([
     'shell',
-    'cat',
-    `/data/b2g/mozilla/Crash\ Reports/${folder}/${id}.dmp`
+    `"cat /data/b2g/mozilla/Crash\\ Reports/${folder}/${id}.dmp"`
   ]);
 
-  cat.stdout.pipe(res);
+  cat.output.pipe(res);
 
   // Handle the case where the client disconnects while
   // we're still writing crash data.
   req.socket.on('close', () => {
-    cat.stdout.unpipe(res);
-    cat.kill();
+    cat.output.unpipe(res);
+    cat.proc.kill();
   });
 };
