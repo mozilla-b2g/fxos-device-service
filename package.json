@@ -17,6 +17,7 @@
     "denodeify": "^1.2.1",
     "empty-port": "^0.0.1",
     "express": "^4.13.3",
+    "connect-timeout": "^1.7.0",
     "lodash": "^3.10.1",
     "mz": "^2.0.0",
     "tmp": "^0.0.28"
