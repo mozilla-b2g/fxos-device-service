@@ -12,5 +12,5 @@ module.exports = async function device(req, res) {
   ]);
 
   let result = Object.assign({}, {gaia: gaiaCommit});
-  res.send(JSON.stringify(result));
+  res.json(result);
 };

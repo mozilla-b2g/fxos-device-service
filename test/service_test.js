@@ -26,13 +26,11 @@ suite('service', () => {
   test('/', async function() {
     let res = await get(3000, '/');
     res.statusCode.should.equal(200);
-    res.body.should.equal('200 OK');
   });
 
   test('404', async function() {
     let res = await get(3000, '/eh');
     res.statusCode.should.equal(404);
-    res.body.should.equal('404 Not Found');
   });
 
   suite('/log', () => {
@@ -79,7 +77,6 @@ suite('service', () => {
     teardown(async function() {
       let res = await request('DELETE', 3000, `/connection/${port}`);
       res.statusCode.should.equal(200);
-      res.body.should.equal('200 OK');
       await tcpPortUsed.waitUntilFree(port);
     });
 
@@ -151,12 +148,12 @@ suite('service', () => {
 
   test('/restart soft', async function() {
     let res = await request('POST', 3000, '/restart?hard=false');
-    res.body.should.equal('200 OK');
+    res.statusCode.should.equal(200);
   });
 
   test('/restart hard', async function() {
     let res = await request('POST', 3000, '/restart?hard=true');
-    res.body.should.equal('200 OK');
+    res.statusCode.should.equal(200);
   });
 
   suite('crash reports', () => {
@@ -179,7 +176,6 @@ suite('service', () => {
       let res = await get(3000, `/crashes/${crashIds[0]}`);
       res.statusCode.should.equal(200);
       res.body.length.should.be.gt(0);
-      res.body.should.not.equal('404 Not Found');
     });
   });
 });
