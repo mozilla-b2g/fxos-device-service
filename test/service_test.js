@@ -135,14 +135,14 @@ suite('service', () => {
     });
 
     test('target specific device via URL path', async function() {
-      let res = await get(3000, '/device/04fb7d5bc6d37039');
+      let res = await get(3000, '/devices/04fb7d5bc6d37039');
       let {sha, timestamp} = JSON.parse(res.body).gaia;
       sha.should.equal('f75bd584aca0a751a5bed115800250faa8412927');
       timestamp.should.equal('1445236798');
     });
 
     test('target different device via URL path', async function() {
-      let res = await get(3000, '/device/f30eccef');
+      let res = await get(3000, '/devices/f30eccef');
       let {sha, timestamp} = JSON.parse(res.body).gaia;
       sha.should.equal('f75bd584aca0a751a5bed115800250faa8412927');
       timestamp.should.equal('1445236798');

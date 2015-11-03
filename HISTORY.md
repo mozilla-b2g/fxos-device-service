@@ -1,3 +1,12 @@
+### 1.0.0
+
+Thanks to a superhero effort from @eliperelman, we now have
+
++ `/devices`, `/devices/:id`, and `/device` instead of `/info`
++ Session support
++ Multiple connected device support
++ Remote adb host support
+
 ### 0.1.0
 
 + Add `GET /crashes` and `GET /crashes/:id` to service api.

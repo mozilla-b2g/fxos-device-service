@@ -16,7 +16,7 @@ exports.start = function start(options = {}) {
   app.get('/crashes/:id', require('./get_crash_report'));
   app.get('/devices', require('./devices'));
   app.get('/device', require('./device'));
-  app.get('/device/:id', require('./device'));
+  app.get('/devices/:id', require('./device'));
   app.get('/log', require('./log'));
   app.get('*', (req, res) => res.status(404).send('404 Not Found'));
   app.post('/connection/:port', require('./connect'));
