@@ -17,6 +17,7 @@ exports.start = function start(options = {}) {
   app.use('/crashes', require('./routes/crashes'));
   app.use('/devices', require('./routes/devices'));
   app.use('/device', require('./routes/device'));
+  app.use('/kill', require('./routes/kill'));
   app.use('/log', require('./routes/log'));
   app.use('/profile', require('./routes/profile'));
   app.use('/restart', require('./routes/restart'));

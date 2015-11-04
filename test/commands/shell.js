@@ -28,6 +28,7 @@ commands.ls = function ls(dir) {
 commands.reboot = noop;
 commands.start = noop;
 commands.stop = noop;
+commands.kill = noop;
 
 module.exports = function shell(arg0) {
   if (!arg0) {
