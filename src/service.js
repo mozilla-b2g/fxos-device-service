@@ -1,5 +1,7 @@
 let express = require('express');
+let fs = require('fs');
 let http = require('http');
+let path = require('path');
 let session = require('./session');
 let adb = require('./adb');
 
@@ -10,19 +12,15 @@ exports.start = function start(options = {}) {
 
   app.use(session());
   app.use(adb({path: options.adbPath}));
-
-  app.get('/', (req, res) => res.send('200 OK'));
-  app.get('/crashes', require('./list_crash_reports'));
-  app.get('/crashes/:id', require('./get_crash_report'));
-  app.get('/devices', require('./devices'));
-  app.get('/device', require('./device'));
-  app.get('/devices/:id', require('./device'));
-  app.get('/log', require('./log'));
-  app.get('*', (req, res) => res.status(404).send('404 Not Found'));
-  app.post('/connection/:port', require('./connect'));
-  app.post('/profile', require('./profile'));
-  app.post('/restart', require('./restart'));
-  app.delete('/connection/:port', require('./disconnect'));
+  app.use('/', require('./routes/root'));
+  app.use('/connection', require('./routes/connection'));
+  app.use('/crashes', require('./routes/crashes'));
+  app.use('/devices', require('./routes/devices'));
+  app.use('/device', require('./routes/device'));
+  app.use('/log', require('./routes/log'));
+  app.use('/profile', require('./routes/profile'));
+  app.use('/restart', require('./routes/restart'));
+  app.use('*', require('./routes/unspecified'));
 
   server = http.createServer(app);
   server.listen(options.port || 8080);
