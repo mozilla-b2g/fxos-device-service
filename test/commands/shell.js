@@ -29,13 +29,14 @@ commands.reboot = noop;
 commands.start = noop;
 commands.stop = noop;
 commands.kill = noop;
+commands.log = noop;
 
 module.exports = function shell(arg0) {
   if (!arg0) {
     return;
   }
 
-  if (arg0.indexOf('"') === 0 && arg0.indexOf('"') === 0) {
+  if (arg0.indexOf("'") === 0 && arg0.indexOf("'") === 0) {
     arg0 = arg0.slice(1, -1);
   }
 

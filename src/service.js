@@ -1,3 +1,4 @@
+let bodyParser = require('body-parser');
 let debug = console.log.bind(console, '[service]');
 let express = require('express');
 let http = require('http');
@@ -9,6 +10,7 @@ let server;
 exports.start = function start(options = {}) {
   let app = express();
 
+  app.use(bodyParser.json());
   app.use(session());
   app.use(adb({path: options.adbPath}));
   app.use('/', require('./routes/root'));

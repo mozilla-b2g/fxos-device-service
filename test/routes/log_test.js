@@ -33,7 +33,7 @@ function getLog(options) {
   });
 }
 
-suite('/log', () => {
+suite('GET /log', () => {
   let log = '';
 
   setup(async function() {
@@ -47,6 +47,62 @@ suite('/log', () => {
   test('should kill adb process when client disconnects', async function() {
     let [ps] = await exec('ps au');
     ps.should.not.match(/adb.*logcat/);
+  });
+});
+
+suite('POST /log', () => {
+  let options = {
+    hostname: '127.0.0.1',
+    port: 3000,
+    path: '/log',
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  };
+  let data = {
+    message: 'Hello!',
+    priority: 'v',
+    tag: 'GeckoConsole'
+  };
+
+  test('should succeed', done => {
+    let req = http.request(options, res => {
+      res.statusCode.should.equal(200);
+      done();
+    });
+
+    req.write(JSON.stringify(data));
+    req.end();
+  });
+
+  test('should fail if no data', done => {
+    let req = http.request(options, res => {
+      res.statusCode.should.equal(500);
+      done();
+    });
+
+    req.end();
+  });
+
+  test('should fail if message empty', done => {
+    let req = http.request(options, res => {
+      res.statusCode.should.equal(500);
+      done();
+    });
+
+    req.write(JSON.stringify(Object.assign({}, data, {message: ''})));
+    req.end();
+  });
+
+  test('should fail if not sent as JSON', done => {
+    let req = http.request(Object.assign({}, options, {headers: null}), res => {
+      res.statusCode.should.equal(500);
+      done();
+    });
+
+    req.write(JSON.stringify(data));
+    req.end();
   });
 });
 
