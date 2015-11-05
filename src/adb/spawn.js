@@ -14,21 +14,18 @@ module.exports = function spawner(spawnArgs) {
   }
 
   if (this.options.serial) {
-    args.push('-s');
-    args.push(this.options.serial);
+    args.push('-s', this.options.serial);
   }
 
   if (this.options.remoteHost) {
-    args.push('-H');
-    args.push(this.options.remoteHost);
+    args.push('-H', this.options.remoteHost);
   }
 
   if (this.options.remotePort) {
-    args.push('-P');
-    args.push(this.options.remotePort);
+    args.push('-P', this.options.remotePort);
   }
 
-  args = args.concat(spawnArgs);
+  args.push(...spawnArgs);
   debug(adb, args.join(' '));
 
   let proc = spawn(adb, args);

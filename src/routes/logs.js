@@ -1,9 +1,40 @@
 let express = require('express');
+let fxos = require('../fxos');
+let moment = require('moment');
 
+/**
+ * There are two issues with `logcat -c` on Android LL
+ * 1. The log buffer is not cleared
+ * 2. Halts future logcat streams from outputting new content
+ * The workaround is to capture a timestamp at clear, and use it in the next
+ * logcat call, effectively faking a clear call
+ * https://code.google.com/p/android/issues/detail?id=78916
+ */
+const BUGGY_SDK_VERSION = 21;
 let router = express.Router();
 
-function get(req, res) {
-  let {proc, output} = req.adb.logcat();
+function createTimestamp() {
+  // Create a bash-formatted timestamp to cache-bust logcat on buggy Android L
+  return moment().format('MM-DD HH:mm:ss.SSS');
+}
+
+function getSdkVersion(adb) {
+  return fxos
+    .getProperties(adb, 'ro.build.version.sdk')
+    .then(sdkVersion => parseInt(sdkVersion, 10));
+}
+
+async function get(req, res) {
+  let adb = req.adb;
+  let sdkVersion = await getSdkVersion(adb);
+  let timestamp;
+
+  if (sdkVersion >= BUGGY_SDK_VERSION) {
+    timestamp = req.session.clearTimestamp || createTimestamp();
+  }
+
+  let {proc, output} = adb.logcat(timestamp);
+
   output.pipe(res);
   req.socket.on('close', () => {
     output.unpipe(res);
@@ -22,7 +53,21 @@ async function write(req, res) {
   res.sendStatus(200);
 }
 
+async function clear(req, res) {
+  let adb = req.adb;
+  let sdkVersion = await getSdkVersion(adb);
+
+  if (sdkVersion < BUGGY_SDK_VERSION) {
+    await adb.shell('logcat -c');
+    return res.sendStatus(200);
+  }
+
+  req.session.clearTimestamp = createTimestamp();
+  res.sendStatus(200);
+}
+
 router.get('/', get);
 router.post('/', write);
+router.delete('/', clear);
 
 module.exports = router;

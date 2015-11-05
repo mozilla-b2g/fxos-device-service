@@ -5,7 +5,7 @@ let sessions = {};
 function hydrate(request, sessionId) {
   let session = sessions[sessionId];
 
-  Object.assign(request, session, { sessionId });
+  Object.assign(request, { session, sessionId });
 }
 
 function createHash(data) {

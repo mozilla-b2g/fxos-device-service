@@ -1,5 +1,6 @@
 let exec = require('mz/child_process').exec;
 let http = require('http');
+let request = require('../request');
 
 function getLog(options) {
   return new Promise((resolve, reject) => {
@@ -103,6 +104,13 @@ suite('POST /logs', () => {
 
     req.write(JSON.stringify(data));
     req.end();
+  });
+});
+
+suite('DELETE /logs', () => {
+  test('should succeed', async function() {
+    let res = await request('DELETE', 3000, '/logs');
+    res.statusCode.should.equal(200);
   });
 });
 
