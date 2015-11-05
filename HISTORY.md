@@ -1,3 +1,9 @@
+### 2.1.0
+
++ Add `DELETE /logs` to clear device logs.
++ `GET /logs` will now only write future logs if the android sdk is 22
+  or later.
+
 ### 2.0.0
 
 Thanks to more great patches from @eliperelman, we've now cleaned up a

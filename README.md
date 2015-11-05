@@ -55,6 +55,10 @@ a JSON object in the request body with the following fields:
 + _priority_, optional, defaults to `i`
 + _tag_, optional, defaults to `DeviceService`
 
+#### DELETE /logs
+
+Clear all logcat logs on adb-connected device.
+
 #### DELETE /processes/:pid
 
 Delete the process given by *pid* parameter.
