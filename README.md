@@ -1,6 +1,9 @@
 # fxos-device-service
 
-[![Build Status](https://travis-ci.org/mozilla-b2g/fxos-device-service.png?branch=master)](https://travis-ci.org/mozilla-b2g/fxos-device-service)
+[![Build
+Status](https://travis-ci.org/mozilla-b2g/fxos-device-service.png?branch=master)](https://travis-ci.org/mozilla-b2g/fxos-device-service)
+[![npm
+version](https://badge.fury.io/js/fxos-device-service.svg)](https://badge.fury.io/js/fxos-device-service)
 
 A RESTful web service that exposes interactions with a connected Firefox OS device
 
