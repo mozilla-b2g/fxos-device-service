@@ -28,7 +28,7 @@ async function getCrashReport(req, res) {
   // Now stream the thing.
   let cat = adb.spawn([
     'shell',
-    `"cat /data/b2g/mozilla/Crash\\ Reports/${folder}/${id}.dmp"`
+    `'cat /data/b2g/mozilla/Crash\\ Reports/${folder}/${id}.dmp'`
   ]);
 
   cat.output.pipe(res);
