@@ -19,9 +19,9 @@ module.exports = options => {
    */
   return (req, res, next) => {
     req.adb = new Adb(Object.assign({
-      serial: req.serial,
-      remoteHost: req.remoteHost,
-      remotePort: req.remotePort
+      serial: req.session.serial,
+      remoteHost: req.session.remoteHost,
+      remotePort: req.session.remotePort
     }, options));
 
     next();
