@@ -1,7 +1,7 @@
 let exec = require('mz/child_process').exec;
 let http = require('http');
 
-module.exports = function(options) {
+function getLog(options) {
   return new Promise((resolve, reject) => {
     let log = '';
     let settings = Object.assign({
@@ -31,4 +31,36 @@ module.exports = function(options) {
 
     req.end();
   });
-};
+}
+
+suite('/log', () => {
+  let log = '';
+
+  setup(async function() {
+    log = await getLog();
+  });
+
+  test('should pipe data to browser', () => {
+    log.length.should.be.gt(0);
+  });
+
+  test('should kill adb process when client disconnects', async function() {
+    let [ps] = await exec('ps au');
+    ps.should.not.match(/adb.*logcat/);
+  });
+});
+
+suite('/log multiple', () => {
+  let logA = '';
+  let logB = '';
+
+  setup(async function () {
+    logA = await getLog({headers: {'X-Android-Serial': 'f30eccef'}});
+    logB = await getLog({headers: {'X-Android-Serial': '04fb7d5bc6d37039'}});
+  });
+
+  test('get different log per device', () => {
+    logA.should.match(/ANDROID_SERIAL.*f30eccef/);
+    logB.should.match(/ANDROID_SERIAL.*04fb7d5bc6d37039/);
+  });
+});
