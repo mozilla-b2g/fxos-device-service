@@ -7,6 +7,6 @@ async function kill(req, res) {
   res.sendStatus(200);
 }
 
-router.post('/:pid', kill);
+router.delete('/:pid', kill);
 
 module.exports = router;

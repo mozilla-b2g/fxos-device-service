@@ -14,12 +14,12 @@ exports.start = function start(options = {}) {
   app.use(session());
   app.use(adb({path: options.adbPath}));
   app.use('/', require('./routes/root'));
-  app.use('/connection', require('./routes/connection'));
+  app.use('/connections', require('./routes/connections'));
   app.use('/crashes', require('./routes/crashes'));
   app.use('/devices', require('./routes/devices'));
   app.use('/device', require('./routes/device'));
-  app.use('/kill', require('./routes/kill'));
-  app.use('/log', require('./routes/log'));
+  app.use('/logs', require('./routes/logs'));
+  app.use('/processes', require('./routes/processes'));
   app.use('/profile', require('./routes/profile'));
   app.use('/restart', require('./routes/restart'));
   app.use('*', require('./routes/unspecified'));

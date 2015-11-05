@@ -8,7 +8,7 @@ function getLog(options) {
       method: 'GET',
       hostname: '127.0.0.1',
       port: 3000,
-      path: '/log'
+      path: '/logs'
     }, options);
     let req = http.request(settings, res => {
       function onend() {
@@ -33,7 +33,7 @@ function getLog(options) {
   });
 }
 
-suite('GET /log', () => {
+suite('GET /logs', () => {
   let log = '';
 
   setup(async function() {
@@ -50,11 +50,11 @@ suite('GET /log', () => {
   });
 });
 
-suite('POST /log', () => {
+suite('POST /logs', () => {
   let options = {
     hostname: '127.0.0.1',
     port: 3000,
-    path: '/log',
+    path: '/logs',
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -106,7 +106,7 @@ suite('POST /log', () => {
   });
 });
 
-suite('/log multiple', () => {
+suite('/logs multiple', () => {
   let logA = '';
   let logB = '';
 

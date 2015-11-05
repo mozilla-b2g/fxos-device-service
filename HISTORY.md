@@ -1,3 +1,11 @@
+### 2.0.0
+
+Thanks to more great patches from @eliperelman, we've now cleaned up a
+lot of the server's internals and organized all of our test cases! In
+addition, we've added `DELETE /processes/:pid` and `POST /logs`. We also
+changed the previous `/connection` endpoint to `/connections` and the
+previous `/log` endpoint to `/logs` in the spirit of keeping the urls RESTful.
+
 ### 1.0.0
 
 Thanks to a superhero effort from @eliperelman, we now have

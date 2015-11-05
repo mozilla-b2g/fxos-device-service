@@ -1,6 +1,6 @@
 let request = require('../request');
 
-suite('/restart', () => {
+suite('POST /restart', () => {
   test('soft', async function() {
     let res = await request('POST', 3000, '/restart?hard=false');
     res.statusCode.should.equal(200);

@@ -1,6 +1,6 @@
 let get = require('../get');
 
-suite('/devices', async function () {
+suite('GET /devices', async function () {
   let data;
 
   setup(async function () {
