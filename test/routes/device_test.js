@@ -1,6 +1,6 @@
 let get = require('../get');
 
-suite('/device', async function () {
+suite('GET /device', async function () {
   test('gaia commit', async function () {
     let res = await get(3000, '/device');
     let {sha, timestamp} = JSON.parse(res.body).gaia;
