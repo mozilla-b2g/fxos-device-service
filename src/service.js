@@ -1,3 +1,4 @@
+let debug = console.log.bind(console, '[service]');
 let express = require('express');
 let http = require('http');
 let session = require('./session');
@@ -21,10 +22,12 @@ exports.start = function start(options = {}) {
   app.use('/restart', require('./routes/restart'));
   app.use('*', require('./routes/unspecified'));
 
+  debug('Will start server with options', JSON.stringify(options));
   server = http.createServer(app);
   server.listen(options.port || 8080);
 };
 
 exports.stop = function stop() {
+  debug('Will stop server');
   server.close();
 };
