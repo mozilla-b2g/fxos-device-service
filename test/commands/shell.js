@@ -2,7 +2,17 @@ var fs = require('fs');
 var path = require('path');
 var spawn = require('child_process').spawn;
 
+// Regular expression for extracting adb property output
+const GETPROP_MATCHER = /^\[([\s\S]*?)]: \[([\s\S]*?)]\r?$/gm;
+
 function noop() {}
+function parse(value) {
+  try {
+    return JSON.parse(value);
+  } catch (e) {
+    return value;
+  }
+}
 function stream(command, location) {
   location = location
     .replace('/data/b2g/mozilla/', '')
@@ -25,11 +35,37 @@ commands.ls = function ls(dir) {
   return stream('ls', dir);
 };
 
+commands.getprop = function getprop(name) {
+  var output = path.resolve(__dirname, '../output/getprop');
+  var readStream = fs.createReadStream(output, {encoding: 'utf8'});
+
+  if (!name) {
+    return readStream.pipe(process.stdout);
+  }
+
+  var content = '';
+
+  readStream.on('data', function(data) { content += data; });
+  readStream.on('end', function() {
+    var match;
+
+    while (match = GETPROP_MATCHER.exec(content)) {
+      if (match[1] !== name) {
+        continue;
+      }
+
+      console.log(parse(match[2]));
+      return;
+    }
+  });
+};
+
 commands.reboot = noop;
 commands.start = noop;
 commands.stop = noop;
 commands.kill = noop;
 commands.log = noop;
+commands.setprop = noop;
 
 module.exports = function shell(arg0) {
   if (!arg0) {
