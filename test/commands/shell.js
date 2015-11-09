@@ -23,12 +23,23 @@ function stream(command, location) {
 
   child.stdout.pipe(process.stdout);
   child.stderr.pipe(process.stderr);
+
+  return child;
 }
 
 var commands = {};
 
 commands.cat = function cat(file) {
-  return stream('cat', file);
+  var proc = stream('cat', file);
+
+  proc.stderr.once('data', function(data) {
+    if (/No such file or directory/.test(data.toString())) {
+      console.log(data.toString());
+      process.exit(1);
+    }
+  });
+
+  return proc;
 };
 
 commands.ls = function ls(dir) {
@@ -67,16 +78,18 @@ commands.kill = noop;
 commands.log = noop;
 commands.setprop = noop;
 
-module.exports = function shell(arg0) {
-  if (!arg0) {
+module.exports = function shell() {
+  var args = Array.prototype.slice.call(arguments).join(' ');
+
+  if (!args) {
     return;
   }
 
-  if (arg0.indexOf("'") === 0 && arg0.indexOf("'") === 0) {
-    arg0 = arg0.slice(1, -1);
+  if (args.indexOf("'") === 0 && args.lastIndexOf("'") === args.length - 1) {
+    args = args.slice(1, -1);
   }
 
-  var argv = arg0
+  var argv = args
     .replace(/\\ /g, '<@>')
     .split(/\s+/)
     .map(function(item) { return item.replace(/<@>/g, '\\ '); });
