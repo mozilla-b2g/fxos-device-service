@@ -21,6 +21,7 @@ exports.start = function start(options = {}) {
   app.use('/logs', require('./routes/logs'));
   app.use('/processes', require('./routes/processes'));
   app.use('/profile', require('./routes/profile'));
+  app.use('/properties', require('./routes/properties'));
   app.use('/restart', require('./routes/restart'));
   app.use('*', require('./routes/unspecified'));
 

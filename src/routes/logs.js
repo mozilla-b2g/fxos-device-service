@@ -19,9 +19,7 @@ function createTimestamp() {
 }
 
 function getSdkVersion(adb) {
-  return fxos
-    .getProperties(adb, 'ro.build.version.sdk')
-    .then(sdkVersion => parseInt(sdkVersion, 10));
+  return fxos.getProperties(adb, 'ro.build.version.sdk');
 }
 
 async function get(req, res) {
@@ -46,7 +44,7 @@ async function write(req, res) {
   let body = req.body;
 
   if (!body.message) {
-    return res.status(500).send('Missing log message');
+    return res.status(422).send('Missing log message');
   }
 
   await req.adb.log(body.message, body.priority, body.tag);

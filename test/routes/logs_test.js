@@ -79,7 +79,7 @@ suite('POST /logs', () => {
 
   test('should fail if no data', done => {
     let req = http.request(options, res => {
-      res.statusCode.should.equal(500);
+      res.statusCode.should.equal(422);
       done();
     });
 
@@ -88,7 +88,7 @@ suite('POST /logs', () => {
 
   test('should fail if message empty', done => {
     let req = http.request(options, res => {
-      res.statusCode.should.equal(500);
+      res.statusCode.should.equal(422);
       done();
     });
 
@@ -98,7 +98,7 @@ suite('POST /logs', () => {
 
   test('should fail if not sent as JSON', done => {
     let req = http.request(Object.assign({}, options, {headers: null}), res => {
-      res.statusCode.should.equal(500);
+      res.statusCode.should.equal(422);
       done();
     });
 

@@ -8,7 +8,7 @@ module.exports = async function device(req, res) {
   }
 
   let [gaiaCommit] = await Promise.all([
-    fxos.readGaiaCommit(req.adb)
+    fxos.readGaiaCommit(adb)
   ]);
 
   let result = Object.assign({}, {gaia: gaiaCommit});
