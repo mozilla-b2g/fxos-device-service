@@ -71,6 +71,13 @@ commands.getprop = function getprop(name) {
   });
 };
 
+commands.chmod = function chmod(mode, file) {
+  // Super-dirty mode validity check
+  if (!/^\d+$/.test(mode) && !/[\+\-=]/.test(mode)) {
+    console.log('Bad mode');
+  }
+};
+
 commands.reboot = noop;
 commands.start = noop;
 commands.stop = noop;

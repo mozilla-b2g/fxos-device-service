@@ -3,14 +3,15 @@ let get = require('../get');
 let path = require('path');
 let restler = require('restler');
 
-function upload(url, file) {
+function upload(url, file, mode) {
   return new Promise((resolve, reject) => {
-    let req = restler.put(url, {
-      multipart: true,
-      data: {
-        upload: file
-      }
-    });
+    let data = {upload: file};
+
+    if (mode) {
+      data.mode = mode;
+    }
+
+    let req = restler.put(url, {multipart: true, data: data});
 
     req.on('complete', (result, response) => {
       result instanceof Error ?
@@ -71,5 +72,23 @@ suite('PUT /files', () => {
     let url = 'http://localhost:3000/files?filepath=';
     let res = await upload(url, uploadFile);
     res.statusCode.should.equal(422);
+  });
+
+  test('should allow setting numerical permissions mode', async function() {
+    let url = 'http://localhost:3000/files?filepath=/data/b2g/mozilla/profiles.ini';
+    let res = await upload(url, uploadFile, 777);
+    res.statusCode.should.equal(200);
+  });
+
+  test('should allow setting string permissions mode', async function() {
+    let url = 'http://localhost:3000/files?filepath=/data/b2g/mozilla/profiles.ini';
+    let res = await upload(url, uploadFile, '+x');
+    res.statusCode.should.equal(200);
+  });
+
+  test('should fail with bad permission mode', async function() {
+    let url = 'http://localhost:3000/files?filepath=/data/b2g/mozilla/profiles.ini';
+    let res = await upload(url, uploadFile, 'invalid');
+    res.statusCode.should.equal(500);
   });
 });
