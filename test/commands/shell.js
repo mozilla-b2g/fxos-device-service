@@ -13,37 +13,19 @@ function parse(value) {
     return value;
   }
 }
-function stream(command, location) {
+function createStream(command, location, options) {
   location = location
     .replace('/data/b2g/mozilla/', '')
     .replace('\\', '');
   location = path.resolve(__dirname, '..', 'fixtures', location);
 
-  var child = spawn(command, [location]);
-
-  child.stdout.pipe(process.stdout);
-  child.stderr.pipe(process.stderr);
-
-  return child;
+  return spawn(command, [location], options || {});
 }
 
 var commands = {};
 
-commands.cat = function cat(file) {
-  var proc = stream('cat', file);
-
-  proc.stderr.once('data', function(data) {
-    if (/No such file or directory/.test(data.toString())) {
-      console.log(data.toString());
-      process.exit(1);
-    }
-  });
-
-  return proc;
-};
-
 commands.ls = function ls(dir) {
-  return stream('ls', dir);
+  return createStream('ls', dir, {stdio: 'inherit'});
 };
 
 commands.getprop = function getprop(name) {
