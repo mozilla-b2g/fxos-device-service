@@ -8,6 +8,12 @@ suite('GET /device', async function () {
     timestamp.should.equal('1445236798');
   });
 
+  test('gecko commit', async function () {
+    let res = await get(3000, '/device');
+    let sha = JSON.parse(res.body).gecko;
+    sha.should.equal('61dcc13d0848230382d5c85cdcf6721a05ee37c6');
+  });
+
   test('target specific device', async function () {
     let res = await get(3000, '/device', {
       headers: {'X-Android-Serial': '04fb7d5bc6d37039'}
