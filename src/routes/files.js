@@ -52,8 +52,24 @@ function download(req, res) {
 }
 
 async function upload(req, res) {
-  await req.adb.push(req.files[0].path, req.query.filepath);
-  res.sendStatus(200);
+  let adb = req.adb;
+  let source = req.files[0].path;
+  let destination = req.query.filepath;
+  let mode = req.body.mode;
+
+  await adb.push(source, destination);
+
+  if (!mode) {
+    return res.sendStatus(200);
+  }
+
+  let [output] = await fxos.setFilePermissions(adb, destination, mode);
+
+  if (/Bad mode/.test(output)) {
+    return res.status(500).send('Invalid file permissions mode used');
+  }
+
+  return res.sendStatus(200);
 }
 
 router.get('/', filepath, download);
