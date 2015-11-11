@@ -25,20 +25,7 @@ async function getCrashReport(req, res) {
     return res.sendStatus(404);
   }
 
-  // Now stream the thing.
-  let cat = adb.spawn([
-    'shell',
-    `'cat /data/b2g/mozilla/Crash\\ Reports/${folder}/${id}.dmp'`
-  ]);
-
-  cat.output.pipe(res);
-
-  // Handle the case where the client disconnects while
-  // we're still writing crash data.
-  req.socket.on('close', () => {
-    cat.output.unpipe(res);
-    cat.proc.kill();
-  });
+  res.sendFromDevice(`/data/b2g/mozilla/Crash\\ Reports/${folder}/${id}.dmp`);
 }
 
 

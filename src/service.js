@@ -1,9 +1,10 @@
+let adb = require('./adb');
 let bodyParser = require('body-parser');
 let debug = console.log.bind(console, '[service]');
 let express = require('express');
 let http = require('http');
 let session = require('./session');
-let adb = require('./adb');
+let sendFromDevice = require('./sendFromDevice');
 
 let server;
 
@@ -13,6 +14,7 @@ exports.start = function start(options = {}) {
   app.use(bodyParser.json());
   app.use(session());
   app.use(adb({path: options.adbPath}));
+  app.use(sendFromDevice());
   app.use('/', require('./routes/root'));
   app.use('/connections', require('./routes/connections'));
   app.use('/crashes', require('./routes/crashes'));

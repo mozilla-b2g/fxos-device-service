@@ -1,15 +1,13 @@
 let assert = require('assert');
 let debug = console.log.bind(console, '[fxos/readGaiaCommit]');
-let denodeify = require('denodeify');
 let exec = require('mz/child_process').exec;
 let fs = require('mz/fs');
-let tmpdir = denodeify(require('tmp').dir);
+let tempdir = require('../tempdir');
 
 let roots = ['/data/local', '/system/b2g'];
 
 module.exports = async function readGaiaCommit(adb) {
-  let local = await tmpdir();
-  debug('tmpdir', local);
+  let local = await tempdir();
   await Promise.all(
     roots.map(async function(root) {
       try {

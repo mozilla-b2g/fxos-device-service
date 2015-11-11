@@ -1,11 +1,10 @@
 let assert = require('assert');
 let debug = console.log.bind(console, '[fxos/readGeckoCommit]');
-let denodeify = require('denodeify');
 let findInStream = require('../findInStream');
 let fs = require('mz/fs');
 let path = require('path');
 let sax = require('sax');
-let tmpdir = denodeify(require('tmp').dir);
+let tempdir = require('../tempdir');
 
 const SOURCES_XML = '/system/sources.xml';
 const APPLICATION_INI = '/system/b2g/application.ini';
@@ -62,8 +61,7 @@ async function getGeckoRevisionFromXml(local) {
  * @returns {string}
  */
 module.exports = async function getGeckoRevision(adb) {
-  let local = await tmpdir();
-  debug('tmpdir', local);
+  let local = await tempdir();
 
   try {
     await adb.pull(SOURCES_XML, local);
