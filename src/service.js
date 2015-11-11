@@ -18,6 +18,7 @@ exports.start = function start(options = {}) {
   app.use('/crashes', require('./routes/crashes'));
   app.use('/devices', require('./routes/devices'));
   app.use('/device', require('./routes/device'));
+  app.use('/files', require('./routes/files'));
   app.use('/logs', require('./routes/logs'));
   app.use('/processes', require('./routes/processes'));
   app.use('/profile', require('./routes/profile'));
