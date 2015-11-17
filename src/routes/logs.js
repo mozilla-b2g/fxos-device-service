@@ -18,13 +18,9 @@ function createTimestamp() {
   return moment().format('MM-DD HH:mm:ss.SSS');
 }
 
-function getSdkVersion(adb) {
-  return fxos.getProperties(adb, 'ro.build.version.sdk');
-}
-
 async function get(req, res) {
   let adb = req.adb;
-  let sdkVersion = await getSdkVersion(adb);
+  let sdkVersion = await fxos.getSdkVersion(adb);
   let timestamp;
 
   if (sdkVersion >= BUGGY_SDK_VERSION) {
@@ -53,7 +49,7 @@ async function write(req, res) {
 
 async function clear(req, res) {
   let adb = req.adb;
-  let sdkVersion = await getSdkVersion(adb);
+  let sdkVersion = await fxos.getSdkVersion(adb);
 
   if (sdkVersion < BUGGY_SDK_VERSION) {
     await adb.shell('logcat -c');

@@ -24,7 +24,10 @@ function middleware(req, res, next) {
       remotePort: req.get('X-Remote-Port')
     };
     sessionId = createHash(session);
-    sessions[sessionId] = session;
+
+    if (!sessions[sessionId]) {
+      sessions[sessionId] = session;
+    }
   }
 
   hydrate(req, sessionId);

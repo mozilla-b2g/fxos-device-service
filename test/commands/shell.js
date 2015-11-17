@@ -71,6 +71,11 @@ commands.getprop = function getprop(name) {
   });
 };
 
+commands.getevent = function getevent() {
+  var output = path.resolve(__dirname, '../output/getevent');
+  fs.createReadStream(output).pipe(process.stdout);
+};
+
 commands.chmod = function chmod(mode, file) {
   // Super-dirty mode validity check
   if (!/^\d+$/.test(mode) && !/[\+\-=]/.test(mode)) {

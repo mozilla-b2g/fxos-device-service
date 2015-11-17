@@ -69,7 +69,8 @@ async function upload(req, res) {
     return res.status(500).send('Invalid file permissions mode used');
   }
 
-  return res.sendStatus(200);
+  await req.adb.push(req.files[0].path, req.query.filepath);
+  res.sendStatus(200);
 }
 
 router.get('/', filepath, download);

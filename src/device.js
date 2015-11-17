@@ -7,11 +7,12 @@ module.exports = async function device(req, res) {
     adb.options.serial = req.params.id;
   }
 
-  let [gaiaCommit, geckoCommit] = await Promise.all([
+  let [info, gaiaCommit, geckoCommit] = await Promise.all([
+    fxos.getDeviceInfo(adb),
     fxos.readGaiaCommit(adb),
     fxos.readGeckoCommit(adb)
   ]);
 
-  let result = {gaia: gaiaCommit, gecko: geckoCommit};
+  let result = Object.assign(info, {gaia: gaiaCommit, gecko: geckoCommit});
   res.json(result);
 };
