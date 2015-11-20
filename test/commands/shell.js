@@ -22,7 +22,19 @@ function createStream(command, location, options) {
   return spawn(command, [location], options || {});
 }
 
+function streamOutput(name) {
+  var output = path.resolve(__dirname, '../output/' + name);
+  fs.createReadStream(output).pipe(process.stdout);
+}
+
 var commands = {};
+
+[
+  'getevent',
+  'b2g-info'
+].forEach(function(commandName) {
+  commands[commandName] = streamOutput.bind(null, commandName);
+});
 
 commands.ls = function ls(dir) {
   return createStream('ls', dir, {stdio: 'inherit'});
@@ -51,11 +63,6 @@ commands.getprop = function getprop(name) {
       return;
     }
   });
-};
-
-commands.getevent = function getevent() {
-  var output = path.resolve(__dirname, '../output/getevent');
-  fs.createReadStream(output).pipe(process.stdout);
 };
 
 commands.chmod = function chmod(mode, file) {
