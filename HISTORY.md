@@ -1,3 +1,17 @@
+### 3.0.0
+
++ BREAKING CHANGE: Invalid post data now responds with HTTP 422 instead of 500.
++ Add `POST /events` to trigger low-level touch-related interactions.
++ Add `GET /files` to download and stream a file from a device destination.
++ Add `PUT /files` to upload a file to a destination on device.
++ Add `GET /processes` to fetch information about one or many B2G processes.
++ Add `GET /properties` to retrieve one or many properties from `getprop`.
++ Add `POST /properties` to set the value of a device property.
++ Added Gecko revision to data returned from `/device`.
++ Added display interface information to data returned from `/device`.
++ Added ability to set file permissions on uploaded files.
++ Fixed session creation which would not correctly hydrate a previous session.
+
 ### 2.1.0
 
 + Add `DELETE /logs` to clear device logs.
