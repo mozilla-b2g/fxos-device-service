@@ -1,0 +1,70 @@
+add device 1: /dev/input/event8
+  name:     "msm8x10-skuaa-snd-card Headset Jack"
+  events:
+    SW  (0005): SW_HEADPHONE_INSERT   SW_MICROPHONE_INSERT  SW_LINEOUT_INSERT     000e
+                000f                  0010                  0011
+  input props:
+    <none>
+add device 2: /dev/input/event7
+  name:     "msm8x10-skuaa-snd-card Button Jack"
+  events:
+    KEY (0001): KEY_MEDIA             BTN_1                 BTN_2                 BTN_3
+                BTN_4                 BTN_5                 BTN_6                 BTN_7
+  input props:
+    <none>
+add device 3: /dev/input/event5
+  name:     "qpnp_pon"
+  events:
+    KEY (0001): KEY_VOLUMEDOWN        KEY_POWER
+  input props:
+    0004
+add device 4: /dev/input/event4
+  name:     "compass"
+  events:
+    ABS (0003): ABS_BRAKE             : value 0, min -32768, max 32767, fuzz 0, flat 0, resolution 0
+                ABS_HAT0X             : value 0, min -32768, max 32767, fuzz 0, flat 0, resolution 0
+                ABS_HAT0Y             : value 0, min -32768, max 32767, fuzz 0, flat 0, resolution 0
+  input props:
+    <none>
+add device 5: /dev/input/event3
+  name:     "bma2x2"
+  events:
+    REL (0002): REL_Z                 REL_HWHEEL            REL_DIAL              REL_WHEEL
+                REL_MISC
+    ABS (0003): ABS_X                 : value 12, min -512, max 512, fuzz 0, flat 0, resolution 0
+                ABS_Y                 : value 10, min -512, max 512, fuzz 0, flat 0, resolution 0
+                ABS_Z                 : value -61, min -512, max 512, fuzz 0, flat 0, resolution 0
+                ABS_PRESSURE          : value 0, min 0, max 0, fuzz 0, flat 0, resolution 0
+                ABS_DISTANCE          : value 0, min 0, max 0, fuzz 0, flat 0, resolution 0
+  input props:
+    <none>
+add device 6: /dev/input/event2
+  name:     "stk3x1x-ps"
+  events:
+    ABS (0003): ABS_DISTANCE          : value 1, min 0, max 1, fuzz 0, flat 0, resolution 0
+  input props:
+    <none>
+add device 7: /dev/input/event1
+  name:     "stk3x1x-als"
+  events:
+    ABS (0003): ABS_MISC              : value 0, min 0, max 288353, fuzz 0, flat 0, resolution 0
+  input props:
+    <none>
+add device 8: /dev/input/event6
+  name:     "gpio-keys"
+  events:
+    KEY (0001): KEY_VOLUMEUP          KEY_CAMERA_FOCUS      02fe
+  input props:
+    <none>
+add device 9: /dev/input/event0
+  name:     "Goodix-TS"
+  events:
+    KEY (0001): KEY_HOME
+    ABS (0003): ABS_MT_SLOT           : value 0, min 0, max 9, fuzz 0, flat 0, resolution 0
+                ABS_MT_TOUCH_MAJOR    : value 0, min 0, max 255, fuzz 0, flat 0, resolution 0
+                ABS_MT_WIDTH_MAJOR    : value 0, min 0, max 255, fuzz 0, flat 0, resolution 0
+                ABS_MT_POSITION_X     : value 0, min 0, max 480, fuzz 0, flat 0, resolution 0
+                ABS_MT_POSITION_Y     : value 0, min 0, max 854, fuzz 0, flat 0, resolution 0
+                ABS_MT_TRACKING_ID    : value 0, min 0, max 255, fuzz 0, flat 0, resolution 0
+  input props:
+    INPUT_PROP_DIRECT
