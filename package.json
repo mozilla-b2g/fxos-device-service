@@ -8,7 +8,10 @@
   "main": "./build/service.js",
   "repository": "mozilla-b2g/fxos-device-service",
 
-  "files": ["build"],
+  "files": [
+    "build",
+    "bin"
+  ],
 
   "dependencies": {
     "argparse": "^1.0.2",
