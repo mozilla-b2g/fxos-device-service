@@ -7,7 +7,7 @@ let router = express.Router();
 async function getCrashReport(req, res) {
   // First we want to figure out whether the thing
   // is pending or submitted.
-  let id = req.params.id;
+  let id = req.params.crashId;
   let adb = req.adb;
   let [pending, submitted] = await Promise.all([
     adb.shell('ls /data/b2g/mozilla/Crash\\ Reports/pending'),
@@ -58,6 +58,6 @@ async function listCrashReports(req, res) {
 }
 
 router.get('/', listCrashReports);
-router.get('/:id', getCrashReport);
+router.get('/:crashId', getCrashReport);
 
 module.exports = router;

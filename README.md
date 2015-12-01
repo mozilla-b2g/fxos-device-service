@@ -9,49 +9,44 @@ A RESTful web service that exposes interactions with a connected Firefox OS devi
 
 ### API Methods
 
-#### GET /
+#### `GET /`
 
 Status message that shows whether the service is running.
 
-#### POST /connections/:port
+#### `GET /devices[?host=<host>&port=<port>]`
 
-Open a tcp connection to the parameter *port*. Returns a port on the
-host machine that is proxied to that device port.
+List IDs and serial numbers of adb-attached devices. Can optionally specify a
+remote `host` and `port` for which the device is connected.
 
-#### DELETE /connections/:port
+#### `GET /devices/:id`
+
+Fetch details about the device whose session ID is the parameter `id`.
+
+#### `POST /devices/:id/connections/:port`
+
+Open a tcp connection to the parameter `port`. Returns a port on the
+host machine that is proxied to the device's port.
+
+#### `DELETE /devices/:id/connections/:port`
 
 Close the device tcp connection previously opened on the parameter
-*port*.
+`port`.
 
-#### GET /crashes
+#### `GET /devices/:id/crashes`
 
-List ids of crash reports on device.
+List IDs of crash reports on device.
 
-#### GET /crashes/:id
+#### `GET /devices/:id/crashes/:crashId`
 
-Download the crash dump with the parameter crash *id*.
+Download the crash dump with the parameter crash `crashId`.
 
-#### GET /devices
-
-List ids of adb-attached devices.
-
-#### GET /devices/:id
-
-Fetch details about the device whose adb id is the parameter *id*.
-
-#### GET /device
-
-Fetch details about a device. The service will look at the request
-headers (particularly `X-Session-Id` or `X-Android-Serial`) to
-figure out which device to report about.
-
-#### POST /events
+#### `POST /devices/:id/events`
 
 Trigger a series of sequential low-level touch interactions. The client is
 expected to write a JSON array of event objects for which to sequentially
 execute. See the syntax for `POST /events/:event` for event object schema.
 
-#### POST /events/:event
+#### `POST /devices/:id/events/:event`
 
 Trigger a low-level touch-related interaction. The client is expected to write a
 JSON object with event-related properties which control the trigger details.
@@ -85,16 +80,16 @@ Example:
 curl \
   -H 'Content-Type: application/json' \
   -X POST \
-  'http://localhost:8080/events/tap' \
+  'http://localhost:8080/devices/abcdef0123456789/events/tap' \
   --data-binary '{"x":100,"y":200}'
 ```
 
-#### GET /files?filepath=&lt;filepath&gt;
+#### `GET /devices/:id/files?filepath=<filepath>`
 
 Download a file from device. Use the `filepath` query parameter to specify the
 location of the file to download.
 
-#### PUT /files?filepath=&lt;filepath&gt;
+#### `PUT /devices/:id/files?filepath=<filepath>`
 
 Upload a file to device. Use the `filepath` query parameter to specify the path
 destination of the uploaded file. The uploaded file should sent via
@@ -107,7 +102,7 @@ Examples:
 curl \
   -X PUT
   -F 'upload=@myfile.txt'
-  'http://localhost:8080/files?filepath=/data/local/myfile.txt'
+  'http://localhost:8080/devices/abcdef0123456789/files?filepath=/data/local/myfile.txt'
 ```
 
 ```sh
@@ -116,7 +111,7 @@ curl \
   -X PUT
   -F 'upload=@image.jpg'
   -F 'mode=777'
-  'http://localhost:8080/files?filepath=/data/local/image.jpg'
+  'http://localhost:8080/devices/abcdef0123456789/files?filepath=/data/local/image.jpg'
 ```
 
 ```sh
@@ -125,69 +120,44 @@ curl \
   -X PUT
   -F 'upload=@script.sh'
   -F 'mode=+x'
-  'http://localhost:8080/files?filepath=/data/local/script.sh'
+  'http://localhost:8080/devices/abcdef0123456789/files?filepath=/data/local/script.sh'
 ```
 
-#### GET /logs
+#### `GET /devices/:id/logs`
 
 Pipe logs from logcat to the connected client.
 
-#### POST /logs
+#### `POST /devices/:id/logs`
 
-Write a log to the adb-connected device. The client is expected to write
-a JSON object in the request body with the following fields:
+Write a log entry to the device. The client is expected to write a JSON object
+in the request body with the following fields:
 
 + _message_, required
 + _priority_, optional, defaults to `i`
 + _tag_, optional, defaults to `DeviceService`
 
-#### DELETE /logs
+#### `DELETE /devices/:id/logs`
 
-Clear all logcat logs on adb-connected device.
+Clear all logcat logs on the device.
 
-#### DELETE /processes/:pid
+#### `DELETE /devices/:id/processes/:pid`
 
-Delete the process given by *pid* parameter.
+Stop the process given by `pid` parameter.
 
-#### GET /properties
+#### `GET /devices/:id/properties`
 
 Retrieve a JSON object of all the device properties and their associates values.
 
-#### GET /properties/:id
+#### `GET /devices/:id/properties/:property`
 
-Retrieve the value of a device property specified by the `:id` url parameter.
+Retrieve the value of a device property specified by the `property` url parameter.
 
-#### POST /properties
+#### `POST /devices/:id/properties`
 
 Set the values of a collection device properties. The client is expected to
 write a JSON object which contains a dictionary of property names to values.
 
-#### POST /restart?hard=(true|false|0|1)
+#### `POST /devices/:id/restart?hard=(true|false|0|1)`
 
-Restarts b2g process running on device. If the url parameter *hard* is
+Restarts b2g process running on device. If the url parameter `hard` is
 `true` or `1`, then the device will be restarted instead.
-
-### Request headers
-
-#### X-Session-Id
-
-We store a map from session ids to sessions on the server. The `X-Session-Id`
-request header allows you to make a request using details from an
-existing session which are stored on the server. Every request response
-comes with an `X-Session-Id` header.
-
-#### X-Android-Serial
-
-The `X-Android-Serial` header allows you to specify that a certain adb
-device id should be used when multiple devices are connected to the host
-machine.
-
-#### X-Remote-Host
-
-The `X-Remote-Host` header specifies a remote host for any commands
-issued via adb to use during this request.
-
-#### X-Remote-Port
-
-The `X-Remote-Port` header specifies a device port for any commands
-issued via adb to use during this request.

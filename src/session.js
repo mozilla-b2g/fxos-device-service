@@ -1,39 +1,21 @@
-let crypto = require('crypto');
-
+const SESSION_ID_MATCHER = /^\/devices\/(.+?)(\/|$)/;
 let sessions = {};
 
-function hydrate(request, sessionId) {
+function middleware(req, res, next) {
+  let matches = SESSION_ID_MATCHER.exec(req.url);
+  let sessionId = matches ? matches[1] : '';
   let session = sessions[sessionId];
 
-  Object.assign(request, { session, sessionId });
-}
-
-function createHash(data) {
-  let hash = crypto.createHash('sha1');
-  hash.update(JSON.stringify(data));
-  return hash.digest('hex');
-}
-
-function middleware(req, res, next) {
-  let sessionId = req.get('X-Session-Id');
-
-  if (!sessionId) {
-    let session = {
-      serial: req.get('X-Android-Serial'),
-      remoteHost: req.get('X-Remote-Host'),
-      remotePort: req.get('X-Remote-Port')
+  if (!session || !sessionId) {
+    session = sessions[sessionId] = {
+      remoteHost: req.query.host,
+      remotePort: req.query.port
     };
-    sessionId = createHash(session);
-
-    if (!sessions[sessionId]) {
-      sessions[sessionId] = session;
-    }
   }
 
-  hydrate(req, sessionId);
-
-  res.setHeader('X-Session-Id', sessionId);
+  req.session = session;
   next();
 }
 
 module.exports = () => middleware;
+module.exports.sessions = sessions;
