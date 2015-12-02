@@ -1,3 +1,11 @@
+### 4.0.0
+
++ Device-contextual routes are now organized under the `/devices/:id` API.
++ `/device` route removed in favor of `/devices/:id`.
++ Removed necessity of all request headers.
++ Search for devices on remote hosts with `/devices?host=<host>&port=<port>`
++ ID in `/devices/:id` is now a device session ID, not device serial number.
+
 ### 3.0.0
 
 + BREAKING CHANGE: Invalid post data now responds with HTTP 422 instead of 500.

@@ -9,7 +9,7 @@ async function getAll(req, res) {
 }
 
 async function getOne(req, res) {
-  let property = await fxos.getProperties(req.adb, req.params.id);
+  let property = await fxos.getProperties(req.adb, req.params.property);
   res.json(property);
 }
 
@@ -32,7 +32,7 @@ async function set(req, res) {
 }
 
 router.get('/', getAll);
-router.get('/:id', getOne);
+router.get('/:property', getOne);
 router.post('/', set);
 
 module.exports = router;
