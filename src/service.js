@@ -1,5 +1,6 @@
 let adb = require('./adb');
 let bodyParser = require('body-parser');
+let cors = require('./cors');
 let debug = console.log.bind(console, '[service]');
 let express = require('express');
 let http = require('http');
@@ -15,6 +16,7 @@ exports.start = function start(options = {}) {
   app.use(session());
   app.use(adb({path: options.adbPath}));
   app.use(sendFromDevice());
+  app.use(cors());
   app.use('/', require('./routes/root'));
   app.use('/devices', require('./routes/devices'));
   app.use('*', require('./routes/unspecified'));

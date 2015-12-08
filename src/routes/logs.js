@@ -30,10 +30,13 @@ async function get(req, res) {
   let {proc, output} = adb.logcat(timestamp);
 
   output.pipe(res);
-  req.socket.on('close', () => {
+  let close = () => {
     output.unpipe(res);
     proc.kill();
-  });
+  };
+
+  req.socket.on('close', close);
+  process.on('exit', close);
 }
 
 async function write(req, res) {
