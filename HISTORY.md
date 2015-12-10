@@ -1,3 +1,7 @@
+### 4.1.0
+
++ Added CORS headers to all responses to improve in-browser API access.
+
 ### 4.0.0
 
 + Device-contextual routes are now organized under the `/devices/:id` API.
