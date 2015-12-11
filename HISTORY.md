@@ -1,3 +1,7 @@
+### 4.1.1
+
++ Replace linux adb binary with one that works on ubuntu 15.10
+
 ### 4.1.0
 
 + Added CORS headers to all responses to improve in-browser API access.
