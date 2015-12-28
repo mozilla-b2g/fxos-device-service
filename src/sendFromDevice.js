@@ -1,16 +1,15 @@
-let fs = require('fs');
+let {createReadStream} = require('fs');
+let {exec} = require('mz/child_process');
 let path = require('path');
 let tempdir = require('./tempdir');
 
 function middleware(req, res, next) {
-  res.sendFromDevice = async function(source) {
+  res.sendFromDevice = async function(source, options = {}) {
     let local = await tempdir();
 
     try {
-      await req.adb.pull(source, local);
-      let file = path.resolve(local, path.basename(source));
-      let stream = fs.createReadStream(file);
-
+      let file = await copyToLocal(req.adb, source, local, options);
+      let stream = createReadStream(file);
       stream.pipe(res);
       req.socket.on('close', () => stream.unpipe(res));
     } catch (error) {
@@ -23,6 +22,21 @@ function middleware(req, res, next) {
   };
 
   next();
+}
+
+async function copyToLocal(adb, source, local, options) {
+  let filename = path.basename(source);
+  if (!options.isFolder) {
+    await adb.pull(source, local);
+    return path.resolve(local, filename);
+  }
+
+  // The dot is for recursive copy according to
+  // android.stackexchange.com/questions/87326/recursive-adb-pull
+  await adb.pull(`${source}/.`, local);
+  await exec(`tar -cf ${filename}.tar *`, {cwd: local});
+  await exec(`gzip ${filename}.tar`, {cwd: local});
+  return path.resolve(local, `${filename}.tar.gz`);
 }
 
 module.exports = () => middleware;

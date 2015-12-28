@@ -34,15 +34,15 @@ function uploader(req, res, next) {
   });
 }
 
-async function download(req, res) {
+function download(req, res) {
   res.sendFromDevice(req.query.filepath);
 }
 
 async function upload(req, res) {
-  let adb = req.adb;
+  let {adb} = req;
   let source = req.files[0].path;
   let destination = req.query.filepath;
-  let mode = req.body.mode;
+  let {mode} = req.body;
 
   await adb.push(source, destination);
 

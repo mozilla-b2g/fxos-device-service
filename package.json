@@ -21,10 +21,12 @@
     "denodeify": "^1.2.1",
     "empty-port": "^0.0.1",
     "express": "^4.13.3",
+    "event-to-promise": "^0.6.0",
     "lodash": "^3.10.1",
     "moment": "^2.10.6",
     "multer": "^1.1.0",
     "mz": "^2.0.0",
+    "ncp": "^2.0.0",
     "sax": "^1.1.4",
     "tmp": "^0.0.28"
   },
@@ -41,7 +43,7 @@
   "scripts": {
     "prepublish": "make -j8",
     "start": "./bin/fxos-device-service",
-    "test": "mocha",
+    "test": "mocha $(find test -name '*_test.js')",
     "watch": "watchman src 'npm run prepublish'"
   }
 }

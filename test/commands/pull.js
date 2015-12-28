@@ -1,4 +1,5 @@
 var fs = require('fs');
+var ncp = require('ncp').ncp;
 var path = require('path');
 
 // List out the remote locations on device which will be resolved into the
@@ -14,6 +15,7 @@ var remotePathsForLocalFixtures = [
  * Copy a fixture source file to a destination.
  */
 module.exports = function pull(remoteSource, destination) {
+  var isRecursive = remoteSource.slice(-1) === '.';
   var source = path.resolve(
     __dirname, '../fixtures',
     // In the remote source, replace any entry in our fixture mapping with an
@@ -34,7 +36,21 @@ module.exports = function pull(remoteSource, destination) {
     destination = path.resolve(process.cwd(), destination);
   }
 
-  fs
-    .createReadStream(source)
-    .pipe(fs.createWriteStream(path.join(destination, path.basename(source))));
+  if (isRecursive) {
+    ncp(source, destination, function(err) {
+      if (err) {
+        throw err;
+      }
+    });
+  } else {
+    var reader = fs.createReadStream(source);
+    var writer = fs.createWriteStream(
+      path.join(
+        destination,
+        path.basename(source)
+      )
+    );
+
+    reader.pipe(writer);
+  }
 };
