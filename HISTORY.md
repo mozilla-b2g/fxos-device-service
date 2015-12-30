@@ -1,3 +1,8 @@
+### 4.2.0
+
++ Add GET `/devices/:id/profile`
++ Add POST `/devices/:id/profile`
+
 ### 4.1.1
 
 + Replace linux adb binary with one that works on ubuntu 15.10

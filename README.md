@@ -159,5 +159,13 @@ write a JSON object which contains a dictionary of property names to values.
 
 #### `POST /devices/:id/restart?hard=(true|false|0|1)`
 
-Restarts b2g process running on device. If the url parameter `hard` is
 `true` or `1`, then the device will be restarted instead.
+
+#### `GET /devices/:id/profile`
+
+Stream the gecko profile from the target device as a tarball (`.tar.gz`).
+
+#### `POST /devices/:id/profile`
+
+Push a gecko profile to the target device. The service expects a gzipped
+tarball to be sent along as the request body.
