@@ -1,5 +1,5 @@
 let debug = console.log.bind(console, '[adb/exec]');
-let exec = require('mz/child_process').exec;
+let {exec} = require('mz/child_process');
 let path = require('path');
 
 let adbPath = path.resolve(__dirname, '..', '..', 'bin', 'adb', process.platform);

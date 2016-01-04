@@ -78,6 +78,7 @@ commands.stop = noop;
 commands.kill = noop;
 commands.log = noop;
 commands.setprop = noop;
+commands.rm = noop;
 
 module.exports = function shell() {
   var args = Array.prototype.slice.call(arguments).join(' ');
