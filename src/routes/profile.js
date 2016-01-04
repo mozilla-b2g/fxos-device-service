@@ -9,8 +9,7 @@ let tempdir = require('../tempdir');
 let router = express.Router();
 
 async function download(req, res) {
-  let {adb} = req;
-  let profile = await findProfile(adb);
+  let profile = await findProfile(req.adb);
   debug('profile', profile);
   res.sendFromDevice(`/data/b2g/mozilla/${profile}`, {isFolder: true});
 }
